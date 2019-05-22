@@ -1,0 +1,3250 @@
+Starting preprocessing of the model file ...
+Found 8 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 2).
+Computing static model derivatives w.r.t. parameters (order 2).
+Computing dynamic model derivatives (order 2).
+Computing dynamic model derivatives w.r.t. parameters (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+y   		 2.6827
+c   		 2.01202
+iv  		 0.670674
+rk  		 0.03
+k   		 26.827
+lam 		 0.500722
+q   		 1
+a   		 1
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : foc household wrt c (marginal utility of consumption)
+Equation number 2 : 0 : foc household wrt iv (Tobins Q)
+Equation number 3 : 0 : foc household wrt k (Euler equation capital)
+Equation number 4 : 0 : capital accumulation
+Equation number 5 : 0 : production function
+Equation number 6 : 0 : firm capital demand
+Equation number 7 : 0 : market clearing (resource constraint)
+Equation number 8 : 0 : Evolution of technology
+
+
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+       4.832e-17        4.832e-17                0
+          0.4391           0.4391                0
+             0.5              0.5                0
+          0.9787           0.9787                0
+           1.027            1.027                0
+           2.289            2.289                0
+        4.09e+15         4.09e+15                0
+       1.391e+17       -1.391e+17                0
+       4.259e+18       -4.259e+18                0
+
+
+There are 5 eigenvalue(s) larger than 1 in modulus 
+for 5 forward-looking variable(s)
+
+The rank condition is verified.
+
+MODEL_DIAGNOSTICS:  No obvious problems with this mod-file were detected.
+ 
+**** VAROBS: y ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,RHOA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,RHOA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,RHOA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    KAPPA is not identified!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    KAPPA is not identified!
+    [ALPHA,RA,DELTA,RHOA,THETA] are collinear!
+    [ALPHA,RA,DELTA,RHOA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    RHOA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 3 (rank(G) = 5 < 8 with tol = 1e-10)!
+
+    [HBAR,KAPPA] are PAIRWISE collinear!
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,RHOA,SIGA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 3 (rank(G) = 5 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,RHOA,SIGA] are collinear!
+    [ALPHA,RA,DELTA,RHOA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,RHOA,SIGA,THETA] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,SIGA,THETA,HBAR] are collinear!
+    [RHOA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,RHOA,SIGA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,RHOA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,RHOA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,DELTA,RHOA,SIGA,THETA,HBAR] are collinear!
+    [ALPHA,DELTA,RHOA,SIGA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,RHOA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,RHOA,SIGA,THETA,KAPPA] are collinear!
+    [RA,DELTA,RHOA,SIGA,THETA,HBAR] are collinear!
+    [RA,DELTA,RHOA,SIGA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,RHOA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: lam ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: lam ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,RHOA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: q ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: q ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,RHOA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,RHOA,SIGA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,RHOA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,RHOA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,RHOA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,RHOA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 6 (rank(J) = 2 < 8 with tol = 1e-10)!
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    HBAR is not identified!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 6 (rank(G) = 2 < 8 with tol = 1e-10)!
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    HBAR is not identified!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 6 (rank(J) = 2 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    HBAR is not identified!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 6 (rank(G) = 2 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    HBAR is not identified!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y c ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y c ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y iv ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y iv ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y rk ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y rk ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y k ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y k ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA] are collinear!
+    [RA,DELTA,THETA,HBAR] are collinear!
+    [RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y lam ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y lam ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y q ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y q ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: y a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c iv ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c iv ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c rk ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c rk ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c k ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c k ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c lam ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    All parameters are identified in the minimal system (rank(D) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c lam ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    All parameters are identified in the minimal system (rank(D) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c q ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c q ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c a ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: c a ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv rk ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv rk ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv k ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    [HBAR,KAPPA] are PAIRWISE collinear!
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv k ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [SIGA,THETA,KAPPA] are collinear!
+    [SIGA,THETA,HBAR] are collinear!
+    [SIGA,KAPPA,HBAR] are collinear!
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,SIGA,THETA] are collinear!
+    [ALPHA,RA,SIGA,KAPPA] are collinear!
+    [ALPHA,RA,SIGA,HBAR] are collinear!
+    [ALPHA,RA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,THETA,HBAR] are collinear!
+    [ALPHA,RA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,SIGA,THETA,HBAR] are collinear!
+    [RHOA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,RHOA,SIGA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,RHOA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,RHOA,SIGA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv lam ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv lam ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv q ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv q ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv a ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: iv a ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA] are collinear!
+    [ALPHA,RA,DELTA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,HBAR] are collinear!
+    [ALPHA,RA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,THETA,HBAR] are collinear!
+    [ALPHA,RA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,DELTA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA] are collinear!
+    [RA,DELTA,THETA,HBAR] are collinear!
+    [RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk k ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk k ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA] are collinear!
+    [RA,DELTA,THETA,HBAR] are collinear!
+    [RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [RA,DELTA,RHOA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk lam ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk lam ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk q ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk q ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: rk a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k lam ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k lam ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k q ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k q ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k a ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    [HBAR,KAPPA] are PAIRWISE collinear!
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: k a ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,THETA] are collinear!
+    [ALPHA,RA,DELTA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,HBAR] are collinear!
+    [ALPHA,RA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,THETA,HBAR] are collinear!
+    [ALPHA,RA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,DELTA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA] are collinear!
+    [RA,DELTA,THETA,HBAR] are collinear!
+    [RA,DELTA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: lam q ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: lam q ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 12 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: lam a ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: lam a ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 11 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,RA,DELTA,KAPPA,HBAR] are collinear!
+    [ALPHA,RA,THETA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: q a ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    HBAR is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** VAROBS: q a ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 3 (rank(D) = 10 < 13 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,THETA] are collinear!
+    [ALPHA,RA,DELTA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,HBAR] are collinear!
+    [ALPHA,RA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,THETA,HBAR] are collinear!
+    [ALPHA,RA,KAPPA,HBAR] are collinear!
+    [ALPHA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,DELTA,THETA,HBAR] are collinear!
+    [ALPHA,DELTA,KAPPA,HBAR] are collinear!
+    [ALPHA,THETA,KAPPA,HBAR] are collinear!
+    [RA,DELTA,THETA,KAPPA] are collinear!
+    [RA,DELTA,THETA,HBAR] are collinear!
+    [RA,DELTA,KAPPA,HBAR] are collinear!
+    [RA,THETA,KAPPA,HBAR] are collinear!
+    [DELTA,THETA,KAPPA,HBAR] are collinear!
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./table.tex
+LaTeX2e <2018-04-01> patch level 5
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+No file table.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \vbox (badness 10000) detected at line 48
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./table.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb>
+Output written on table.pdf (1 page, 43548 bytes).
+Transcript written on table.log.
+
+ans =
+
+     0
+
+Total computing time : 0h02m12s
+Note: warning(s) encountered in MATLAB/Octave code
