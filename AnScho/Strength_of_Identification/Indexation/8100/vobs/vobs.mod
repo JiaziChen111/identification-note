@@ -1,0 +1,1 @@
+varobs YGR INFL INT;

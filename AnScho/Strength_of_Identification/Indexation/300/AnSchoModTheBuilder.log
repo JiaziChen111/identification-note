@@ -1,0 +1,2043 @@
+Starting preprocessing of the model file ...
+Found 9 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+YGR  		 0.55
+INFL 		 3.2
+INT  		 6.4
+y    		 1.1161
+c    		 0.948683
+r    		 1.01608
+p    		 1.008
+g    		 1.17647
+z    		 1
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : Euler equation
+Equation number 2 : 0 : Price setting based on Rotemberg quadratic price adjustment costs and Dixit/Stiglitz aggregator
+Equation number 3 : 0 : Market clearing: aggregate supply equals aggregate demand
+Equation number 4 : 0 : Taylor rule
+Equation number 5 : 0 : Government spending process
+Equation number 6 : 0 : Technology growth process
+Equation number 7 : 0 : Output growth (q-on-q)
+Equation number 8 : 0 : Annualized inflation
+Equation number 9 : 0 : Annualized nominal interest rate
+
+
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+               0                0                0
+          0.5691           0.5434           0.1691
+          0.5691           0.5434          -0.1691
+             0.9              0.9                0
+            0.95             0.95                0
+           1.077            1.077                0
+           1.078           -1.078                0
+       2.191e+16        2.191e+16                0
+       3.822e+16       -3.822e+16                0
+
+
+There are 4 eigenvalue(s) larger than 1 in modulus 
+for 4 forward-looking variable(s)
+
+The rank condition is verified.
+
+MODEL_DIAGNOSTICS:  No obvious problems with this mod-file were detected.
+ 
+RUNNING OPTIMISER-TYPE: CMA-ES
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+Initial value of the log posterior (or likelihood): -892.1324
+[Warning: Initial SIGMA is, in at least one coordinate, much smaller than the
+given boundary intervals. For reasonable global search performance SIGMA should
+be between 0.2 and 0.5 of the bounded interval in each coordinate. If all
+coordinates have lower and upper bounds SIGMA can be empty] 
+[> In cmaes (line 609)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)] 
+  n=14: (5,11)-CMA-ES(w=[46 27 16 9 3]%, mu_eff=3.2) on function dsge_likelihood
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.311930e-18.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.863935e-20.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+    1 ,     12 : 2.9741580716994e+03 +(1e+06,5e+12) | 3.33e+01 |  5:1.1e-01  2:3.7e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.504309e-17.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.270613e-18.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+    2 ,     23 : 1.1111977626386e+03 +(5e+04,4e+09) | 3.34e+01 |  5:1.0e-01  2:3.5e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.300638e-18.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.377071e-17.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+   10 ,    111 : 2.7875991878884e+03 +(8e+04,2e+06) | 3.28e+01 |  5:9.4e-02  2:3.1e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.333278e-17.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.969616e-18.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.114433e-19.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.808652e-18.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+   20 ,    221 : 4.4775689763055e+03 +(5e+04,Inf) | 3.09e+01 |  5:6.2e-02  2:1.9e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.749140e-17.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.089455e-16.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.583175e-16.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+   30 ,    331 : 1.5202076033294e+03 +(9e+02,3e+04) | 3.05e+01 |  5:6.3e-02  2:1.9e+00
+   40 ,    441 : 1.7343436298724e+03 +(9e+01,2e+03) | 2.95e+01 |  5:4.0e-02  2:1.1e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.738816e-20.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In cmaes (line 948)
+  In dynare_minimize_objective (line 360)
+  In dynare_estimation_1 (line 223)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 302)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+   50 ,    551 : 1.5407733170885e+03 +(5e+02,1e+04) | 2.86e+01 |  5:2.8e-02  2:7.7e-01
+   60 ,    661 : 1.4023272426250e+03 +(2e+02,3e+04) | 2.72e+01 |  5:2.2e-02  2:5.7e-01
+   70 ,    771 : 1.2953880183340e+03 +(2e+02,3e+02) | 2.71e+01 |  5:1.5e-02  2:3.9e-01
+   80 ,    881 : 1.1238725904436e+03 +(1e+02,1e+04) | 2.66e+01 |  5:1.2e-02  2:2.9e-01
+   90 ,    991 : 1.0886103629055e+03 +(2e+02,8e+03) | 2.75e+01 |  5:1.7e-02  2:3.9e-01
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  100 ,   1101 : 1.0059709550934e+03 +(1e+02,6e+02) | 3.08e+01 |  9:1.3e-02  2:3.1e-01
+  110 ,   1211 : 9.7675563242910e+02 +(5e+01,8e+02) | 3.10e+01 |  5:8.5e-03  2:2.1e-01
+  120 ,   1321 : 9.7062324342778e+02 +(3e+01,1e+02) | 3.13e+01 |  5:5.4e-03  2:1.3e-01
+  130 ,   1431 : 9.4921078587460e+02 +(2e+01,3e+01) | 3.13e+01 |  5:4.2e-03  2:1.0e-01
+  140 ,   1541 : 9.3394384588027e+02 +(1e+01,6e+01) | 3.43e+01 |  5:5.3e-03  2:1.3e-01
+  150 ,   1651 : 9.2806281828979e+02 +(1e+01,5e+01) | 3.91e+01 |  5:4.3e-03  2:1.2e-01
+  160 ,   1761 : 9.1852935472188e+02 +(1e+01,8e+01) | 4.92e+01 |  5:4.9e-03  1:1.7e-01
+  170 ,   1871 : 9.1874296450659e+02 +(8e+00,2e+01) | 5.08e+01 |  5:4.1e-03  1:1.5e-01
+  180 ,   1981 : 9.1082125587804e+02 +(3e+00,3e+01) | 5.27e+01 |  5:3.5e-03  1:1.3e-01
+  190 ,   2091 : 9.0595684291053e+02 +(4e+00,3e+01) | 5.39e+01 |  5:2.3e-03  1:8.8e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  200 ,   2201 : 9.0480738589714e+02 +(2e+00,5e+00) | 5.42e+01 |  5:1.3e-03  1:4.6e-02
+  210 ,   2311 : 9.0345259178959e+02 +(8e-01,3e+00) | 5.50e+01 |  5:1.1e-03  1:3.8e-02
+  220 ,   2421 : 9.0133698715718e+02 +(1e+00,2e+00) | 5.67e+01 |  5:1.3e-03  1:4.5e-02
+  230 ,   2531 : 8.9952338129417e+02 +(9e-01,8e+00) | 5.93e+01 |  5:1.8e-03  1:6.7e-02
+  240 ,   2641 : 8.9784589387313e+02 +(1e+00,4e+00) | 6.05e+01 |  5:1.2e-03  1:4.7e-02
+  250 ,   2751 : 8.9575403346688e+02 +(2e+00,6e+00) | 6.15e+01 |  5:1.6e-03  1:5.8e-02
+  260 ,   2861 : 8.9415848435381e+02 +(4e+00,6e+00) | 6.59e+01 |  5:1.5e-03  1:5.9e-02
+  270 ,   2971 : 8.9274730890467e+02 +(2e+00,5e+00) | 6.99e+01 |  5:1.3e-03  1:5.3e-02
+  280 ,   3081 : 8.9128049859456e+02 +(2e+00,5e+00) | 7.72e+01 |  5:1.1e-03  1:5.0e-02
+  290 ,   3191 : 8.9032936503024e+02 +(4e-01,3e+00) | 7.80e+01 |  5:9.6e-04  1:4.3e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  300 ,   3301 : 8.8931506262309e+02 +(6e-01,1e+00) | 8.43e+01 |  5:6.5e-04  1:3.2e-02
+  310 ,   3411 : 8.8890107706170e+02 +(5e-01,3e+00) | 1.03e+02 |  5:7.4e-04  1:4.2e-02
+  320 ,   3521 : 8.8847491160560e+02 +(4e-01,2e+00) | 1.09e+02 |  5:7.5e-04  1:4.4e-02
+  330 ,   3631 : 8.8798231168112e+02 +(2e-01,1e+00) | 1.09e+02 |  5:5.2e-04  1:3.0e-02
+  340 ,   3741 : 8.8741132068394e+02 +(3e-01,1e+00) | 1.07e+02 |  5:9.1e-04  1:5.0e-02
+  350 ,   3851 : 8.8719718694531e+02 +(4e-01,8e-01) | 1.06e+02 |  5:6.1e-04  1:3.4e-02
+  360 ,   3961 : 8.8677252900904e+02 +(3e-01,7e-01) | 1.09e+02 |  5:6.6e-04  1:3.6e-02
+  370 ,   4071 : 8.8656048827256e+02 +(2e-01,1e+00) | 1.09e+02 |  5:6.2e-04  1:3.4e-02
+  380 ,   4181 : 8.8638015773011e+02 +(3e-01,6e-01) | 1.07e+02 |  5:6.4e-04  1:3.4e-02
+  390 ,   4291 : 8.8617433675882e+02 +(6e-02,2e-01) | 1.09e+02 |  5:4.8e-04  1:2.6e-02
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  400 ,   4401 : 8.8611950101188e+02 +(6e-02,4e-01) | 1.12e+02 |  5:3.9e-04  1:2.1e-02
+  410 ,   4511 : 8.8602029404726e+02 +(3e-02,1e-01) | 1.14e+02 |  5:2.9e-04  1:1.6e-02
+  420 ,   4621 : 8.8595333174411e+02 +(5e-02,2e-01) | 1.17e+02 |  5:3.1e-04  1:1.7e-02
+  430 ,   4731 : 8.8591419344042e+02 +(6e-02,1e-01) | 1.18e+02 |  5:2.6e-04  1:1.4e-02
+  440 ,   4841 : 8.8584812180286e+02 +(3e-02,8e-02) | 1.21e+02 |  5:2.1e-04  1:1.1e-02
+  450 ,   4951 : 8.8582442810748e+02 +(3e-02,8e-02) | 1.26e+02 |  5:3.0e-04  1:1.6e-02
+  460 ,   5061 : 8.8580165809908e+02 +(2e-02,7e-02) | 1.30e+02 |  5:2.0e-04  1:1.1e-02
+  470 ,   5171 : 8.8578069816977e+02 +(3e-03,1e-02) | 1.30e+02 |  5:1.6e-04  1:8.6e-03
+  480 ,   5281 : 8.8577003371126e+02 +(9e-03,2e-02) | 1.41e+02 |  5:1.2e-04  1:6.4e-03
+  490 ,   5391 : 8.8576077732900e+02 +(6e-03,1e-02) | 1.56e+02 |  5:1.2e-04  1:6.5e-03
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  500 ,   5501 : 8.8575089628132e+02 +(6e-03,9e-03) | 1.63e+02 |  5:9.8e-05  1:5.4e-03
+  510 ,   5611 : 8.8574281915849e+02 +(4e-03,2e-02) | 1.60e+02 |  5:1.5e-04  1:7.1e-03
+  520 ,   5721 : 8.8574190948565e+02 +(6e-03,2e-02) | 1.71e+02 |  5:1.5e-04  1:6.8e-03
+  530 ,   5831 : 8.8574049162599e+02 +(7e-04,3e-03) | 1.75e+02 |  5:8.0e-05  1:3.6e-03
+  540 ,   5941 : 8.8573911671634e+02 +(3e-04,5e-04) | 1.89e+02 |  5:5.1e-05  1:2.4e-03
+  550 ,   6051 : 8.8573858743215e+02 +(2e-04,8e-04) | 1.96e+02 |  5:3.4e-05  1:1.6e-03
+  560 ,   6161 : 8.8573856962297e+02 +(5e-05,2e-04) | 1.93e+02 |  5:2.0e-05  1:9.6e-04
+  570 ,   6271 : 8.8573849122778e+02 +(2e-05,8e-05) | 1.92e+02 |  5:1.1e-05  1:5.5e-04
+  580 ,   6381 : 8.8573846991904e+02 +(8e-06,2e-05) | 1.92e+02 |  5:7.3e-06  1:3.4e-04
+  590 ,   6491 : 8.8573846654198e+02 +(1e-06,3e-06) | 1.91e+02 |  5:4.0e-06  1:1.9e-04
+Iterat, #Fevals:   Function Value    (median,worst) |Axis Ratio|idx:Min SD idx:Max SD
+  600 ,   6601 : 8.8573846000307e+02 +(2e-06,6e-06) | 1.95e+02 |  5:4.6e-06  1:2.1e-04
+  610 ,   6711 : 8.8573845906387e+02 +(2e-06,5e-06) | 1.94e+02 |  5:3.8e-06  1:1.6e-04
+  620 ,   6821 : 8.8573845639600e+02 +(1e-06,2e-06) | 1.95e+02 |  5:2.4e-06  1:1.1e-04
+  630 ,   6931 : 8.8573845577946e+02 +(3e-07,7e-07) | 1.93e+02 |  5:1.8e-06  1:7.8e-05
+  640 ,   7041 : 8.8573845526561e+02 +(1e-07,3e-07) | 1.90e+02 |  5:1.3e-06  1:5.1e-05
+  650 ,   7151 : 8.8573845511711e+02 +(6e-08,1e-07) | 1.93e+02 |  5:7.2e-07  1:2.9e-05
+  660 ,   7261 : 8.8573845502313e+02 +(4e-08,7e-08) | 1.98e+02 |  5:4.5e-07  1:1.7e-05
+  670 ,   7371 : 8.8573845502068e+02 +(4e-09,1e-08) | 1.95e+02 |  5:2.4e-07  1:9.0e-06
+  680 ,   7481 : 8.8573845501503e+02 +(1e-09,3e-09) | 1.96e+02 |  5:1.2e-07  1:4.7e-06
+  690 ,   7591 : 8.8573845501360e+02 +(6e-10,9e-10) | 1.94e+02 |  5:7.0e-08  1:2.6e-06
+  699 ,   7690 : 8.8573845501319e+02 +(1e-10,3e-10) | 1.89e+02 |  5:4.0e-08  1:1.5e-06
+#Fevals:   f(returned x)   |    bestever.f     | stopflag (saved to variablescmaes.mat)
+   7691: 8.85738455013e+02 | 8.85738455013e+02 | tolfun
+mean solution: +1.6e+00 +2.8e+00 +3.9e-01 +1.7e+00 +9.0e-02 +1.4e+00 +2.2e-01 +7.4e-01 +9.3e-01 +8.9e-01 +2.1e-01 +6.0e-01 +3.0e-01 +5.4e-01
+std deviation:  1.5e-06  1.1e-06  5.5e-07  1.2e-06  4.0e-08  9.3e-07  4.5e-07  1.3e-07  1.3e-07  6.8e-08  5.5e-08  1.4e-07  1.2e-07  1.8e-07
+use plotcmaesdat.m for plotting the output at any time (option LogModulo must not be zero)
+
+Final value of minus the log posterior (or likelihood):885.738455 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+    prior mean     mode    s.d. prior pstdev
+
+RA      0.800   1.6438  0.3020 gamm 0.5000 
+PA      4.000   2.7749  0.2235 gamm 2.0000 
+GAMQ    0.400   0.3943  0.1161 norm 0.2000 
+TAU     2.000   1.6972  0.2371 gamm 0.5000 
+NU      0.100   0.0896  0.0085 beta 0.0500 
+PSIP    1.500   1.3758  0.1795 gamm 0.2500 
+PSIY    0.500   0.2223  0.0851 gamm 0.2500 
+RHOR    0.500   0.7426  0.0244 beta 0.2000 
+RHOG    0.800   0.9263  0.0213 beta 0.1000 
+RHOZ    0.660   0.8864  0.0136 beta 0.1500 
+SIGR    0.300   0.2129  0.0098 invg 4.0000 
+SIGG    0.400   0.5991  0.0244 invg 4.0000 
+SIGZ    0.400   0.2977  0.0229 invg 4.0000 
+IOTAP   0.500   0.5434  0.0348 beta 0.1500 
+
+
+Log data density [Laplace approximation] is -922.580343.
+
+[Warning: MATLAB has disabled some advanced graphics rendering features by
+switching to software OpenGL. For more information, click <a
+href="matlab:opengl('problems')">here</a>.] 
+RUNNING OPTIMISER-TYPE: Nelson-Mead Simplex
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -885.7385
+
+Simplex initialization...
+Done!
+
+Objective function value: 885.7385
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+1           17         8.8573846E+02 9.4612983E+02  6.0391377E+01  1.3874317E-01  contract inside
+2           19         8.8573846E+02 9.0120412E+02  1.5465670E+01  8.4861450E-02  contract outside
+3           21         8.8573846E+02 8.9853134E+02  1.2792884E+01  8.4861450E-02  contract outside
+4           23         8.8573846E+02 8.9065183E+02  4.9133717E+00  8.4861450E-02  contract inside
+5           24         8.8573846E+02 8.9061645E+02  4.8779954E+00  8.4861450E-02  reflect-0
+6           25         8.8573846E+02 8.9013446E+02  4.3960014E+00  8.4861450E-02  reflect-0
+7           26         8.8573846E+02 8.8992751E+02  4.1890501E+00  8.4861450E-02  reflect-0
+8           28         8.8573846E+02 8.8955666E+02  3.8182082E+00  8.4861450E-02  contract inside
+9           30         8.8573846E+02 8.8950845E+02  3.7699942E+00  8.4861450E-02  contract inside
+10          32         8.8573846E+02 8.8861685E+02  2.8783956E+00  8.4861450E-02  contract inside
+11          34         8.8573846E+02 8.8858663E+02  2.8481737E+00  8.4861450E-02  contract inside
+12          35         8.8573846E+02 8.8851126E+02  2.7728010E+00  8.4861450E-02  reflect-0
+13          37         8.8573846E+02 8.8825045E+02  2.5119980E+00  8.4861450E-02  contract inside
+14          39         8.8573846E+02 8.8691267E+02  1.1742114E+00  8.4861450E-02  contract inside
+15          41         8.8573846E+02 8.8690092E+02  1.1624674E+00  8.4861450E-02  contract inside
+16          43         8.8573846E+02 8.8670192E+02  9.6346417E-01  8.4861450E-02  contract inside
+17          45         8.8573846E+02 8.8658514E+02  8.4668840E-01  8.4861450E-02  contract inside
+18          47         8.8573846E+02 8.8647825E+02  7.3979665E-01  8.4861450E-02  contract inside
+19          49         8.8573846E+02 8.8645208E+02  7.1362067E-01  8.4861450E-02  contract inside
+20          51         8.8573846E+02 8.8645207E+02  7.1361528E-01  8.4861450E-02  contract inside
+21          53         8.8573846E+02 8.8643716E+02  6.9870432E-01  8.4861450E-02  contract inside
+22          55         8.8573846E+02 8.8643604E+02  6.9758391E-01  8.4861450E-02  contract inside
+23          57         8.8573846E+02 8.8643354E+02  6.9508636E-01  8.4861450E-02  contract inside
+24          59         8.8573846E+02 8.8640583E+02  6.6737645E-01  8.4861450E-02  contract inside
+25          61         8.8573846E+02 8.8640479E+02  6.6633851E-01  8.4861450E-02  contract inside
+26          62         8.8573846E+02 8.8638753E+02  6.4907713E-01  8.4861450E-02  reflect-0
+27          64         8.8573846E+02 8.8633665E+02  5.9819250E-01  4.5503226E-02  contract inside
+28          66         8.8573846E+02 8.8608724E+02  3.4878561E-01  4.5503226E-02  contract inside
+29          67         8.8573846E+02 8.8602318E+02  2.8472418E-01  4.5503226E-02  reflect-0
+30          69         8.8573846E+02 8.8599906E+02  2.6060257E-01  4.5503226E-02  contract inside
+31          70         8.8573846E+02 8.8596929E+02  2.3083041E-01  4.5503226E-02  reflect-0
+32          72         8.8573846E+02 8.8594964E+02  2.1118380E-01  4.5503226E-02  contract inside
+33          73         8.8573846E+02 8.8594902E+02  2.1056832E-01  4.5503226E-02  reflect-0
+34          74         8.8573846E+02 8.8594614E+02  2.0768182E-01  4.5503226E-02  reflect-0
+35          76         8.8573846E+02 8.8594027E+02  2.0181350E-01  4.5503226E-02  contract inside
+36          77         8.8573846E+02 8.8593935E+02  2.0089281E-01  4.5503226E-02  reflect-0
+37          79         8.8573846E+02 8.8593755E+02  1.9909674E-01  4.5503226E-02  contract inside
+38          81         8.8573846E+02 8.8593734E+02  1.9888681E-01  4.5503226E-02  contract inside
+39          82         8.8573846E+02 8.8592682E+02  1.8836143E-01  4.5503226E-02  reflect-0
+40          84         8.8573846E+02 8.8592656E+02  1.8810579E-01  4.5503226E-02  contract inside
+41          86         8.8573846E+02 8.8591966E+02  1.8120856E-01  4.5503226E-02  contract inside
+42          88         8.8573846E+02 8.8590536E+02  1.6690246E-01  4.5503226E-02  contract outside
+43          90         8.8573846E+02 8.8589878E+02  1.6032142E-01  4.5503226E-02  contract inside
+44          92         8.8573846E+02 8.8589590E+02  1.5744273E-01  4.5503226E-02  contract inside
+45          93         8.8573846E+02 8.8589568E+02  1.5722194E-01  4.5503226E-02  reflect-0
+46          95         8.8573846E+02 8.8589482E+02  1.5636846E-01  2.6663541E-02  contract inside
+47          97         8.8573846E+02 8.8585662E+02  1.1816954E-01  2.6663541E-02  contract inside
+48          99         8.8573846E+02 8.8582457E+02  8.6114095E-02  2.6663541E-02  contract inside
+49          101        8.8573846E+02 8.8580923E+02  7.0777872E-02  2.6663541E-02  contract outside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+50          103        8.8573846E+02 8.8579512E+02  5.6662515E-02  2.6663541E-02  contract inside
+51          104        8.8573846E+02 8.8579316E+02  5.4709016E-02  2.6663541E-02  reflect-0
+52          106        8.8573846E+02 8.8579221E+02  5.3750266E-02  2.6663541E-02  contract inside
+53          107        8.8573846E+02 8.8579150E+02  5.3044002E-02  2.6663541E-02  reflect-0
+54          109        8.8573846E+02 8.8579109E+02  5.2631045E-02  2.6663541E-02  contract inside
+55          111        8.8573846E+02 8.8579067E+02  5.2214161E-02  2.6663541E-02  contract inside
+56          112        8.8573846E+02 8.8579064E+02  5.2183754E-02  2.6663541E-02  reflect-0
+57          113        8.8573846E+02 8.8578875E+02  5.0290294E-02  2.6663541E-02  reflect-0
+58          115        8.8573846E+02 8.8578856E+02  5.0102761E-02  2.6663541E-02  contract inside
+59          117        8.8573846E+02 8.8578732E+02  4.8864092E-02  2.6663541E-02  contract inside
+60          119        8.8573846E+02 8.8578328E+02  4.4820725E-02  2.6663541E-02  contract outside
+61          121        8.8573846E+02 8.8578283E+02  4.4372099E-02  2.6663541E-02  contract inside
+62          123        8.8573846E+02 8.8578253E+02  4.4075906E-02  2.6663541E-02  contract inside
+63          124        8.8573846E+02 8.8578197E+02  4.3511318E-02  2.6663541E-02  reflect-0
+64          125        8.8573846E+02 8.8578154E+02  4.3089928E-02  2.6663541E-02  reflect-0
+65          126        8.8573846E+02 8.8577563E+02  3.7171072E-02  1.5230062E-02  reflect-0
+66          128        8.8573846E+02 8.8577269E+02  3.4230848E-02  1.5230062E-02  contract inside
+67          130        8.8573846E+02 8.8577041E+02  3.1951091E-02  1.5230062E-02  contract inside
+68          132        8.8573846E+02 8.8577018E+02  3.1727254E-02  1.5230062E-02  contract inside
+69          134        8.8573846E+02 8.8576625E+02  2.7795672E-02  1.4693107E-02  contract inside
+70          136        8.8573846E+02 8.8576145E+02  2.2999622E-02  1.3731275E-02  contract inside
+71          138        8.8573846E+02 8.8575676E+02  1.8301367E-02  1.3731275E-02  contract inside
+72          139        8.8573846E+02 8.8575578E+02  1.7329388E-02  1.3731275E-02  reflect-0
+73          141        8.8573846E+02 8.8575516E+02  1.6704358E-02  1.3731275E-02  contract inside
+74          142        8.8573846E+02 8.8575484E+02  1.6381617E-02  1.3731275E-02  reflect-0
+75          143        8.8573846E+02 8.8575425E+02  1.5797139E-02  1.2385814E-02  reflect-0
+76          144        8.8573846E+02 8.8575396E+02  1.5509977E-02  1.2385814E-02  reflect-0
+77          146        8.8573846E+02 8.8575385E+02  1.5391561E-02  1.2385814E-02  contract inside
+78          148        8.8573846E+02 8.8575366E+02  1.5205985E-02  1.2385814E-02  contract inside
+79          150        8.8573846E+02 8.8575301E+02  1.4557890E-02  1.2385814E-02  contract inside
+80          151        8.8573846E+02 8.8575195E+02  1.3492847E-02  1.2385814E-02  reflect-0
+81          152        8.8573846E+02 8.8575190E+02  1.3443151E-02  1.2385814E-02  reflect-0
+82          154        8.8573846E+02 8.8575142E+02  1.2961151E-02  1.2385814E-02  contract inside
+83          156        8.8573846E+02 8.8575103E+02  1.2573100E-02  1.2385814E-02  contract inside
+84          157        8.8573846E+02 8.8575023E+02  1.1779619E-02  1.2385814E-02  reflect-0
+85          158        8.8573846E+02 8.8574976E+02  1.1302793E-02  1.2385814E-02  reflect-0
+86          160        8.8573846E+02 8.8574976E+02  1.1302516E-02  1.2385814E-02  contract inside
+87          162        8.8573846E+02 8.8574885E+02  1.0397089E-02  1.2385814E-02  contract inside
+88          163        8.8573846E+02 8.8574875E+02  1.0293536E-02  1.2385814E-02  reflect-0
+89          164        8.8573846E+02 8.8574846E+02  1.0004258E-02  1.0340250E-02  reflect-0
+90          166        8.8573846E+02 8.8574831E+02  9.8571912E-03  1.0340250E-02  contract inside
+91          168        8.8573846E+02 8.8574818E+02  9.7206205E-03  1.0340250E-02  contract inside
+92          170        8.8573846E+02 8.8574767E+02  9.2155798E-03  1.0340250E-02  contract inside
+93          172        8.8573846E+02 8.8574765E+02  9.1968695E-03  1.0340250E-02  contract inside
+94          173        8.8573846E+02 8.8574573E+02  7.2795759E-03  1.0340250E-02  reflect-0
+95          174        8.8573846E+02 8.8574533E+02  6.8754611E-03  1.0217471E-02  reflect-0
+96          175        8.8573846E+02 8.8574524E+02  6.7853765E-03  1.0217471E-02  reflect-0
+97          176        8.8573846E+02 8.8574511E+02  6.6504833E-03  1.0217471E-02  reflect-0
+98          177        8.8573846E+02 8.8574457E+02  6.1139029E-03  9.3368535E-03  reflect-0
+99          178        8.8573846E+02 8.8574448E+02  6.0227651E-03  9.3368535E-03  reflect-0
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+100         180        8.8573846E+02 8.8574412E+02  5.6686679E-03  9.3368535E-03  contract inside
+101         182        8.8573846E+02 8.8574378E+02  5.3204730E-03  9.3368535E-03  contract outside
+102         183        8.8573846E+02 8.8574375E+02  5.2971170E-03  7.9681286E-03  reflect-0
+103         185        8.8573846E+02 8.8574368E+02  5.2271336E-03  7.9681286E-03  contract inside
+104         186        8.8573846E+02 8.8574339E+02  4.9302928E-03  7.9681286E-03  reflect-0
+105         187        8.8573846E+02 8.8574325E+02  4.7989171E-03  7.9681286E-03  reflect-0
+106         188        8.8573846E+02 8.8574322E+02  4.7600429E-03  7.9681286E-03  reflect-0
+107         189        8.8573846E+02 8.8574320E+02  4.7420821E-03  7.9681286E-03  reflect-0
+108         191        8.8573846E+02 8.8574295E+02  4.4962563E-03  7.9681286E-03  contract inside
+109         192        8.8573846E+02 8.8574294E+02  4.4833924E-03  7.9681286E-03  reflect-0
+110         193        8.8573846E+02 8.8574286E+02  4.4051228E-03  7.9681286E-03  reflect-0
+111         194        8.8573846E+02 8.8574264E+02  4.1809760E-03  6.6487900E-03  reflect-0
+112         196        8.8573846E+02 8.8574230E+02  3.8411140E-03  6.6487900E-03  contract inside
+113         198        8.8573846E+02 8.8574222E+02  3.7603496E-03  6.6487900E-03  contract inside
+114         199        8.8573846E+02 8.8574216E+02  3.7066170E-03  6.6487900E-03  reflect-0
+115         201        8.8573846E+02 8.8574184E+02  3.3833663E-03  6.6487900E-03  contract inside
+116         202        8.8573846E+02 8.8574168E+02  3.2256473E-03  6.6487900E-03  reflect-0
+117         203        8.8573846E+02 8.8574149E+02  3.0361130E-03  6.6487900E-03  reflect-0
+118         204        8.8573846E+02 8.8574139E+02  2.9314533E-03  6.0580705E-03  reflect-0
+119         205        8.8573846E+02 8.8574123E+02  2.7775178E-03  5.7268523E-03  reflect-0
+120         206        8.8573846E+02 8.8574119E+02  2.7330043E-03  5.7268523E-03  reflect-0
+121         207        8.8573846E+02 8.8574108E+02  2.6234112E-03  5.7268523E-03  reflect-0
+122         209        8.8573846E+02 8.8574076E+02  2.3066592E-03  5.5422305E-03  contract inside
+123         210        8.8573846E+02 8.8574076E+02  2.3012621E-03  5.5422305E-03  reflect-0
+124         212        8.8573846E+02 8.8574075E+02  2.2913991E-03  5.5422305E-03  contract inside
+125         213        8.8573846E+02 8.8574060E+02  2.1403589E-03  5.5422305E-03  reflect-0
+126         214        8.8573846E+02 8.8574048E+02  2.0220734E-03  5.5422305E-03  reflect-0
+127         216        8.8573846E+02 8.8574042E+02  1.9647579E-03  5.5422305E-03  contract inside
+128         218        8.8573846E+02 8.8574022E+02  1.7647359E-03  5.5422305E-03  contract inside
+129         219        8.8573846E+02 8.8574020E+02  1.7486962E-03  5.5422305E-03  reflect-0
+130         220        8.8573846E+02 8.8574017E+02  1.7111258E-03  5.5422305E-03  reflect-0
+131         221        8.8573846E+02 8.8574010E+02  1.6475412E-03  5.5422305E-03  reflect-0
+132         222        8.8573846E+02 8.8574007E+02  1.6189916E-03  5.5422305E-03  reflect-0
+133         224        8.8573846E+02 8.8574004E+02  1.5812094E-03  5.5422305E-03  contract inside
+134         225        8.8573846E+02 8.8573994E+02  1.4802300E-03  5.5422305E-03  reflect-0
+135         227        8.8573846E+02 8.8573986E+02  1.4093935E-03  5.5422305E-03  contract inside
+136         229        8.8573846E+02 8.8573986E+02  1.4080821E-03  5.5422305E-03  contract inside
+137         231        8.8573846E+02 8.8573977E+02  1.3171852E-03  5.5422305E-03  contract inside
+138         233        8.8573846E+02 8.8573972E+02  1.2670357E-03  5.5422305E-03  contract inside
+139         234        8.8573846E+02 8.8573972E+02  1.2605788E-03  5.5422305E-03  reflect-0
+140         236        8.8573846E+02 8.8573969E+02  1.2363901E-03  3.8205805E-03  contract inside
+141         238        8.8573846E+02 8.8573955E+02  1.0928398E-03  3.8205805E-03  contract inside
+
+NO SIGNIFICANT IMPROVEMENT AFTER 141 ITERATIONS!
+
+(Re)Start with a lager simplex based on the best current values for the control variables.
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+
+MAXIMUM NUMBER OF SIMPLEX REINITIALIZATION EXCEEDED (1)!
+
+(Re)Start with a lager simplex based on the best current values for the control variables.
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+144         168        8.8573846E+02 9.5232268E+02  6.6584220E+01  1.4568033E-01  contract inside
+145         188        8.8573846E+02 9.0276099E+02  1.7022538E+01  8.9104522E-02  contract outside
+146         208        8.8573846E+02 8.9973290E+02  1.3994441E+01  8.9104522E-02  contract outside
+147         228        8.8573846E+02 8.9116068E+02  5.4222207E+00  8.9104522E-02  contract inside
+148         238        8.8573846E+02 8.9115544E+02  5.4169844E+00  8.9104522E-02  reflect-0
+149         258        8.8573846E+02 8.8993705E+02  4.1985968E+00  8.9104522E-02  contract outside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+150         278        8.8573846E+02 8.8957450E+02  3.8360404E+00  8.9104522E-02  contract inside
+151         298        8.8573846E+02 8.8891190E+02  3.1734453E+00  8.9104522E-02  contract inside
+152         318        8.8573846E+02 8.8889276E+02  3.1543053E+00  8.9104522E-02  contract inside
+153         328        8.8573846E+02 8.8879627E+02  3.0578120E+00  8.9104522E-02  reflect-0
+154         348        8.8573846E+02 8.8853796E+02  2.7995007E+00  8.9104522E-02  contract outside
+155         368        8.8573846E+02 8.8736157E+02  1.6231173E+00  8.9104522E-02  contract inside
+156         388        8.8573846E+02 8.8703304E+02  1.2945834E+00  8.9104522E-02  contract outside
+157         408        8.8573846E+02 8.8688316E+02  1.1447045E+00  8.9104522E-02  contract inside
+158         428        8.8573846E+02 8.8669425E+02  9.5579007E-01  8.9104522E-02  contract inside
+159         448        8.8573846E+02 8.8655408E+02  8.1562601E-01  8.9104522E-02  contract inside
+160         468        8.8573846E+02 8.8650918E+02  7.7072087E-01  8.9104522E-02  contract inside
+161         478        8.8573846E+02 8.8650574E+02  7.6728418E-01  8.9104522E-02  reflect-0
+162         498        8.8573846E+02 8.8650451E+02  7.6605004E-01  8.9104522E-02  contract inside
+163         518        8.8573846E+02 8.8650176E+02  7.6330773E-01  8.9104522E-02  contract inside
+164         538        8.8573846E+02 8.8649650E+02  7.5804146E-01  8.9104522E-02  contract inside
+165         558        8.8573846E+02 8.8647324E+02  7.3478733E-01  8.9104522E-02  contract inside
+166         578        8.8573846E+02 8.8645083E+02  7.1237440E-01  8.9104522E-02  contract inside
+167         598        8.8573846E+02 8.8641255E+02  6.7409895E-01  4.8348788E-02  contract inside
+168         618        8.8573846E+02 8.8631674E+02  5.7828884E-01  4.8348788E-02  contract inside
+169         638        8.8573846E+02 8.8612257E+02  3.8411822E-01  4.8348788E-02  contract outside
+170         658        8.8573846E+02 8.8605595E+02  3.1749483E-01  4.8348788E-02  contract inside
+171         678        8.8573846E+02 8.8603548E+02  2.9702583E-01  4.8348788E-02  contract inside
+172         698        8.8573846E+02 8.8598996E+02  2.5150874E-01  4.8348788E-02  contract inside
+173         718        8.8573846E+02 8.8597609E+02  2.3763660E-01  4.8348788E-02  contract inside
+174         728        8.8573846E+02 8.8596444E+02  2.2598109E-01  4.8348788E-02  reflect-0
+175         738        8.8573846E+02 8.8596007E+02  2.2161445E-01  4.8348788E-02  reflect-0
+176         748        8.8573846E+02 8.8594809E+02  2.0963938E-01  4.8348788E-02  reflect-0
+177         768        8.8573846E+02 8.8594792E+02  2.0946109E-01  4.8348788E-02  contract inside
+178         778        8.8573846E+02 8.8594657E+02  2.0811957E-01  3.0983924E-02  reflect-0
+179         798        8.8573846E+02 8.8594242E+02  2.0396097E-01  3.0983924E-02  contract outside
+180         818        8.8573846E+02 8.8593361E+02  1.9515485E-01  3.0983924E-02  contract inside
+181         828        8.8573846E+02 8.8593121E+02  1.9275298E-01  3.0983924E-02  reflect-0
+182         848        8.8573846E+02 8.8592402E+02  1.8556833E-01  3.0983924E-02  contract inside
+183         868        8.8573846E+02 8.8591894E+02  1.8048160E-01  3.0983924E-02  contract inside
+184         888        8.8573846E+02 8.8591233E+02  1.7387646E-01  3.0983924E-02  contract inside
+185         898        8.8573846E+02 8.8589959E+02  1.6113827E-01  4.3000602E-02  reflect-0
+186         918        8.8573846E+02 8.8589920E+02  1.6074149E-01  4.3000602E-02  contract inside
+187         938        8.8573846E+02 8.8585047E+02  1.1201938E-01  2.4473223E-02  contract inside
+188         958        8.8573846E+02 8.8584595E+02  1.0749954E-01  2.4473223E-02  contract inside
+189         968        8.8573846E+02 8.8584506E+02  1.0660790E-01  2.4473223E-02  reflect-0
+190         988        8.8573846E+02 8.8583334E+02  9.4883245E-02  2.4473223E-02  contract inside
+191         100        8.8573846E+02 8.8582228E+02  8.3820279E-02  2.4473223E-02  contract inside
+192         102        8.8573846E+02 8.8581736E+02  7.8908850E-02  2.4473223E-02  contract inside
+193         103        8.8573846E+02 8.8580684E+02  6.8385685E-02  2.4473223E-02  reflect-0
+194         104        8.8573846E+02 8.8580460E+02  6.6144753E-02  2.4473223E-02  reflect-0
+195         106        8.8573846E+02 8.8579777E+02  5.9317134E-02  2.4473223E-02  contract outside
+196         108        8.8573846E+02 8.8579706E+02  5.8604434E-02  2.4473223E-02  contract inside
+197         110        8.8573846E+02 8.8579553E+02  5.7078331E-02  2.4473223E-02  contract inside
+198         111        8.8573846E+02 8.8579519E+02  5.6735019E-02  2.4473223E-02  reflect-0
+199         112        8.8573846E+02 8.8579361E+02  5.5153659E-02  2.4473223E-02  reflect-0
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+200         114        8.8573846E+02 8.8579294E+02  5.4488980E-02  2.4473223E-02  contract inside
+201         116        8.8573846E+02 8.8579151E+02  5.3059048E-02  2.4473223E-02  contract inside
+202         117        8.8573846E+02 8.8579020E+02  5.1747121E-02  1.1985113E-02  reflect-0
+203         119        8.8573846E+02 8.8578943E+02  5.0971619E-02  1.1985113E-02  contract inside
+204         121        8.8573846E+02 8.8577859E+02  4.0139496E-02  1.1985113E-02  contract outside
+205         123        8.8573846E+02 8.8577774E+02  3.9282759E-02  1.1985113E-02  contract inside
+206         124        8.8573846E+02 8.8577318E+02  3.4727349E-02  1.1985113E-02  reflect-0
+207         126        8.8573846E+02 8.8577117E+02  3.2712826E-02  1.3576228E-02  contract outside
+208         128        8.8573846E+02 8.8577011E+02  3.1655004E-02  1.3576228E-02  contract inside
+209         130        8.8573846E+02 8.8576714E+02  2.8681293E-02  1.3576228E-02  contract inside
+210         132        8.8573846E+02 8.8576675E+02  2.8294035E-02  1.3576228E-02  contract inside
+211         133        8.8573846E+02 8.8576369E+02  2.5231121E-02  1.3576228E-02  reflect-0
+212         135        8.8573846E+02 8.8576178E+02  2.3322738E-02  1.3576228E-02  contract inside
+213         136        8.8573846E+02 8.8576165E+02  2.3195719E-02  1.3576228E-02  reflect-0
+214         138        8.8573846E+02 8.8576144E+02  2.2983558E-02  1.3576228E-02  contract inside
+215         140        8.8573846E+02 8.8576123E+02  2.2776932E-02  1.3576228E-02  contract inside
+216         141        8.8573846E+02 8.8575774E+02  1.9287898E-02  1.3576228E-02  reflect-0
+217         142        8.8573846E+02 8.8575565E+02  1.7190200E-02  1.3576228E-02  reflect-0
+218         144        8.8573846E+02 8.8575560E+02  1.7149612E-02  1.3576228E-02  contract inside
+219         146        8.8573846E+02 8.8575558E+02  1.7122318E-02  1.3576228E-02  contract inside
+220         147        8.8573846E+02 8.8575400E+02  1.5542660E-02  1.3576228E-02  reflect-0
+221         148        8.8573846E+02 8.8575306E+02  1.4603634E-02  1.3576228E-02  reflect-0
+222         149        8.8573846E+02 8.8575285E+02  1.4395591E-02  1.3576228E-02  reflect-0
+223         151        8.8573846E+02 8.8575211E+02  1.3655511E-02  1.3576228E-02  contract inside
+224         153        8.8573846E+02 8.8575084E+02  1.2385383E-02  1.3576228E-02  contract inside
+225         154        8.8573846E+02 8.8575021E+02  1.1758125E-02  7.9284460E-03  reflect-0
+226         155        8.8573846E+02 8.8575018E+02  1.1726214E-02  7.9284460E-03  reflect-0
+227         156        8.8573846E+02 8.8574917E+02  1.0718651E-02  7.9284460E-03  reflect-0
+228         158        8.8573846E+02 8.8574786E+02  9.4037138E-03  8.4783201E-03  contract outside
+229         159        8.8573846E+02 8.8574781E+02  9.3543846E-03  8.4783201E-03  reflect-0
+230         160        8.8573846E+02 8.8574753E+02  9.0796942E-03  8.4783201E-03  reflect-0
+231         161        8.8573846E+02 8.8574737E+02  8.9144345E-03  8.4783201E-03  reflect-0
+232         162        8.8573846E+02 8.8574729E+02  8.8358345E-03  8.4783201E-03  reflect-0
+233         164        8.8573846E+02 8.8574713E+02  8.6754665E-03  8.4783201E-03  contract inside
+234         166        8.8573846E+02 8.8574694E+02  8.4858225E-03  8.4783201E-03  contract outside
+235         168        8.8573846E+02 8.8574694E+02  8.4807286E-03  8.4783201E-03  contract inside
+236         169        8.8573846E+02 8.8574630E+02  7.8439424E-03  8.4783201E-03  reflect-0
+237         170        8.8573846E+02 8.8574541E+02  6.9548682E-03  8.4783201E-03  reflect-0
+238         171        8.8573846E+02 8.8574503E+02  6.5705595E-03  8.4783201E-03  reflect-0
+239         172        8.8573846E+02 8.8574472E+02  6.2650829E-03  8.4783201E-03  reflect-0
+240         174        8.8573846E+02 8.8574444E+02  5.9857270E-03  8.4783201E-03  contract outside
+241         176        8.8573846E+02 8.8574433E+02  5.8735483E-03  8.4783201E-03  contract inside
+242         178        8.8573846E+02 8.8574426E+02  5.8039710E-03  8.4783201E-03  contract inside
+243         180        8.8573846E+02 8.8574382E+02  5.3684273E-03  8.4783201E-03  contract inside
+244         181        8.8573846E+02 8.8574377E+02  5.3153343E-03  8.4783201E-03  reflect-0
+245         183        8.8573846E+02 8.8574294E+02  4.4828459E-03  8.4783201E-03  contract inside
+246         185        8.8573846E+02 8.8574273E+02  4.2733826E-03  8.4783201E-03  contract inside
+247         187        8.8573846E+02 8.8574263E+02  4.1792442E-03  8.4783201E-03  contract inside
+248         188        8.8573846E+02 8.8574243E+02  3.9746533E-03  6.2345587E-03  reflect-0
+249         190        8.8573846E+02 8.8574237E+02  3.9143673E-03  5.2802460E-03  contract inside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+250         192        8.8573846E+02 8.8574227E+02  3.8191410E-03  5.2802460E-03  contract inside
+251         194        8.8573846E+02 8.8574162E+02  3.1665514E-03  5.2802460E-03  contract inside
+252         196        8.8573846E+02 8.8574160E+02  3.1408332E-03  4.8518182E-03  contract inside
+253         197        8.8573846E+02 8.8574140E+02  2.9404167E-03  4.5694994E-03  reflect-0
+254         198        8.8573846E+02 8.8574130E+02  2.8410783E-03  4.5694994E-03  reflect-0
+255         200        8.8573846E+02 8.8574047E+02  2.0185349E-03  4.5694994E-03  contract outside
+256         201        8.8573846E+02 8.8574046E+02  2.0049661E-03  4.4768774E-03  reflect-0
+257         203        8.8573846E+02 8.8574036E+02  1.9008125E-03  4.4768774E-03  contract inside
+258         204        8.8573846E+02 8.8574034E+02  1.8812329E-03  4.4768774E-03  reflect-0
+259         205        8.8573846E+02 8.8574031E+02  1.8519145E-03  4.5048919E-03  reflect-0
+260         207        8.8573846E+02 8.8574026E+02  1.8087019E-03  4.5048919E-03  contract inside
+261         209        8.8573846E+02 8.8574022E+02  1.7692445E-03  4.5048919E-03  contract inside
+262         210        8.8573846E+02 8.8574021E+02  1.7577830E-03  4.5048919E-03  reflect-0
+263         211        8.8573846E+02 8.8574019E+02  1.7312309E-03  4.4768774E-03  reflect-0
+264         213        8.8573846E+02 8.8574012E+02  1.6685052E-03  4.4768774E-03  contract inside
+265         214        8.8573846E+02 8.8574009E+02  1.6370496E-03  4.4768774E-03  reflect-0
+266         216        8.8573846E+02 8.8574000E+02  1.5480216E-03  4.4768774E-03  contract inside
+267         218        8.8573846E+02 8.8573990E+02  1.4451116E-03  4.4768774E-03  contract inside
+268         220        8.8573846E+02 8.8573984E+02  1.3862574E-03  4.4768774E-03  contract inside
+269         222        8.8573846E+02 8.8573980E+02  1.3416922E-03  4.4768774E-03  contract inside
+270         223        8.8573846E+02 8.8573970E+02  1.2486077E-03  4.4768774E-03  reflect-0
+271         225        8.8573846E+02 8.8573966E+02  1.2016086E-03  4.4768774E-03  contract inside
+272         226        8.8573846E+02 8.8573955E+02  1.0911693E-03  4.4768774E-03  reflect-0
+273         228        8.8573846E+02 8.8573946E+02  1.0027939E-03  3.9447466E-03  contract inside
+274         229        8.8573846E+02 8.8573942E+02  9.6912010E-04  3.9447466E-03  reflect-0
+275         230        8.8573846E+02 8.8573942E+02  9.6590342E-04  3.9447466E-03  reflect-0
+276         232        8.8573846E+02 8.8573940E+02  9.4855278E-04  3.9447466E-03  contract outside
+277         234        8.8573846E+02 8.8573923E+02  7.7345680E-04  3.9447466E-03  contract inside
+278         235        8.8573846E+02 8.8573917E+02  7.1232837E-04  3.9447466E-03  reflect-0
+279         236        8.8573846E+02 8.8573916E+02  7.0788563E-04  3.9447466E-03  reflect-0
+280         237        8.8573846E+02 8.8573913E+02  6.7254944E-04  3.9447466E-03  reflect-0
+281         238        8.8573846E+02 8.8573911E+02  6.5657389E-04  3.9447466E-03  reflect-0
+282         240        8.8573846E+02 8.8573908E+02  6.2422699E-04  3.9447466E-03  contract inside
+283         242        8.8573846E+02 8.8573907E+02  6.1518640E-04  3.9447466E-03  contract inside
+284         244        8.8573846E+02 8.8573904E+02  5.8931883E-04  3.9447466E-03  contract inside
+
+NO SIGNIFICANT IMPROVEMENT AFTER 141 ITERATIONS!
+
+(Re)Start with a lager simplex based on the best current values for the control variables.
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+
+MAXIMUM NUMBER OF SIMPLEX REINITIALIZATION EXCEEDED (1)!
+
+(Re)Start with a lager simplex based on the best current values for the control variables.
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+287         164        8.8573846E+02 9.5232268E+02  6.6584220E+01  1.4568033E-01  contract inside
+288         184        8.8573846E+02 9.0276099E+02  1.7022538E+01  8.9104522E-02  contract outside
+289         204        8.8573846E+02 8.9973290E+02  1.3994441E+01  8.9104522E-02  contract outside
+290         224        8.8573846E+02 8.9116068E+02  5.4222207E+00  8.9104522E-02  contract inside
+291         234        8.8573846E+02 8.9115544E+02  5.4169844E+00  8.9104522E-02  reflect-0
+292         254        8.8573846E+02 8.8993705E+02  4.1985968E+00  8.9104522E-02  contract outside
+293         274        8.8573846E+02 8.8957450E+02  3.8360404E+00  8.9104522E-02  contract inside
+294         294        8.8573846E+02 8.8891190E+02  3.1734453E+00  8.9104522E-02  contract inside
+295         314        8.8573846E+02 8.8889276E+02  3.1543053E+00  8.9104522E-02  contract inside
+296         324        8.8573846E+02 8.8879627E+02  3.0578120E+00  8.9104522E-02  reflect-0
+297         344        8.8573846E+02 8.8853796E+02  2.7995007E+00  8.9104522E-02  contract outside
+298         364        8.8573846E+02 8.8736157E+02  1.6231173E+00  8.9104522E-02  contract inside
+299         384        8.8573846E+02 8.8703304E+02  1.2945834E+00  8.9104522E-02  contract outside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+300         404        8.8573846E+02 8.8688316E+02  1.1447045E+00  8.9104522E-02  contract inside
+301         424        8.8573846E+02 8.8669425E+02  9.5579007E-01  8.9104522E-02  contract inside
+302         444        8.8573846E+02 8.8655408E+02  8.1562601E-01  8.9104522E-02  contract inside
+303         464        8.8573846E+02 8.8650918E+02  7.7072087E-01  8.9104522E-02  contract inside
+304         474        8.8573846E+02 8.8650574E+02  7.6728418E-01  8.9104522E-02  reflect-0
+305         494        8.8573846E+02 8.8650451E+02  7.6605004E-01  8.9104522E-02  contract inside
+306         514        8.8573846E+02 8.8650176E+02  7.6330773E-01  8.9104522E-02  contract inside
+307         534        8.8573846E+02 8.8649650E+02  7.5804146E-01  8.9104522E-02  contract inside
+308         554        8.8573846E+02 8.8647324E+02  7.3478733E-01  8.9104522E-02  contract inside
+309         574        8.8573846E+02 8.8645083E+02  7.1237440E-01  8.9104522E-02  contract inside
+310         594        8.8573846E+02 8.8641255E+02  6.7409895E-01  4.8348788E-02  contract inside
+311         614        8.8573846E+02 8.8631674E+02  5.7828884E-01  4.8348788E-02  contract inside
+312         634        8.8573846E+02 8.8612257E+02  3.8411822E-01  4.8348788E-02  contract outside
+313         654        8.8573846E+02 8.8605595E+02  3.1749483E-01  4.8348788E-02  contract inside
+314         674        8.8573846E+02 8.8603548E+02  2.9702583E-01  4.8348788E-02  contract inside
+315         694        8.8573846E+02 8.8598996E+02  2.5150874E-01  4.8348788E-02  contract inside
+316         714        8.8573846E+02 8.8597609E+02  2.3763660E-01  4.8348788E-02  contract inside
+317         724        8.8573846E+02 8.8596444E+02  2.2598109E-01  4.8348788E-02  reflect-0
+318         734        8.8573846E+02 8.8596007E+02  2.2161445E-01  4.8348788E-02  reflect-0
+319         744        8.8573846E+02 8.8594809E+02  2.0963938E-01  4.8348788E-02  reflect-0
+320         764        8.8573846E+02 8.8594792E+02  2.0946109E-01  4.8348788E-02  contract inside
+321         774        8.8573846E+02 8.8594657E+02  2.0811957E-01  3.0983924E-02  reflect-0
+322         794        8.8573846E+02 8.8594242E+02  2.0396097E-01  3.0983924E-02  contract outside
+323         814        8.8573846E+02 8.8593361E+02  1.9515485E-01  3.0983924E-02  contract inside
+324         824        8.8573846E+02 8.8593121E+02  1.9275298E-01  3.0983924E-02  reflect-0
+325         844        8.8573846E+02 8.8592402E+02  1.8556833E-01  3.0983924E-02  contract inside
+326         864        8.8573846E+02 8.8591894E+02  1.8048160E-01  3.0983924E-02  contract inside
+327         884        8.8573846E+02 8.8591233E+02  1.7387646E-01  3.0983924E-02  contract inside
+328         894        8.8573846E+02 8.8589959E+02  1.6113827E-01  4.3000602E-02  reflect-0
+329         914        8.8573846E+02 8.8589920E+02  1.6074149E-01  4.3000602E-02  contract inside
+330         934        8.8573846E+02 8.8585047E+02  1.1201938E-01  2.4473223E-02  contract inside
+331         954        8.8573846E+02 8.8584595E+02  1.0749954E-01  2.4473223E-02  contract inside
+332         964        8.8573846E+02 8.8584506E+02  1.0660790E-01  2.4473223E-02  reflect-0
+333         984        8.8573846E+02 8.8583334E+02  9.4883245E-02  2.4473223E-02  contract inside
+334         100        8.8573846E+02 8.8582228E+02  8.3820279E-02  2.4473223E-02  contract inside
+335         102        8.8573846E+02 8.8581736E+02  7.8908850E-02  2.4473223E-02  contract inside
+336         103        8.8573846E+02 8.8580684E+02  6.8385685E-02  2.4473223E-02  reflect-0
+337         104        8.8573846E+02 8.8580460E+02  6.6144753E-02  2.4473223E-02  reflect-0
+338         106        8.8573846E+02 8.8579777E+02  5.9317134E-02  2.4473223E-02  contract outside
+339         108        8.8573846E+02 8.8579706E+02  5.8604434E-02  2.4473223E-02  contract inside
+340         110        8.8573846E+02 8.8579553E+02  5.7078331E-02  2.4473223E-02  contract inside
+341         111        8.8573846E+02 8.8579519E+02  5.6735019E-02  2.4473223E-02  reflect-0
+342         112        8.8573846E+02 8.8579361E+02  5.5153659E-02  2.4473223E-02  reflect-0
+343         114        8.8573846E+02 8.8579294E+02  5.4488980E-02  2.4473223E-02  contract inside
+344         116        8.8573846E+02 8.8579151E+02  5.3059048E-02  2.4473223E-02  contract inside
+345         117        8.8573846E+02 8.8579020E+02  5.1747121E-02  1.1985113E-02  reflect-0
+346         119        8.8573846E+02 8.8578943E+02  5.0971619E-02  1.1985113E-02  contract inside
+347         121        8.8573846E+02 8.8577859E+02  4.0139496E-02  1.1985113E-02  contract outside
+348         123        8.8573846E+02 8.8577774E+02  3.9282759E-02  1.1985113E-02  contract inside
+349         124        8.8573846E+02 8.8577318E+02  3.4727349E-02  1.1985113E-02  reflect-0
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+350         126        8.8573846E+02 8.8577117E+02  3.2712826E-02  1.3576228E-02  contract outside
+351         128        8.8573846E+02 8.8577011E+02  3.1655004E-02  1.3576228E-02  contract inside
+352         130        8.8573846E+02 8.8576714E+02  2.8681293E-02  1.3576228E-02  contract inside
+353         132        8.8573846E+02 8.8576675E+02  2.8294035E-02  1.3576228E-02  contract inside
+354         133        8.8573846E+02 8.8576369E+02  2.5231121E-02  1.3576228E-02  reflect-0
+355         135        8.8573846E+02 8.8576178E+02  2.3322738E-02  1.3576228E-02  contract inside
+356         136        8.8573846E+02 8.8576165E+02  2.3195719E-02  1.3576228E-02  reflect-0
+357         138        8.8573846E+02 8.8576144E+02  2.2983558E-02  1.3576228E-02  contract inside
+358         140        8.8573846E+02 8.8576123E+02  2.2776932E-02  1.3576228E-02  contract inside
+359         141        8.8573846E+02 8.8575774E+02  1.9287898E-02  1.3576228E-02  reflect-0
+360         142        8.8573846E+02 8.8575565E+02  1.7190200E-02  1.3576228E-02  reflect-0
+361         144        8.8573846E+02 8.8575560E+02  1.7149612E-02  1.3576228E-02  contract inside
+362         146        8.8573846E+02 8.8575558E+02  1.7122318E-02  1.3576228E-02  contract inside
+363         147        8.8573846E+02 8.8575400E+02  1.5542660E-02  1.3576228E-02  reflect-0
+364         148        8.8573846E+02 8.8575306E+02  1.4603634E-02  1.3576228E-02  reflect-0
+365         149        8.8573846E+02 8.8575285E+02  1.4395591E-02  1.3576228E-02  reflect-0
+366         151        8.8573846E+02 8.8575211E+02  1.3655511E-02  1.3576228E-02  contract inside
+367         153        8.8573846E+02 8.8575084E+02  1.2385383E-02  1.3576228E-02  contract inside
+368         154        8.8573846E+02 8.8575021E+02  1.1758125E-02  7.9284460E-03  reflect-0
+369         155        8.8573846E+02 8.8575018E+02  1.1726214E-02  7.9284460E-03  reflect-0
+370         156        8.8573846E+02 8.8574917E+02  1.0718651E-02  7.9284460E-03  reflect-0
+371         158        8.8573846E+02 8.8574786E+02  9.4037138E-03  8.4783201E-03  contract outside
+372         159        8.8573846E+02 8.8574781E+02  9.3543846E-03  8.4783201E-03  reflect-0
+373         160        8.8573846E+02 8.8574753E+02  9.0796942E-03  8.4783201E-03  reflect-0
+374         161        8.8573846E+02 8.8574737E+02  8.9144345E-03  8.4783201E-03  reflect-0
+375         162        8.8573846E+02 8.8574729E+02  8.8358345E-03  8.4783201E-03  reflect-0
+376         164        8.8573846E+02 8.8574713E+02  8.6754665E-03  8.4783201E-03  contract inside
+377         166        8.8573846E+02 8.8574694E+02  8.4858225E-03  8.4783201E-03  contract outside
+378         168        8.8573846E+02 8.8574694E+02  8.4807286E-03  8.4783201E-03  contract inside
+379         169        8.8573846E+02 8.8574630E+02  7.8439424E-03  8.4783201E-03  reflect-0
+380         170        8.8573846E+02 8.8574541E+02  6.9548682E-03  8.4783201E-03  reflect-0
+381         171        8.8573846E+02 8.8574503E+02  6.5705595E-03  8.4783201E-03  reflect-0
+382         172        8.8573846E+02 8.8574472E+02  6.2650829E-03  8.4783201E-03  reflect-0
+383         174        8.8573846E+02 8.8574444E+02  5.9857270E-03  8.4783201E-03  contract outside
+384         176        8.8573846E+02 8.8574433E+02  5.8735483E-03  8.4783201E-03  contract inside
+385         178        8.8573846E+02 8.8574426E+02  5.8039710E-03  8.4783201E-03  contract inside
+386         180        8.8573846E+02 8.8574382E+02  5.3684273E-03  8.4783201E-03  contract inside
+387         181        8.8573846E+02 8.8574377E+02  5.3153343E-03  8.4783201E-03  reflect-0
+388         183        8.8573846E+02 8.8574294E+02  4.4828459E-03  8.4783201E-03  contract inside
+389         185        8.8573846E+02 8.8574273E+02  4.2733826E-03  8.4783201E-03  contract inside
+390         187        8.8573846E+02 8.8574263E+02  4.1792442E-03  8.4783201E-03  contract inside
+391         188        8.8573846E+02 8.8574243E+02  3.9746533E-03  6.2345587E-03  reflect-0
+392         190        8.8573846E+02 8.8574237E+02  3.9143673E-03  5.2802460E-03  contract inside
+393         192        8.8573846E+02 8.8574227E+02  3.8191410E-03  5.2802460E-03  contract inside
+394         194        8.8573846E+02 8.8574162E+02  3.1665514E-03  5.2802460E-03  contract inside
+395         196        8.8573846E+02 8.8574160E+02  3.1408332E-03  4.8518182E-03  contract inside
+396         197        8.8573846E+02 8.8574140E+02  2.9404167E-03  4.5694994E-03  reflect-0
+397         198        8.8573846E+02 8.8574130E+02  2.8410783E-03  4.5694994E-03  reflect-0
+398         200        8.8573846E+02 8.8574047E+02  2.0185349E-03  4.5694994E-03  contract outside
+399         201        8.8573846E+02 8.8574046E+02  2.0049661E-03  4.4768774E-03  reflect-0
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+400         203        8.8573846E+02 8.8574036E+02  1.9008125E-03  4.4768774E-03  contract inside
+401         204        8.8573846E+02 8.8574034E+02  1.8812329E-03  4.4768774E-03  reflect-0
+402         205        8.8573846E+02 8.8574031E+02  1.8519145E-03  4.5048919E-03  reflect-0
+403         207        8.8573846E+02 8.8574026E+02  1.8087019E-03  4.5048919E-03  contract inside
+404         209        8.8573846E+02 8.8574022E+02  1.7692445E-03  4.5048919E-03  contract inside
+405         210        8.8573846E+02 8.8574021E+02  1.7577830E-03  4.5048919E-03  reflect-0
+406         211        8.8573846E+02 8.8574019E+02  1.7312309E-03  4.4768774E-03  reflect-0
+407         213        8.8573846E+02 8.8574012E+02  1.6685052E-03  4.4768774E-03  contract inside
+408         214        8.8573846E+02 8.8574009E+02  1.6370496E-03  4.4768774E-03  reflect-0
+409         216        8.8573846E+02 8.8574000E+02  1.5480216E-03  4.4768774E-03  contract inside
+410         218        8.8573846E+02 8.8573990E+02  1.4451116E-03  4.4768774E-03  contract inside
+411         220        8.8573846E+02 8.8573984E+02  1.3862574E-03  4.4768774E-03  contract inside
+412         222        8.8573846E+02 8.8573980E+02  1.3416922E-03  4.4768774E-03  contract inside
+413         223        8.8573846E+02 8.8573970E+02  1.2486077E-03  4.4768774E-03  reflect-0
+414         225        8.8573846E+02 8.8573966E+02  1.2016086E-03  4.4768774E-03  contract inside
+415         226        8.8573846E+02 8.8573955E+02  1.0911693E-03  4.4768774E-03  reflect-0
+416         228        8.8573846E+02 8.8573946E+02  1.0027939E-03  3.9447466E-03  contract inside
+417         229        8.8573846E+02 8.8573942E+02  9.6912010E-04  3.9447466E-03  reflect-0
+418         230        8.8573846E+02 8.8573942E+02  9.6590342E-04  3.9447466E-03  reflect-0
+419         232        8.8573846E+02 8.8573940E+02  9.4855278E-04  3.9447466E-03  contract outside
+420         234        8.8573846E+02 8.8573923E+02  7.7345680E-04  3.9447466E-03  contract inside
+421         235        8.8573846E+02 8.8573917E+02  7.1232837E-04  3.9447466E-03  reflect-0
+422         236        8.8573846E+02 8.8573916E+02  7.0788563E-04  3.9447466E-03  reflect-0
+423         237        8.8573846E+02 8.8573913E+02  6.7254944E-04  3.9447466E-03  reflect-0
+424         238        8.8573846E+02 8.8573911E+02  6.5657389E-04  3.9447466E-03  reflect-0
+425         240        8.8573846E+02 8.8573908E+02  6.2422699E-04  3.9447466E-03  contract inside
+426         242        8.8573846E+02 8.8573907E+02  6.1518640E-04  3.9447466E-03  contract inside
+427         244        8.8573846E+02 8.8573904E+02  5.8931883E-04  3.9447466E-03  contract inside
+
+NO SIGNIFICANT IMPROVEMENT AFTER 141 ITERATIONS!
+
+(Re)Start with a lager simplex based on the best current values for the control variables.
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+
+MAXIMUM NUMBER OF SIMPLEX REINITIALIZATION EXCEEDED (1)!
+
+429         260        8.8573846E+02 9.4612983E+02  6.0391377E+01  1.3874317E-01  contract inside
+430         262        8.8573846E+02 9.0120412E+02  1.5465670E+01  8.4861450E-02  contract outside
+431         264        8.8573846E+02 8.9853134E+02  1.2792884E+01  8.4861450E-02  contract outside
+432         266        8.8573846E+02 8.9065183E+02  4.9133717E+00  8.4861450E-02  contract inside
+433         267        8.8573846E+02 8.9061645E+02  4.8779954E+00  8.4861450E-02  reflect-0
+434         268        8.8573846E+02 8.9013446E+02  4.3960014E+00  8.4861450E-02  reflect-0
+435         269        8.8573846E+02 8.8992751E+02  4.1890501E+00  8.4861450E-02  reflect-0
+436         271        8.8573846E+02 8.8955666E+02  3.8182082E+00  8.4861450E-02  contract inside
+437         273        8.8573846E+02 8.8950845E+02  3.7699942E+00  8.4861450E-02  contract inside
+438         275        8.8573846E+02 8.8861685E+02  2.8783956E+00  8.4861450E-02  contract inside
+439         277        8.8573846E+02 8.8858663E+02  2.8481737E+00  8.4861450E-02  contract inside
+440         278        8.8573846E+02 8.8851126E+02  2.7728010E+00  8.4861450E-02  reflect-0
+441         280        8.8573846E+02 8.8825045E+02  2.5119980E+00  8.4861450E-02  contract inside
+442         282        8.8573846E+02 8.8691267E+02  1.1742114E+00  8.4861450E-02  contract inside
+443         284        8.8573846E+02 8.8690092E+02  1.1624674E+00  8.4861450E-02  contract inside
+444         286        8.8573846E+02 8.8670192E+02  9.6346417E-01  8.4861450E-02  contract inside
+445         288        8.8573846E+02 8.8658514E+02  8.4668840E-01  8.4861450E-02  contract inside
+446         290        8.8573846E+02 8.8647825E+02  7.3979665E-01  8.4861450E-02  contract inside
+447         292        8.8573846E+02 8.8645208E+02  7.1362067E-01  8.4861450E-02  contract inside
+448         294        8.8573846E+02 8.8645207E+02  7.1361528E-01  8.4861450E-02  contract inside
+449         296        8.8573846E+02 8.8643716E+02  6.9870432E-01  8.4861450E-02  contract inside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+450         298        8.8573846E+02 8.8643604E+02  6.9758391E-01  8.4861450E-02  contract inside
+451         300        8.8573846E+02 8.8643354E+02  6.9508636E-01  8.4861450E-02  contract inside
+452         302        8.8573846E+02 8.8640583E+02  6.6737645E-01  8.4861450E-02  contract inside
+453         304        8.8573846E+02 8.8640479E+02  6.6633851E-01  8.4861450E-02  contract inside
+454         305        8.8573846E+02 8.8638753E+02  6.4907713E-01  8.4861450E-02  reflect-0
+455         307        8.8573846E+02 8.8633665E+02  5.9819250E-01  4.5503226E-02  contract inside
+456         309        8.8573846E+02 8.8608724E+02  3.4878561E-01  4.5503226E-02  contract inside
+457         310        8.8573846E+02 8.8602318E+02  2.8472418E-01  4.5503226E-02  reflect-0
+458         312        8.8573846E+02 8.8599906E+02  2.6060257E-01  4.5503226E-02  contract inside
+459         313        8.8573846E+02 8.8596929E+02  2.3083041E-01  4.5503226E-02  reflect-0
+460         315        8.8573846E+02 8.8594964E+02  2.1118380E-01  4.5503226E-02  contract inside
+461         316        8.8573846E+02 8.8594902E+02  2.1056832E-01  4.5503226E-02  reflect-0
+462         317        8.8573846E+02 8.8594614E+02  2.0768182E-01  4.5503226E-02  reflect-0
+463         319        8.8573846E+02 8.8594027E+02  2.0181350E-01  4.5503226E-02  contract inside
+464         320        8.8573846E+02 8.8593935E+02  2.0089281E-01  4.5503226E-02  reflect-0
+465         322        8.8573846E+02 8.8593755E+02  1.9909674E-01  4.5503226E-02  contract inside
+466         324        8.8573846E+02 8.8593734E+02  1.9888681E-01  4.5503226E-02  contract inside
+467         325        8.8573846E+02 8.8592682E+02  1.8836143E-01  4.5503226E-02  reflect-0
+468         327        8.8573846E+02 8.8592656E+02  1.8810579E-01  4.5503226E-02  contract inside
+469         329        8.8573846E+02 8.8591966E+02  1.8120856E-01  4.5503226E-02  contract inside
+470         331        8.8573846E+02 8.8590536E+02  1.6690246E-01  4.5503226E-02  contract outside
+471         333        8.8573846E+02 8.8589878E+02  1.6032142E-01  4.5503226E-02  contract inside
+472         335        8.8573846E+02 8.8589590E+02  1.5744273E-01  4.5503226E-02  contract inside
+473         336        8.8573846E+02 8.8589568E+02  1.5722194E-01  4.5503226E-02  reflect-0
+474         338        8.8573846E+02 8.8589482E+02  1.5636846E-01  2.6663541E-02  contract inside
+475         340        8.8573846E+02 8.8585662E+02  1.1816954E-01  2.6663541E-02  contract inside
+476         342        8.8573846E+02 8.8582457E+02  8.6114095E-02  2.6663541E-02  contract inside
+477         344        8.8573846E+02 8.8580923E+02  7.0777872E-02  2.6663541E-02  contract outside
+478         346        8.8573846E+02 8.8579512E+02  5.6662515E-02  2.6663541E-02  contract inside
+479         347        8.8573846E+02 8.8579316E+02  5.4709016E-02  2.6663541E-02  reflect-0
+480         349        8.8573846E+02 8.8579221E+02  5.3750266E-02  2.6663541E-02  contract inside
+481         350        8.8573846E+02 8.8579150E+02  5.3044002E-02  2.6663541E-02  reflect-0
+482         352        8.8573846E+02 8.8579109E+02  5.2631045E-02  2.6663541E-02  contract inside
+483         354        8.8573846E+02 8.8579067E+02  5.2214161E-02  2.6663541E-02  contract inside
+484         355        8.8573846E+02 8.8579064E+02  5.2183754E-02  2.6663541E-02  reflect-0
+485         356        8.8573846E+02 8.8578875E+02  5.0290294E-02  2.6663541E-02  reflect-0
+486         358        8.8573846E+02 8.8578856E+02  5.0102761E-02  2.6663541E-02  contract inside
+487         360        8.8573846E+02 8.8578732E+02  4.8864092E-02  2.6663541E-02  contract inside
+488         362        8.8573846E+02 8.8578328E+02  4.4820725E-02  2.6663541E-02  contract outside
+489         364        8.8573846E+02 8.8578283E+02  4.4372099E-02  2.6663541E-02  contract inside
+490         366        8.8573846E+02 8.8578253E+02  4.4075906E-02  2.6663541E-02  contract inside
+491         367        8.8573846E+02 8.8578197E+02  4.3511318E-02  2.6663541E-02  reflect-0
+492         368        8.8573846E+02 8.8578154E+02  4.3089928E-02  2.6663541E-02  reflect-0
+493         369        8.8573846E+02 8.8577563E+02  3.7171072E-02  1.5230062E-02  reflect-0
+494         371        8.8573846E+02 8.8577269E+02  3.4230848E-02  1.5230062E-02  contract inside
+495         373        8.8573846E+02 8.8577041E+02  3.1951091E-02  1.5230062E-02  contract inside
+496         375        8.8573846E+02 8.8577018E+02  3.1727254E-02  1.5230062E-02  contract inside
+497         377        8.8573846E+02 8.8576625E+02  2.7795672E-02  1.4693107E-02  contract inside
+498         379        8.8573846E+02 8.8576145E+02  2.2999622E-02  1.3731275E-02  contract inside
+499         381        8.8573846E+02 8.8575676E+02  1.8301367E-02  1.3731275E-02  contract inside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+500         382        8.8573846E+02 8.8575578E+02  1.7329388E-02  1.3731275E-02  reflect-0
+501         384        8.8573846E+02 8.8575516E+02  1.6704358E-02  1.3731275E-02  contract inside
+502         385        8.8573846E+02 8.8575484E+02  1.6381617E-02  1.3731275E-02  reflect-0
+503         386        8.8573846E+02 8.8575425E+02  1.5797139E-02  1.2385814E-02  reflect-0
+504         387        8.8573846E+02 8.8575396E+02  1.5509977E-02  1.2385814E-02  reflect-0
+505         389        8.8573846E+02 8.8575385E+02  1.5391561E-02  1.2385814E-02  contract inside
+506         391        8.8573846E+02 8.8575366E+02  1.5205985E-02  1.2385814E-02  contract inside
+507         393        8.8573846E+02 8.8575301E+02  1.4557890E-02  1.2385814E-02  contract inside
+508         394        8.8573846E+02 8.8575195E+02  1.3492847E-02  1.2385814E-02  reflect-0
+509         395        8.8573846E+02 8.8575190E+02  1.3443151E-02  1.2385814E-02  reflect-0
+510         397        8.8573846E+02 8.8575142E+02  1.2961151E-02  1.2385814E-02  contract inside
+511         399        8.8573846E+02 8.8575103E+02  1.2573100E-02  1.2385814E-02  contract inside
+512         400        8.8573846E+02 8.8575023E+02  1.1779619E-02  1.2385814E-02  reflect-0
+513         401        8.8573846E+02 8.8574976E+02  1.1302793E-02  1.2385814E-02  reflect-0
+514         403        8.8573846E+02 8.8574976E+02  1.1302516E-02  1.2385814E-02  contract inside
+515         405        8.8573846E+02 8.8574885E+02  1.0397089E-02  1.2385814E-02  contract inside
+516         406        8.8573846E+02 8.8574875E+02  1.0293536E-02  1.2385814E-02  reflect-0
+517         407        8.8573846E+02 8.8574846E+02  1.0004258E-02  1.0340250E-02  reflect-0
+518         409        8.8573846E+02 8.8574831E+02  9.8571912E-03  1.0340250E-02  contract inside
+519         411        8.8573846E+02 8.8574818E+02  9.7206205E-03  1.0340250E-02  contract inside
+520         413        8.8573846E+02 8.8574767E+02  9.2155798E-03  1.0340250E-02  contract inside
+521         415        8.8573846E+02 8.8574765E+02  9.1968695E-03  1.0340250E-02  contract inside
+522         416        8.8573846E+02 8.8574573E+02  7.2795759E-03  1.0340250E-02  reflect-0
+523         417        8.8573846E+02 8.8574533E+02  6.8754611E-03  1.0217471E-02  reflect-0
+524         418        8.8573846E+02 8.8574524E+02  6.7853765E-03  1.0217471E-02  reflect-0
+525         419        8.8573846E+02 8.8574511E+02  6.6504833E-03  1.0217471E-02  reflect-0
+526         420        8.8573846E+02 8.8574457E+02  6.1139029E-03  9.3368535E-03  reflect-0
+527         421        8.8573846E+02 8.8574448E+02  6.0227651E-03  9.3368535E-03  reflect-0
+528         423        8.8573846E+02 8.8574412E+02  5.6686679E-03  9.3368535E-03  contract inside
+529         425        8.8573846E+02 8.8574378E+02  5.3204730E-03  9.3368535E-03  contract outside
+530         426        8.8573846E+02 8.8574375E+02  5.2971170E-03  7.9681286E-03  reflect-0
+531         428        8.8573846E+02 8.8574368E+02  5.2271336E-03  7.9681286E-03  contract inside
+532         429        8.8573846E+02 8.8574339E+02  4.9302928E-03  7.9681286E-03  reflect-0
+533         430        8.8573846E+02 8.8574325E+02  4.7989171E-03  7.9681286E-03  reflect-0
+534         431        8.8573846E+02 8.8574322E+02  4.7600429E-03  7.9681286E-03  reflect-0
+535         432        8.8573846E+02 8.8574320E+02  4.7420821E-03  7.9681286E-03  reflect-0
+536         434        8.8573846E+02 8.8574295E+02  4.4962563E-03  7.9681286E-03  contract inside
+537         435        8.8573846E+02 8.8574294E+02  4.4833924E-03  7.9681286E-03  reflect-0
+538         436        8.8573846E+02 8.8574286E+02  4.4051228E-03  7.9681286E-03  reflect-0
+539         437        8.8573846E+02 8.8574264E+02  4.1809760E-03  6.6487900E-03  reflect-0
+540         439        8.8573846E+02 8.8574230E+02  3.8411140E-03  6.6487900E-03  contract inside
+541         441        8.8573846E+02 8.8574222E+02  3.7603496E-03  6.6487900E-03  contract inside
+542         442        8.8573846E+02 8.8574216E+02  3.7066170E-03  6.6487900E-03  reflect-0
+543         444        8.8573846E+02 8.8574184E+02  3.3833663E-03  6.6487900E-03  contract inside
+544         445        8.8573846E+02 8.8574168E+02  3.2256473E-03  6.6487900E-03  reflect-0
+545         446        8.8573846E+02 8.8574149E+02  3.0361130E-03  6.6487900E-03  reflect-0
+546         447        8.8573846E+02 8.8574139E+02  2.9314533E-03  6.0580705E-03  reflect-0
+547         448        8.8573846E+02 8.8574123E+02  2.7775178E-03  5.7268523E-03  reflect-0
+548         449        8.8573846E+02 8.8574119E+02  2.7330043E-03  5.7268523E-03  reflect-0
+549         450        8.8573846E+02 8.8574108E+02  2.6234112E-03  5.7268523E-03  reflect-0
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+550         452        8.8573846E+02 8.8574076E+02  2.3066592E-03  5.5422305E-03  contract inside
+551         453        8.8573846E+02 8.8574076E+02  2.3012621E-03  5.5422305E-03  reflect-0
+552         455        8.8573846E+02 8.8574075E+02  2.2913991E-03  5.5422305E-03  contract inside
+553         456        8.8573846E+02 8.8574060E+02  2.1403589E-03  5.5422305E-03  reflect-0
+554         457        8.8573846E+02 8.8574048E+02  2.0220734E-03  5.5422305E-03  reflect-0
+555         459        8.8573846E+02 8.8574042E+02  1.9647579E-03  5.5422305E-03  contract inside
+556         461        8.8573846E+02 8.8574022E+02  1.7647359E-03  5.5422305E-03  contract inside
+557         462        8.8573846E+02 8.8574020E+02  1.7486962E-03  5.5422305E-03  reflect-0
+558         463        8.8573846E+02 8.8574017E+02  1.7111258E-03  5.5422305E-03  reflect-0
+559         464        8.8573846E+02 8.8574010E+02  1.6475412E-03  5.5422305E-03  reflect-0
+560         465        8.8573846E+02 8.8574007E+02  1.6189916E-03  5.5422305E-03  reflect-0
+561         467        8.8573846E+02 8.8574004E+02  1.5812094E-03  5.5422305E-03  contract inside
+562         468        8.8573846E+02 8.8573994E+02  1.4802300E-03  5.5422305E-03  reflect-0
+563         470        8.8573846E+02 8.8573986E+02  1.4093935E-03  5.5422305E-03  contract inside
+564         472        8.8573846E+02 8.8573986E+02  1.4080821E-03  5.5422305E-03  contract inside
+565         474        8.8573846E+02 8.8573977E+02  1.3171852E-03  5.5422305E-03  contract inside
+566         476        8.8573846E+02 8.8573972E+02  1.2670357E-03  5.5422305E-03  contract inside
+567         477        8.8573846E+02 8.8573972E+02  1.2605788E-03  5.5422305E-03  reflect-0
+568         479        8.8573846E+02 8.8573969E+02  1.2363901E-03  3.8205805E-03  contract inside
+569         481        8.8573846E+02 8.8573955E+02  1.0928398E-03  3.8205805E-03  contract inside
+570         483        8.8573846E+02 8.8573952E+02  1.0618847E-03  3.8205805E-03  contract inside
+571         484        8.8573846E+02 8.8573940E+02  9.4594959E-04  3.8105113E-03  reflect-0
+572         485        8.8573846E+02 8.8573940E+02  9.4453478E-04  3.8105113E-03  reflect-0
+573         487        8.8573846E+02 8.8573925E+02  7.9207260E-04  3.8105113E-03  contract inside
+574         488        8.8573846E+02 8.8573923E+02  7.7768600E-04  3.8105113E-03  reflect-0
+575         489        8.8573846E+02 8.8573912E+02  6.6439611E-04  3.8105113E-03  reflect-0
+576         491        8.8573846E+02 8.8573897E+02  5.1888616E-04  3.8105113E-03  contract outside
+577         492        8.8573846E+02 8.8573897E+02  5.1259898E-04  3.8105113E-03  reflect-0
+578         494        8.8573846E+02 8.8573896E+02  5.0099627E-04  3.8105113E-03  contract inside
+579         496        8.8573846E+02 8.8573895E+02  4.9273192E-04  3.8105113E-03  contract inside
+580         497        8.8573846E+02 8.8573895E+02  4.9220133E-04  3.8105113E-03  reflect-0
+581         498        8.8573846E+02 8.8573894E+02  4.8323251E-04  3.8105113E-03  reflect-0
+582         499        8.8573846E+02 8.8573890E+02  4.4912631E-04  3.8105113E-03  reflect-0
+583         501        8.8573846E+02 8.8573890E+02  4.4662027E-04  3.8105113E-03  contract inside
+584         503        8.8573846E+02 8.8573890E+02  4.4484398E-04  3.8105113E-03  contract inside
+585         504        8.8573846E+02 8.8573889E+02  4.3897342E-04  3.3196224E-03  reflect-0
+586         505        8.8573846E+02 8.8573888E+02  4.2648754E-04  3.3196224E-03  reflect-0
+587         507        8.8573846E+02 8.8573886E+02  4.0333320E-04  3.3196224E-03  contract inside
+588         509        8.8573846E+02 8.8573884E+02  3.8488106E-04  3.3196224E-03  contract inside
+589         511        8.8573846E+02 8.8573883E+02  3.7881896E-04  2.8770081E-03  contract inside
+590         513        8.8573846E+02 8.8573881E+02  3.5703748E-04  2.8770081E-03  contract inside
+591         515        8.8573846E+02 8.8573880E+02  3.4032028E-04  2.8770081E-03  contract inside
+592         516        8.8573846E+02 8.8573878E+02  3.2573978E-04  2.4084157E-03  reflect-0
+593         517        8.8573846E+02 8.8573876E+02  3.0496632E-04  2.4084157E-03  reflect-0
+594         518        8.8573846E+02 8.8573876E+02  3.0234565E-04  2.4084157E-03  reflect-0
+595         520        8.8573846E+02 8.8573873E+02  2.7904731E-04  2.4084157E-03  contract outside
+596         522        8.8573846E+02 8.8573873E+02  2.7268357E-04  2.4084157E-03  contract inside
+597         524        8.8573846E+02 8.8573869E+02  2.3949039E-04  2.4084157E-03  contract inside
+598         526        8.8573846E+02 8.8573867E+02  2.1784951E-04  2.4084157E-03  contract inside
+599         528        8.8573846E+02 8.8573863E+02  1.7369444E-04  2.4084157E-03  contract outside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+600         530        8.8573846E+02 8.8573861E+02  1.5948094E-04  2.4084157E-03  contract inside
+601         531        8.8573846E+02 8.8573861E+02  1.5696635E-04  2.2529012E-03  reflect-0
+602         533        8.8573846E+02 8.8573860E+02  1.4678410E-04  2.2529012E-03  contract outside
+603         535        8.8573846E+02 8.8573860E+02  1.4116932E-04  2.2529012E-03  contract inside
+604         536        8.8573846E+02 8.8573860E+02  1.3998963E-04  2.2529012E-03  reflect-0
+605         537        8.8573846E+02 8.8573859E+02  1.3960491E-04  2.2529012E-03  reflect-0
+606         538        8.8573846E+02 8.8573859E+02  1.3443440E-04  2.2529012E-03  reflect-0
+607         539        8.8573846E+02 8.8573859E+02  1.3332345E-04  2.2529012E-03  reflect-0
+608         540        8.8573846E+02 8.8573856E+02  1.0723587E-04  1.8413469E-03  reflect-0
+609         542        8.8573846E+02 8.8573856E+02  1.0707884E-04  1.5972245E-03  contract inside
+610         543        8.8573846E+02 8.8573856E+02  1.0434764E-04  1.5972245E-03  reflect-0
+611         545        8.8573846E+02 8.8573856E+02  1.0222042E-04  1.5972245E-03  contract inside
+612         547        8.8573846E+02 8.8573856E+02  1.0220663E-04  1.5972245E-03  contract inside
+613         549        8.8573846E+02 8.8573856E+02  1.0091730E-04  1.3071510E-03  contract inside
+614         551        8.8573846E+02 8.8573855E+02  9.6289087E-05  1.3071510E-03  contract inside
+615         553        8.8573846E+02 8.8573854E+02  8.8193456E-05  1.3071510E-03  contract outside
+616         555        8.8573846E+02 8.8573854E+02  8.2553046E-05  1.3071510E-03  contract outside
+617         556        8.8573846E+02 8.8573854E+02  8.0131672E-05  1.3071510E-03  reflect-0
+618         557        8.8573846E+02 8.8573853E+02  7.8454397E-05  1.3071510E-03  reflect-0
+619         558        8.8573846E+02 8.8573853E+02  7.0613085E-05  1.3071510E-03  reflect-0
+620         560        8.8573846E+02 8.8573852E+02  6.7664586E-05  1.3071510E-03  contract inside
+621         561        8.8573846E+02 8.8573852E+02  6.6783981E-05  1.3071510E-03  reflect-0
+622         562        8.8573846E+02 8.8573851E+02  5.0263296E-05  1.3071510E-03  reflect-0
+623         564        8.8573846E+02 8.8573850E+02  4.4382534E-05  1.3071510E-03  contract inside
+624         565        8.8573846E+02 8.8573850E+02  4.4223279E-05  1.3071510E-03  reflect-0
+625         566        8.8573846E+02 8.8573850E+02  4.3668979E-05  1.0426316E-03  reflect-0
+626         567        8.8573846E+02 8.8573850E+02  4.2577305E-05  1.0426316E-03  reflect-0
+627         568        8.8573846E+02 8.8573850E+02  4.2551708E-05  1.0426316E-03  reflect-0
+628         570        8.8573846E+02 8.8573850E+02  4.2278999E-05  1.0426316E-03  contract inside
+629         571        8.8573846E+02 8.8573850E+02  4.0481459E-05  1.0426316E-03  reflect-0
+630         572        8.8573846E+02 8.8573849E+02  3.9610818E-05  1.0426316E-03  reflect-0
+631         574        8.8573846E+02 8.8573849E+02  3.8973049E-05  8.7597161E-04  contract inside
+632         575        8.8573846E+02 8.8573849E+02  3.8813859E-05  7.2619941E-04  reflect-0
+633         577        8.8573846E+02 8.8573849E+02  3.7616799E-05  7.2619941E-04  contract inside
+634         578        8.8573846E+02 8.8573849E+02  3.3588939E-05  6.5982219E-04  reflect-0
+635         580        8.8573846E+02 8.8573849E+02  3.2864511E-05  6.5982219E-04  contract inside
+636         582        8.8573846E+02 8.8573849E+02  3.2814933E-05  6.5982219E-04  contract inside
+637         584        8.8573846E+02 8.8573849E+02  3.1891341E-05  6.5982219E-04  contract inside
+638         586        8.8573846E+02 8.8573849E+02  3.0528121E-05  6.5982219E-04  contract inside
+639         587        8.8573846E+02 8.8573848E+02  2.8744559E-05  6.5982219E-04  reflect-0
+640         589        8.8573846E+02 8.8573848E+02  2.8435994E-05  6.5982219E-04  contract inside
+641         590        8.8573846E+02 8.8573848E+02  2.4787335E-05  6.5982219E-04  reflect-0
+642         592        8.8573846E+02 8.8573848E+02  2.1001075E-05  6.5982219E-04  contract inside
+643         593        8.8573846E+02 8.8573847E+02  1.8830614E-05  6.2227665E-04  reflect-0
+644         594        8.8573846E+02 8.8573847E+02  1.8611669E-05  6.2227665E-04  reflect-0
+645         596        8.8573846E+02 8.8573847E+02  1.8116191E-05  6.2227665E-04  contract inside
+646         598        8.8573846E+02 8.8573847E+02  1.4452003E-05  6.2227665E-04  contract inside
+647         599        8.8573846E+02 8.8573847E+02  1.3698387E-05  6.1499916E-04  reflect-0
+648         601        8.8573846E+02 8.8573847E+02  1.2949686E-05  5.4252512E-04  contract inside
+649         602        8.8573846E+02 8.8573847E+02  1.1989949E-05  4.9504319E-04  reflect-0
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+650         604        8.8573846E+02 8.8573847E+02  1.1734764E-05  4.9504319E-04  contract inside
+651         605        8.8573846E+02 8.8573847E+02  1.1540002E-05  4.9504319E-04  reflect-0
+652         607        8.8573846E+02 8.8573847E+02  1.1408377E-05  4.9504319E-04  contract inside
+653         608        8.8573846E+02 8.8573847E+02  1.0897622E-05  4.9504319E-04  reflect-0
+654         609        8.8573846E+02 8.8573847E+02  1.0223434E-05  3.9961595E-04  reflect-0
+655         610        8.8573846E+02 8.8573846E+02  9.7795329E-06  3.9961595E-04  reflect-0
+656         611        8.8573846E+02 8.8573846E+02  9.7424415E-06  3.9961595E-04  reflect-0
+657         613        8.8573846E+02 8.8573846E+02  9.5277769E-06  3.9961595E-04  contract inside
+658         615        8.8573846E+02 8.8573846E+02  9.3109007E-06  3.9961595E-04  contract inside
+659         616        8.8573846E+02 8.8573846E+02  9.2806713E-06  3.9961595E-04  reflect-0
+660         618        8.8573846E+02 8.8573846E+02  8.8221276E-06  3.9961595E-04  contract inside
+661         620        8.8573846E+02 8.8573846E+02  8.7691809E-06  3.4678572E-04  contract inside
+662         622        8.8573846E+02 8.8573846E+02  7.9544307E-06  3.4678572E-04  contract inside
+663         624        8.8573846E+02 8.8573846E+02  7.7995653E-06  3.4678572E-04  contract inside
+664         626        8.8573846E+02 8.8573846E+02  7.4506173E-06  3.4678572E-04  contract inside
+665         628        8.8573846E+02 8.8573846E+02  7.1292252E-06  3.4678572E-04  contract inside
+666         630        8.8573846E+02 8.8573846E+02  6.4544000E-06  3.4678572E-04  contract inside
+667         631        8.8573846E+02 8.8573846E+02  6.1622527E-06  3.4678572E-04  reflect-0
+668         632        8.8573846E+02 8.8573846E+02  5.7774447E-06  3.4678572E-04  reflect-0
+669         634        8.8573846E+02 8.8573846E+02  5.5708952E-06  3.4678572E-04  contract inside
+670         636        8.8573846E+02 8.8573846E+02  4.9237594E-06  3.4678572E-04  contract inside
+671         638        8.8573846E+02 8.8573846E+02  4.3977742E-06  3.4678572E-04  contract outside
+672         640        8.8573846E+02 8.8573846E+02  3.7935566E-06  2.7471111E-04  contract inside
+673         641        8.8573846E+02 8.8573846E+02  3.2725789E-06  2.7471111E-04  reflect-0
+674         642        8.8573846E+02 8.8573846E+02  3.1325037E-06  2.7471111E-04  reflect-0
+675         643        8.8573846E+02 8.8573846E+02  3.0866387E-06  2.7471111E-04  reflect-0
+676         644        8.8573846E+02 8.8573846E+02  3.0499305E-06  2.7471111E-04  reflect-0
+677         645        8.8573846E+02 8.8573846E+02  2.9763729E-06  2.7471111E-04  reflect-0
+678         646        8.8573846E+02 8.8573846E+02  2.7753794E-06  2.2626300E-04  reflect-0
+679         647        8.8573846E+02 8.8573846E+02  2.6041679E-06  2.2626300E-04  reflect-0
+680         648        8.8573846E+02 8.8573846E+02  2.5937435E-06  2.2626300E-04  reflect-0
+681         650        8.8573846E+02 8.8573846E+02  2.5016597E-06  2.2626300E-04  contract inside
+682         652        8.8573846E+02 8.8573846E+02  2.3810042E-06  2.2626300E-04  contract inside
+683         654        8.8573846E+02 8.8573846E+02  2.2940551E-06  2.2626300E-04  contract inside
+684         655        8.8573846E+02 8.8573846E+02  2.2627714E-06  2.2626300E-04  reflect-0
+685         657        8.8573846E+02 8.8573846E+02  2.2177952E-06  2.2626300E-04  contract inside
+686         658        8.8573846E+02 8.8573846E+02  2.1763403E-06  2.2626300E-04  reflect-0
+687         660        8.8573846E+02 8.8573846E+02  2.1714660E-06  2.2626300E-04  contract inside
+688         661        8.8573846E+02 8.8573846E+02  2.0085288E-06  2.2626300E-04  reflect-0
+689         663        8.8573846E+02 8.8573846E+02  1.8651602E-06  2.2626300E-04  contract outside
+690         664        8.8573846E+02 8.8573846E+02  1.7990498E-06  2.2626300E-04  reflect-0
+691         665        8.8573846E+02 8.8573846E+02  1.7910745E-06  2.2626300E-04  reflect-0
+692         666        8.8573846E+02 8.8573846E+02  1.7762379E-06  1.4400736E-04  reflect-0
+693         668        8.8573846E+02 8.8573846E+02  1.5647846E-06  1.4400736E-04  contract inside
+694         669        8.8573846E+02 8.8573846E+02  1.5052933E-06  1.2534466E-04  reflect-0
+695         670        8.8573846E+02 8.8573846E+02  1.3533707E-06  1.2534466E-04  reflect-0
+696         672        8.8573846E+02 8.8573846E+02  1.2411584E-06  1.2534466E-04  contract inside
+697         674        8.8573846E+02 8.8573846E+02  1.2388509E-06  1.2534466E-04  contract inside
+698         676        8.8573846E+02 8.8573846E+02  1.2377075E-06  1.2534466E-04  contract inside
+699         678        8.8573846E+02 8.8573846E+02  1.0219298E-06  1.0989065E-04  contract inside
+
+#Iter.      #FnCalls.   Best Value      Worst Value     Norm(f)        Norm(x)        Move
+700         679        8.8573846E+02 8.8573846E+02  9.9947181E-07  1.0989065E-04  reflect-0
+701         680        8.8573846E+02 8.8573846E+02  9.9085980E-07  1.0989065E-04  reflect-0
+702         682        8.8573846E+02 8.8573846E+02  9.5683356E-07  1.0989065E-04  contract inside
+703         684        8.8573846E+02 8.8573846E+02  8.5671320E-07  1.0989065E-04  contract outside
+704         685        8.8573846E+02 8.8573846E+02  8.0655605E-07  1.0989065E-04  reflect-0
+705         686        8.8573846E+02 8.8573846E+02  7.7901825E-07  1.0989065E-04  reflect-0
+706         688        8.8573846E+02 8.8573846E+02  7.1385853E-07  8.1826647E-05  contract inside
+707         689        8.8573846E+02 8.8573846E+02  6.9715452E-07  8.1826647E-05  reflect-0
+
+CONVERGENCE ACHIEVED AFTER 708 ITERATIONS!
+
+
+Final value of minus the log posterior (or likelihood):885.738455 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+    prior mean     mode    s.d. prior pstdev
+
+RA      0.800   1.6438  0.3020 gamm 0.5000 
+PA      4.000   2.7749  0.2235 gamm 2.0000 
+GAMQ    0.400   0.3943  0.1161 norm 0.2000 
+TAU     2.000   1.6972  0.2371 gamm 0.5000 
+NU      0.100   0.0896  0.0085 beta 0.0500 
+PSIP    1.500   1.3758  0.1795 gamm 0.2500 
+PSIY    0.500   0.2223  0.0851 gamm 0.2500 
+RHOR    0.500   0.7426  0.0244 beta 0.2000 
+RHOG    0.800   0.9263  0.0213 beta 0.1000 
+RHOZ    0.660   0.8864  0.0136 beta 0.1500 
+SIGR    0.300   0.2129  0.0098 invg 4.0000 
+SIGG    0.400   0.5991  0.0244 invg 4.0000 
+SIGZ    0.400   0.2977  0.0229 invg 4.0000 
+IOTAP   0.500   0.5434  0.0348 beta 0.1500 
+
+
+Log data density [Laplace approximation] is -922.580343.
+
+RUNNING OPTIMISER-TYPE: Sims
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -885.7385
+-----------------
+f at the beginning of new iteration,       885.7384550131
+Predicted improvement:        0.000001044
+lambda =          1; f =          885.7384776
+lambda =    0.33333; f =          885.7384575
+lambda =    0.11111; f =          885.7384553
+lambda =   0.037037; f =          885.7384550
+lambda =   0.012346; f =          885.7384550
+lambda =  0.0041152; f =          885.7384550
+lambda =  0.0013717; f =          885.7384550
+lambda = 0.00045725; f =          885.7384550
+lambda = 0.00015242; f =          885.7384550
+lambda = 5.0805e-05; f =          885.7384550
+lambda = 1.6935e-05; f =          885.7384550
+lambda =  5.645e-06; f =          885.7384550
+lambda = 1.8817e-06; f =          885.7384550
+lambda = 6.2723e-07; f =          885.7384550
+lambda = 2.0908e-07; f =          885.7384550
+lambda = 6.9692e-08; f =          885.7384550
+lambda = 1.3473e-07; f =          885.7384550
+lambda = 9.0717e-08; f =          885.7384550
+lambda = 7.1554e-08; f =          885.7384550
+lambda = 8.2502e-08; f =          885.7384550
+lambda = 9.5127e-08; f =          885.7384550
+lambda = 8.7338e-08; f =          885.7384550
+lambda = 9.1931e-08; f =          885.7384550
+lambda = 8.9147e-08; f =          885.7384550
+lambda = 8.6447e-08; f =          885.7384550
+lambda = 8.3829e-08; f =          885.7384550
+lambda =  8.129e-08; f =          885.7384550
+lambda = 7.8828e-08; f =          885.7384550
+lambda = 8.0296e-08; f =          885.7384550
+lambda = 7.9412e-08; f =          885.7384550
+lambda = 7.8537e-08; f =          885.7384550
+lambda = 7.7673e-08; f =          885.7384550
+lambda = 7.6818e-08; f =          885.7384550
+lambda = 7.5972e-08; f =          885.7384550
+lambda = 7.5135e-08; f =          885.7384550
+Norm of dx 1.4453e-05
+Cliff.  Perturbing search direction.
+Predicted improvement:        0.000001501
+lambda =          1; f =          885.7384973
+lambda =    0.33333; f =          885.7384597
+lambda =    0.11111; f =          885.7384555
+lambda =   0.037037; f =          885.7384551
+lambda =   0.012346; f =          885.7384550
+lambda =  0.0041152; f =          885.7384550
+lambda =  0.0013717; f =          885.7384550
+lambda = 0.00045725; f =          885.7384550
+lambda = 0.00015242; f =          885.7384550
+lambda = 5.0805e-05; f =          885.7384550
+lambda = 1.6935e-05; f =          885.7384550
+lambda =  5.645e-06; f =          885.7384550
+lambda = 1.8817e-06; f =          885.7384550
+lambda = 6.2723e-07; f =          885.7384550
+lambda = 2.0908e-07; f =          885.7384550
+lambda = 6.9692e-08; f =          885.7384550
+Norm of dx 2.0843e-05
+
+badg2 =
+
+     0
+
+----
+Improvement on iteration 1 =        0.000000000
+improvement < crit termination
+
+Final value of minus the log posterior (or likelihood):885.738455 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+    prior mean     mode    s.d. prior pstdev
+
+RA      0.800   1.6438  0.3020 gamm 0.5000 
+PA      4.000   2.7749  0.2235 gamm 2.0000 
+GAMQ    0.400   0.3943  0.1161 norm 0.2000 
+TAU     2.000   1.6972  0.2371 gamm 0.5000 
+NU      0.100   0.0896  0.0085 beta 0.0500 
+PSIP    1.500   1.3758  0.1795 gamm 0.2500 
+PSIY    0.500   0.2223  0.0851 gamm 0.2500 
+RHOR    0.500   0.7426  0.0244 beta 0.2000 
+RHOG    0.800   0.9263  0.0213 beta 0.1000 
+RHOZ    0.660   0.8864  0.0136 beta 0.1500 
+SIGR    0.300   0.2129  0.0098 invg 4.0000 
+SIGG    0.400   0.5991  0.0244 invg 4.0000 
+SIGZ    0.400   0.2977  0.0229 invg 4.0000 
+IOTAP   0.500   0.5434  0.0348 beta 0.1500 
+
+
+Log data density [Laplace approximation] is -922.580343.
+
+RUNNING OPTIMISER-TYPE: fminsearch
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -885.7385
+ 
+ Iteration   Func-count     min f(x)         Procedure
+     0            1          885.738         
+     1           15          885.738         initial simplex
+     2           17          885.738         contract inside
+     3           19          885.738         contract outside
+     4           21          885.738         contract outside
+     5           23          885.738         contract inside
+     6           24          885.738         reflect
+     7           25          885.738         reflect
+     8           26          885.738         reflect
+     9           28          885.738         contract inside
+    10           30          885.738         contract inside
+    11           32          885.738         contract inside
+    12           34          885.738         contract inside
+    13           35          885.738         reflect
+    14           37          885.738         contract inside
+    15           39          885.738         contract inside
+    16           41          885.738         contract inside
+    17           43          885.738         contract inside
+    18           45          885.738         contract inside
+    19           47          885.738         contract inside
+    20           49          885.738         contract inside
+    21           51          885.738         contract inside
+    22           53          885.738         contract inside
+    23           55          885.738         contract inside
+    24           57          885.738         contract inside
+    25           59          885.738         contract inside
+    26           61          885.738         contract inside
+    27           62          885.738         reflect
+    28           64          885.738         contract inside
+    29           66          885.738         contract inside
+    30           67          885.738         reflect
+    31           69          885.738         contract inside
+    32           70          885.738         reflect
+    33           72          885.738         contract inside
+    34           73          885.738         reflect
+    35           74          885.738         reflect
+    36           76          885.738         contract inside
+    37           77          885.738         reflect
+    38           79          885.738         contract inside
+    39           81          885.738         contract inside
+    40           82          885.738         reflect
+    41           84          885.738         contract inside
+    42           86          885.738         contract inside
+    43           88          885.738         contract outside
+    44           90          885.738         contract inside
+    45           92          885.738         contract inside
+    46           93          885.738         reflect
+    47           95          885.738         contract inside
+    48           97          885.738         contract inside
+    49           99          885.738         contract inside
+    50          101          885.738         contract outside
+    51          103          885.738         contract inside
+    52          104          885.738         reflect
+    53          106          885.738         contract inside
+    54          107          885.738         reflect
+    55          109          885.738         contract inside
+    56          111          885.738         contract inside
+    57          112          885.738         reflect
+    58          113          885.738         reflect
+    59          115          885.738         contract inside
+    60          117          885.738         contract inside
+    61          119          885.738         contract outside
+    62          121          885.738         contract inside
+    63          123          885.738         contract inside
+    64          124          885.738         reflect
+    65          125          885.738         reflect
+    66          126          885.738         reflect
+    67          128          885.738         contract inside
+    68          130          885.738         contract inside
+    69          132          885.738         contract inside
+    70          134          885.738         contract inside
+    71          136          885.738         contract inside
+    72          138          885.738         contract inside
+    73          139          885.738         reflect
+    74          141          885.738         contract inside
+    75          142          885.738         reflect
+    76          143          885.738         reflect
+    77          144          885.738         reflect
+    78          146          885.738         contract inside
+    79          148          885.738         contract inside
+    80          150          885.738         contract inside
+    81          151          885.738         reflect
+    82          152          885.738         reflect
+    83          154          885.738         contract inside
+    84          156          885.738         contract inside
+    85          157          885.738         reflect
+    86          158          885.738         reflect
+    87          160          885.738         contract inside
+    88          162          885.738         contract inside
+    89          163          885.738         reflect
+    90          164          885.738         reflect
+    91          166          885.738         contract inside
+    92          168          885.738         contract inside
+    93          170          885.738         contract inside
+    94          172          885.738         contract inside
+    95          173          885.738         reflect
+    96          174          885.738         reflect
+    97          175          885.738         reflect
+    98          176          885.738         reflect
+    99          177          885.738         reflect
+   100          178          885.738         reflect
+   101          180          885.738         contract outside
+   102          181          885.738         reflect
+   103          183          885.738         contract inside
+   104          184          885.738         reflect
+   105          185          885.738         reflect
+   106          187          885.738         contract outside
+   107          188          885.738         reflect
+   108          189          885.738         reflect
+   109          190          885.738         reflect
+   110          191          885.738         reflect
+   111          192          885.738         reflect
+   112          194          885.738         contract inside
+   113          196          885.738         contract inside
+   114          197          885.738         reflect
+   115          199          885.738         contract inside
+   116          200          885.738         reflect
+   117          201          885.738         reflect
+   118          203          885.738         contract inside
+   119          205          885.738         contract inside
+   120          207          885.738         contract inside
+   121          209          885.738         contract inside
+   122          211          885.738         contract inside
+   123          212          885.738         reflect
+   124          214          885.738         contract inside
+   125          215          885.738         reflect
+   126          216          885.738         reflect
+   127          218          885.738         contract inside
+   128          220          885.738         contract inside
+   129          221          885.738         reflect
+   130          223          885.738         contract inside
+   131          224          885.738         reflect
+   132          225          885.738         reflect
+   133          226          885.738         reflect
+   134          227          885.738         reflect
+   135          228          885.738         reflect
+   136          229          885.738         reflect
+   137          230          885.738         reflect
+   138          231          885.738         reflect
+   139          232          885.738         reflect
+   140          233          885.738         reflect
+   141          234          885.738         reflect
+   142          235          885.738         reflect
+   143          236          885.738         reflect
+   144          237          885.738         reflect
+   145          238          885.738         reflect
+   146          239          885.738         reflect
+   147          240          885.738         reflect
+   148          241          885.738         reflect
+   149          242          885.738         reflect
+   150          244          885.738         contract inside
+   151          246          885.738         contract inside
+   152          248          885.738         contract outside
+   153          249          885.738         reflect
+   154          250          885.738         reflect
+   155          251          885.738         reflect
+   156          253          885.738         contract inside
+   157          254          885.738         reflect
+   158          256          885.738         contract inside
+   159          257          885.738         reflect
+   160          259          885.738         contract inside
+   161          260          885.738         reflect
+   162          262          885.738         contract inside
+   163          264          885.738         contract inside
+   164          266          885.738         contract inside
+   165          267          885.738         reflect
+   166          268          885.738         reflect
+   167          270          885.738         contract inside
+   168          272          885.738         contract inside
+   169          274          885.738         contract inside
+   170          275          885.738         reflect
+   171          276          885.738         reflect
+   172          278          885.738         contract inside
+   173          280          885.738         contract inside
+   174          282          885.738         contract inside
+   175          284          885.738         contract inside
+   176          285          885.738         reflect
+   177          286          885.738         reflect
+   178          288          885.738         contract inside
+   179          290          885.738         contract inside
+   180          291          885.738         reflect
+   181          292          885.738         reflect
+   182          294          885.738         contract inside
+   183          296          885.738         contract inside
+   184          297          885.738         reflect
+   185          299          885.738         contract inside
+   186          301          885.738         contract inside
+   187          303          885.738         contract inside
+   188          305          885.738         contract inside
+   189          306          885.738         reflect
+   190          308          885.738         contract inside
+   191          309          885.738         reflect
+   192          311          885.738         contract inside
+   193          312          885.738         reflect
+   194          313          885.738         reflect
+   195          315          885.738         contract inside
+   196          317          885.738         contract inside
+   197          318          885.738         reflect
+   198          319          885.738         reflect
+   199          320          885.738         reflect
+   200          322          885.738         contract inside
+   201          323          885.738         reflect
+   202          325          885.738         contract inside
+   203          327          885.738         contract inside
+   204          329          885.738         contract inside
+   205          330          885.738         reflect
+   206          332          885.738         contract outside
+   207          334          885.738         contract inside
+   208          336          885.738         contract inside
+   209          338          885.738         contract inside
+   210          339          885.738         reflect
+   211          340          885.738         reflect
+   212          342          885.738         contract inside
+   213          344          885.738         contract inside
+   214          346          885.738         contract outside
+   215          348          885.738         contract inside
+   216          349          885.738         reflect
+   217          350          885.738         reflect
+   218          352          885.738         contract inside
+   219          353          885.738         reflect
+   220          354          885.738         reflect
+   221          356          885.738         contract inside
+   222          358          885.738         contract inside
+   223          360          885.738         contract inside
+   224          361          885.738         reflect
+   225          362          885.738         reflect
+   226          363          885.738         reflect
+   227          365          885.738         contract inside
+   228          367          885.738         contract inside
+   229          368          885.738         reflect
+   230          370          885.738         contract inside
+   231          372          885.738         contract inside
+   232          374          885.738         contract inside
+   233          375          885.738         reflect
+   234          376          885.738         reflect
+   235          377          885.738         reflect
+   236          379          885.738         contract inside
+   237          381          885.738         contract inside
+   238          382          885.738         reflect
+   239          383          885.738         reflect
+   240          384          885.738         reflect
+   241          385          885.738         reflect
+   242          386          885.738         reflect
+   243          388          885.738         contract inside
+   244          389          885.738         reflect
+   245          390          885.738         reflect
+   246          391          885.738         reflect
+   247          392          885.738         reflect
+   248          393          885.738         reflect
+   249          394          885.738         reflect
+   250          395          885.738         reflect
+   251          396          885.738         reflect
+   252          398          885.738         contract outside
+   253          400          885.738         contract inside
+   254          402          885.738         contract inside
+   255          403          885.738         reflect
+   256          404          885.738         reflect
+   257          405          885.738         reflect
+   258          406          885.738         reflect
+   259          407          885.738         reflect
+   260          408          885.738         reflect
+   261          410          885.738         contract inside
+   262          412          885.738         contract inside
+   263          413          885.738         reflect
+   264          414          885.738         reflect
+   265          416          885.738         contract inside
+   266          418          885.738         contract inside
+   267          419          885.738         reflect
+   268          421          885.738         contract inside
+   269          423          885.738         contract inside
+   270          425          885.738         contract inside
+   271          426          885.738         reflect
+   272          428          885.738         contract inside
+   273          430          885.738         contract inside
+   274          431          885.738         reflect
+   275          433          885.738         contract inside
+   276          435          885.738         contract inside
+   277          437          885.738         contract inside
+   278          439          885.738         contract inside
+   279          440          885.738         reflect
+   280          441          885.738         reflect
+   281          442          885.738         reflect
+   282          444          885.738         contract inside
+   283          445          885.738         reflect
+   284          447          885.738         contract outside
+   285          448          885.738         reflect
+   286          450          885.738         contract inside
+   287          452          885.738         contract outside
+   288          453          885.738         reflect
+   289          455          885.738         contract inside
+   290          456          885.738         reflect
+   291          458          885.738         contract inside
+   292          459          885.738         reflect
+   293          461          885.738         contract inside
+   294          463          885.738         contract inside
+   295          464          885.738         reflect
+   296          466          885.738         contract outside
+   297          468          885.738         contract inside
+   298          470          885.738         contract inside
+   299          472          885.738         contract inside
+   300          474          885.738         contract outside
+   301          476          885.738         contract inside
+   302          477          885.738         reflect
+   303          479          885.738         contract inside
+   304          480          885.738         reflect
+   305          482          885.738         contract inside
+   306          483          885.738         reflect
+   307          485          885.738         contract inside
+   308          487          885.738         contract inside
+   309          488          885.738         reflect
+   310          490          885.738         contract inside
+   311          492          885.738         contract inside
+   312          493          885.738         reflect
+   313          494          885.738         reflect
+   314          495          885.738         reflect
+   315          497          885.738         contract inside
+   316          499          885.738         contract inside
+   317          500          885.738         reflect
+   318          501          885.738         reflect
+   319          503          885.738         contract inside
+   320          505          885.738         contract inside
+   321          507          885.738         contract inside
+   322          509          885.738         contract inside
+   323          510          885.738         reflect
+   324          511          885.738         reflect
+   325          513          885.738         contract inside
+   326          515          885.738         contract inside
+   327          516          885.738         reflect
+   328          518          885.738         contract inside
+   329          519          885.738         reflect
+   330          521          885.738         contract inside
+   331          522          885.738         reflect
+   332          524          885.738         contract inside
+   333          526          885.738         contract inside
+   334          528          885.738         contract inside
+   335          530          885.738         contract inside
+   336          531          885.738         reflect
+   337          532          885.738         reflect
+   338          533          885.738         reflect
+   339          534          885.738         reflect
+   340          535          885.738         reflect
+   341          537          885.738         contract inside
+   342          538          885.738         reflect
+   343          540          885.738         contract inside
+   344          542          885.738         contract inside
+   345          544          885.738         contract inside
+   346          546          885.738         contract inside
+   347          547          885.738         reflect
+   348          549          885.738         contract inside
+   349          550          885.738         reflect
+   350          552          885.738         contract inside
+   351          554          885.738         contract inside
+   352          556          885.738         contract inside
+   353          557          885.738         reflect
+   354          558          885.738         reflect
+   355          560          885.738         contract inside
+   356          561          885.738         reflect
+   357          563          885.738         contract outside
+   358          565          885.738         contract outside
+   359          566          885.738         reflect
+   360          568          885.738         contract inside
+   361          570          885.738         contract inside
+   362          571          885.738         reflect
+   363          572          885.738         reflect
+   364          574          885.738         contract inside
+   365          575          885.738         reflect
+   366          576          885.738         reflect
+   367          577          885.738         reflect
+   368          578          885.738         reflect
+   369          579          885.738         reflect
+   370          581          885.738         contract inside
+   371          583          885.738         contract inside
+   372          585          885.738         contract inside
+   373          586          885.738         reflect
+   374          588          885.738         contract inside
+   375          590          885.738         contract inside
+   376          591          885.738         reflect
+   377          592          885.738         reflect
+   378          594          885.738         contract inside
+   379          595          885.738         reflect
+   380          597          885.738         contract inside
+   381          598          885.738         reflect
+   382          599          885.738         reflect
+   383          600          885.738         reflect
+   384          601          885.738         reflect
+   385          603          885.738         contract inside
+   386          605          885.738         contract inside
+   387          607          885.738         contract inside
+   388          609          885.738         contract inside
+   389          610          885.738         reflect
+   390          611          885.738         reflect
+   391          612          885.738         reflect
+   392          613          885.738         reflect
+   393          615          885.738         contract inside
+   394          616          885.738         reflect
+   395          617          885.738         reflect
+   396          619          885.738         contract inside
+   397          620          885.738         reflect
+   398          622          885.738         contract inside
+   399          623          885.738         reflect
+   400          624          885.738         reflect
+   401          625          885.738         reflect
+   402          626          885.738         reflect
+   403          627          885.738         reflect
+   404          629          885.738         contract inside
+   405          631          885.738         contract inside
+   406          633          885.738         contract inside
+   407          634          885.738         reflect
+   408          636          885.738         contract inside
+   409          637          885.738         reflect
+   410          639          885.738         contract inside
+   411          640          885.738         reflect
+   412          641          885.738         reflect
+   413          643          885.738         contract outside
+   414          644          885.738         reflect
+   415          645          885.738         reflect
+   416          646          885.738         reflect
+   417          647          885.738         reflect
+   418          648          885.738         reflect
+   419          650          885.738         contract inside
+   420          652          885.738         contract inside
+   421          653          885.738         reflect
+   422          654          885.738         reflect
+   423          656          885.738         contract inside
+   424          657          885.738         reflect
+   425          659          885.738         contract inside
+   426          660          885.738         reflect
+   427          661          885.738         reflect
+   428          663          885.738         contract inside
+   429          665          885.738         contract inside
+   430          666          885.738         reflect
+   431          668          885.738         contract inside
+   432          670          885.738         contract inside
+   433          672          885.738         contract inside
+   434          674          885.738         contract inside
+   435          676          885.738         contract outside
+   436          678          885.738         contract inside
+   437          680          885.738         contract inside
+   438          682          885.738         contract inside
+   439          683          885.738         reflect
+   440          684          885.738         reflect
+   441          685          885.738         reflect
+   442          686          885.738         reflect
+   443          688          885.738         contract inside
+   444          690          885.738         contract inside
+   445          691          885.738         reflect
+   446          693          885.738         contract inside
+   447          695          885.738         contract inside
+   448          696          885.738         reflect
+   449          698          885.738         contract inside
+   450          700          885.738         contract inside
+   451          702          885.738         contract inside
+   452          704          885.738         contract inside
+   453          705          885.738         reflect
+   454          706          885.738         reflect
+   455          707          885.738         reflect
+   456          709          885.738         contract inside
+   457          711          885.738         contract inside
+   458          713          885.738         contract inside
+   459          714          885.738         reflect
+   460          716          885.738         contract inside
+   461          718          885.738         contract inside
+   462          720          885.738         contract inside
+   463          722          885.738         reflect
+   464          724          885.738         contract inside
+   465          725          885.738         reflect
+   466          726          885.738         reflect
+   467          728          885.738         contract inside
+   468          729          885.738         reflect
+   469          730          885.738         reflect
+   470          731          885.738         reflect
+   471          733          885.738         contract inside
+   472          734          885.738         reflect
+   473          736          885.738         contract inside
+   474          737          885.738         reflect
+   475          738          885.738         reflect
+   476          739          885.738         reflect
+   477          740          885.738         reflect
+   478          742          885.738         contract outside
+   479          743          885.738         reflect
+   480          745          885.738         reflect
+   481          747          885.738         contract inside
+   482          749          885.738         contract inside
+   483          751          885.738         contract inside
+   484          752          885.738         reflect
+   485          754          885.738         contract inside
+   486          755          885.738         reflect
+   487          757          885.738         reflect
+   488          759          885.738         contract outside
+   489          760          885.738         reflect
+   490          762          885.738         contract inside
+ 
+Optimization terminated:
+ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-06 
+ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-08 
+
+
+Final value of minus the log posterior (or likelihood):885.738455 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+    prior mean     mode    s.d. prior pstdev
+
+RA      0.800   1.6438  0.3020 gamm 0.5000 
+PA      4.000   2.7749  0.2235 gamm 2.0000 
+GAMQ    0.400   0.3943  0.1161 norm 0.2000 
+TAU     2.000   1.6972  0.2371 gamm 0.5000 
+NU      0.100   0.0896  0.0085 beta 0.0500 
+PSIP    1.500   1.3758  0.1795 gamm 0.2500 
+PSIY    0.500   0.2223  0.0851 gamm 0.2500 
+RHOR    0.500   0.7426  0.0244 beta 0.2000 
+RHOG    0.800   0.9263  0.0213 beta 0.1000 
+RHOZ    0.660   0.8864  0.0136 beta 0.1500 
+SIGR    0.300   0.2129  0.0098 invg 4.0000 
+SIGG    0.400   0.5991  0.0244 invg 4.0000 
+SIGZ    0.400   0.2977  0.0229 invg 4.0000 
+IOTAP   0.500   0.5434  0.0348 beta 0.1500 
+
+
+Log data density [Laplace approximation] is -922.580342.
+
+RUNNING OPTIMISER-TYPE: Matlab fmincon
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -885.7385
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+    0      15    8.857385e+02    0.000e+00    2.725e-04
+    1      47    8.857385e+02    0.000e+00    7.887e-03    2.682e-06
+    2      63    8.857385e+02    0.000e+00    4.330e-02    2.439e-06
+    3      85    8.857385e+02    0.000e+00    1.842e-02    1.765e-06
+
+Local minimum possible. Constraints satisfied.
+
+fmincon stopped because the size of the current step is less than
+the selected value of the step size tolerance and constraints are 
+satisfied to within the default value of the constraint tolerance.
+
+
+
+
+Final value of minus the log posterior (or likelihood):885.738455 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+    prior mean     mode    s.d. prior pstdev
+
+RA      0.800   1.6438  0.3020 gamm 0.5000 
+PA      4.000   2.7749  0.2234 gamm 2.0000 
+GAMQ    0.400   0.3943  0.1161 norm 0.2000 
+TAU     2.000   1.6972  0.2371 gamm 0.5000 
+NU      0.100   0.0896  0.0085 beta 0.0500 
+PSIP    1.500   1.3758  0.1795 gamm 0.2500 
+PSIY    0.500   0.2223  0.0851 gamm 0.2500 
+RHOR    0.500   0.7426  0.0244 beta 0.2000 
+RHOG    0.800   0.9263  0.0214 beta 0.1000 
+RHOZ    0.660   0.8864  0.0136 beta 0.1500 
+SIGR    0.300   0.2129  0.0098 invg 4.0000 
+SIGG    0.400   0.5991  0.0244 invg 4.0000 
+SIGZ    0.400   0.2977  0.0229 invg 4.0000 
+IOTAP   0.500   0.5434  0.0348 beta 0.1500 
+
+
+Log data density [Laplace approximation] is -922.580277.
+
+RUNNING OPTIMISER-TYPE: Dynare Monte Carlo
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -885.7385
+
+
+
+
+
+==========================================================
+   Change in the posterior covariance matrix = 0.013697.
+   Change in the posterior mean = 0.12862.
+   Mode improvement = 2.2835e-08
+   New value of jscale = 0.62998
+==========================================================
+
+Optimal value of the scale parameter = 0.62998
+
+
+Final value of minus the log posterior (or likelihood):885.738455 
+
+MODE CHECK
+
+Fval obtained by the minimization routine (minus the posterior/likelihood)): 885.738455
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.291316e-18.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In mode_check (line 158)
+  In dynare_estimation_1 (line 326)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 334)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+    prior mean     mode    s.d. prior pstdev
+
+RA      0.800   1.6438  0.2980 gamm 0.5000 
+PA      4.000   2.7749  0.2206 gamm 2.0000 
+GAMQ    0.400   0.3943  0.1156 norm 0.2000 
+TAU     2.000   1.6972  0.2644 gamm 0.5000 
+NU      0.100   0.0896  0.0093 beta 0.0500 
+PSIP    1.500   1.3758  0.1667 gamm 0.2500 
+PSIY    0.500   0.2223  0.0888 gamm 0.2500 
+RHOR    0.500   0.7426  0.0247 beta 0.2000 
+RHOG    0.800   0.9263  0.0205 beta 0.1000 
+RHOZ    0.660   0.8864  0.0140 beta 0.1500 
+SIGR    0.300   0.2129  0.0097 invg 4.0000 
+SIGG    0.400   0.5991  0.0239 invg 4.0000 
+SIGZ    0.400   0.2977  0.0252 invg 4.0000 
+IOTAP   0.500   0.5434  0.0349 beta 0.1500 
+
+
+Log data density [Laplace approximation] is -921.804544.
+
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+
+Initial value of the log posterior (or likelihood): -885.7385
+
+MODE CHECK
+
+Fval obtained by the minimization routine (minus the posterior/likelihood)): 885.738455
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.291316e-18.] 
+[> In lyapunov_symm (line 153)
+  In lyapunov_solver (line 65)
+  In dsge_likelihood (line 354)
+  In mode_check (line 158)
+  In dynare_estimation_1 (line 326)
+  In dynare_estimation (line 105)
+  In AnSchoModTheBuilder.driver (line 351)
+  In dynare (line 288)
+  In RunAnSchoStrength (line 102)
+  In ReplicateASIndexation_300 (line 15)
+] 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+    prior mean     mode    s.d. prior pstdev
+
+RA      0.800   1.6438  0.2980 gamm 0.5000 
+PA      4.000   2.7749  0.2206 gamm 2.0000 
+GAMQ    0.400   0.3943  0.1156 norm 0.2000 
+TAU     2.000   1.6972  0.2644 gamm 0.5000 
+NU      0.100   0.0896  0.0093 beta 0.0500 
+PSIP    1.500   1.3758  0.1667 gamm 0.2500 
+PSIY    0.500   0.2223  0.0888 gamm 0.2500 
+RHOR    0.500   0.7426  0.0247 beta 0.2000 
+RHOG    0.800   0.9263  0.0205 beta 0.1000 
+RHOZ    0.660   0.8864  0.0140 beta 0.1500 
+SIGR    0.300   0.2129  0.0097 invg 4.0000 
+SIGG    0.400   0.5991  0.0239 invg 4.0000 
+SIGZ    0.400   0.2977  0.0252 invg 4.0000 
+IOTAP   0.500   0.5434  0.0349 beta 0.1500 
+
+
+Log data density [Laplace approximation] is -921.804544.
+
+Estimation::mcmc: Multiple chains mode.
+Estimation::mcmc: Searching for initial values...
+Estimation::mcmc: Initial values found!
+
+Estimation::mcmc: Write details about the MCMC... Ok!
+Estimation::mcmc: Details about the MCMC are available in AnSchoModTheBuilder/metropolis/AnSchoModTheBuilder_mh_history_0.mat
+
+ssh  @localhost rm -f //posterior_sampler_core_output_*.mat: Signal 127
+ssh  @localhost rm -f //comp_status_posterior_sampler_core*.mat: Signal 127
+ssh  @localhost rm -f //slaveParallel_break.mat: Signal 127
+
+Estimation::mcmc: Number of mh files: 2 per block.
+Estimation::mcmc: Total number of generated files: 8.
+Estimation::mcmc: Total number of iterations: 1000000.
+Estimation::mcmc: Current acceptance ratio per chain: 
+                                                       Chain  1: 27.2114%
+                                                       Chain  2: 27.2929%
+                                                       Chain  3: 27.3002%
+                                                       Chain  4: 27.2272%
+Estimation::mcmc: Total number of MH draws per chain: 1000000.
+Estimation::mcmc: Total number of generated MH files: 2.
+Estimation::mcmc: I'll use mh-files 1 to 2.
+Estimation::mcmc: In MH-file number 1 I'll start at line 500001.
+Estimation::mcmc: Finally I keep 500000 draws per chain.
+
+
+
+MCMC Inefficiency factors per block
+Parameter       Block 1     Block 2     Block 3     Block 4
+RA               64.194      61.279      66.967      66.544
+PA               65.692      63.646      68.719      68.273
+GAMQ             68.233      66.136      69.211      71.752
+TAU              56.624      59.715      63.500      67.113
+NU               53.300      58.445      57.446      63.416
+PSIP             59.743      61.546      61.552      59.116
+PSIY             61.008      59.489      59.991      62.220
+RHOR             62.847      58.614      60.254      63.043
+RHOG             66.101      64.151      69.513      66.185
+RHOZ             63.205      64.307      61.209      65.804
+SIGR             60.477      63.287      64.264      63.426
+SIGG             62.527      62.637      59.572      63.690
+SIGZ             58.120      60.830      60.256      63.179
+IOTAP            60.123      60.383      65.939      63.599
+
+Estimation::mcmc::diagnostics: Univariate convergence diagnostic, Brooks and Gelman (1998):
+ssh  @localhost rm -f //McMCDiagnostics_core_output_*.mat: Signal 127
+ssh  @localhost rm -f //comp_status_McMCDiagnostics_core*.mat: Signal 127
+ssh  @localhost rm -f //slaveParallel_break.mat: Signal 127
+
+Estimation::marginal density: I'm computing the posterior mean and covariance...  Done!
+Estimation::marginal density: I'm computing the posterior log marginal density (modified harmonic mean)... Done!
+
+
+ESTIMATION RESULTS
+
+Log data density is -922.340588.
+
+parameters
+        prior mean   post. mean        90% HPD interval    prior       pstdev
+
+RA           0.800       1.6282      1.1261      2.1354    gamm       0.5000
+PA           4.000       2.7849      2.4072      3.1561    gamm       2.0000
+GAMQ         0.400       0.4015      0.2070      0.6012    norm       0.2000
+TAU          2.000       1.8104      1.3950      2.2303    gamm       0.5000
+NU           0.100       0.0929      0.0782      0.1074    beta       0.0500
+PSIP         1.500       1.3820      1.0922      1.6642    gamm       0.2500
+PSIY         0.500       0.2418      0.0988      0.3777    gamm       0.2500
+RHOR         0.500       0.7483      0.7082      0.7887    beta       0.2000
+RHOG         0.800       0.9339      0.8998      0.9699    beta       0.1000
+RHOZ         0.660       0.8890      0.8660      0.9120    beta       0.1500
+SIGR         0.300       0.2151      0.1989      0.2314    invg       4.0000
+SIGG         0.400       0.6063      0.5650      0.6469    invg       4.0000
+SIGZ         0.400       0.3059      0.2651      0.3455    invg       4.0000
+IOTAP        0.500       0.5501      0.4907      0.6082    beta       0.1500
+/bin/bash: pdflatex: command not found
+
+ans =
+
+   127
+
+Total computing time : 2h02m57s
+Note: warning(s) encountered in MATLAB/Octave code
