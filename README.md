@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3192196.svg)](https://doi.org/10.5281/zenodo.3192196)
+
 # Replication files
 
 ## The effect of observables, functional specifications, model features and shocks on identification in linearized DSGE models
