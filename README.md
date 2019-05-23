@@ -3,6 +3,7 @@
 ## The effect of observables, functional specifications, model features and shocks on identification in linearized DSGE models
 
 ## Authors: Sergey Ivashchenko and Willi Mutschler
+If you spot any mistakes please let us know (willi@mutschler.eu)
 
 ### General notes
 - <u>**For all cases you can simply check the Dynare log files and generated pdfs instead of (time-costly) rerunning all models.**</u>
