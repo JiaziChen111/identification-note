@@ -52,6 +52,9 @@
 %                       2: output growth from steady state output growth
 %                       3: output from flex-price output and output growth from flex-price output growth
 % -------------------------------------------------------------------------
+% - MEASERR:            0: Model without measurement errors
+%                       1: Model with measurement errors on YGR, INFL and INT
+% -------------------------------------------------------------------------
 % - COMPUTATIONS:       0: Compute steady state, check Blanchard-Khan conditions, do model diagnostics
 %                       1: Lack of Identification Analysis
 %                       2: Simulate data
@@ -120,6 +123,11 @@ epsz        ${\varepsilon^z}$       (long_name='total factor productivity growth
 @#if PREFSHOCK == 1
 epszeta     ${\varepsilon^\zeta}$   (long_name='discount factor shifter shock')
 @#endif
+@#if MEASERR == 1
+measerr_YGR     ${\epsilon^{YGR}}$   (long_name='measurement error on YGR')
+measerr_INFL    ${\epsilon^{INFL}}$  (long_name='measurement error on INFL')
+measerr_INT     ${\epsilon^{INT}}$   (long_name='measurement error on INT')
+@#endif
 ; % [varexo] end
 
 
@@ -152,6 +160,11 @@ IOTAP       ${\iota_p}$             (long_name='partial inflation indexation')
 RHOZETA     ${\rho_\zeta}$          (long_name='persistence discount rate shifter')
 SIGZETA     ${\sigma_\zeta}$        (long_name='standard deviation discount rate shifter shock')
 @#endif
+@#if MEASERR == 1
+SIGYGR      ${\sigma_{YGR}}$        (long_name='standard deviation measurement errors YGR')
+SIGINFL     ${\sigma_{INFL}}$       (long_name='standard deviation measurement errors INFL')
+SIGINT      ${\sigma_{INT}}$        (long_name='standard deviation measurement errors INT')
+@#endif
 ; % parameter block end
 
 
@@ -181,6 +194,11 @@ IOTAP   = 0.5;
 @#if PREFSHOCK == 1
 RHOZETA = 0.75;
 SIGZETA = 0.2;
+@#endif
+@#if MEASERR == 1
+SIGYGR  = 0.23;
+SIGINFL = 0.56;
+SIGINT  = 0.66;
 @#endif
 
 
@@ -246,33 +264,45 @@ model;
 lam = BET*lamp*r/p(+1)/(GAM*z(+1));
 
 [name='Price setting based on Rotemberg quadratic price adjustment costs and Dixit/Stiglitz aggregator']
-1 = 1/NU*(1-lam^(-1))+PHI*(p-gammapback)*p - PHI/(2*NU)*(p-gammap)^2 + PHI*BET*(lamp/lam*y(+1)/y*(p(+1)-gammap)*p(+1));
+1 = 1/NU*(1-(lam/zeta)^(-1)) + PHI*(p-gammapback)*p - PHI/(2*NU)*(p-gammapback)^2 - PHI*BET*(lamp/lam * y(+1)/y * (p(+1)-gammap)*p(+1));
 
 [name='Market clearing: aggregate supply equals aggregate demand']
 y - PHI/2*(p-gammapback)^2*y = c + (1-1/g)*y;
 
 [name='Taylor rule']
-r = RSTAR^(1-RHOR)*r(-1)^RHOR*exp(SIGR/100*epsr);
+r = RSTAR^(1-RHOR)*r(-1)^RHOR*exp(SIGR*epsr);
 
 [name='Government spending process']
-log(g) = (1-RHOG)*log(G) + RHOG*log(g(-1)) + SIGG/100*epsg;
+log(g) = (1-RHOG)*log(G) + RHOG*log(g(-1)) + SIGG*epsg;
 
 [name='Technology growth process']
-log(z) = RHOZ*log(z(-1)) + SIGZ/100*epsz;
+log(z) = RHOZ*log(z(-1)) + SIGZ*epsz;
 
 @#if PREFSHOCK == 1
 [name='Preference shifter process']
-log(zeta) = RHOZETA*log(zeta(-1)) + SIGZETA/100*epszeta;
+log(zeta) = RHOZETA*log(zeta(-1)) + SIGZETA*epszeta;
 @#endif
 
 [name='Output growth (q-on-q)']
-YGR = GAMQ + 100*(log(y/steady_state(y)) - log(y(-1)/steady_state(y)) + log(z/steady_state(z)));
+YGR = GAMQ + 100*(log(y/steady_state(y)) - log(y(-1)/steady_state(y)) + log(z/steady_state(z)))
+@#if MEASERR == 1
+    + SIGYGR*measerr_YGR
+@#endif
+;
 
 [name='Annualized inflation']
-INFL = PA + 400*log(p/steady_state(p));
+INFL = PA + 400*log(p/steady_state(p))
+@#if MEASERR == 1
+    + SIGINFL*measerr_INFL
+@#endif
+;
 
 [name='Annualized nominal interest rate']
-INT = PA + RA + 4*GAMQ + 400*log(r/steady_state(r));
+INT = PA + RA + 4*GAMQ + 400*log(r/steady_state(r))
+@#if MEASERR == 1
+    + SIGINT*measerr_INT
+@#endif
+;
 
 end; % [model] end
 
@@ -311,6 +341,11 @@ var epsz = 1;
 @#if PREFSHOCK == 1
 var epszeta = 1;
 @#endif
+@#if MEASERR == 1
+var measerr_YGR = 1;
+var measerr_INFL = 1;
+var measerr_INT = 1;
+@#endif
 end; % [shocks] end
 
 
@@ -334,15 +369,20 @@ PSIDY,           0.2,           1e-5,        10,          gamma_pdf,     0.2,   
 RHOR,            0.75,          1e-5,        0.99999,     beta_pdf,      0.5,        0.2;
 RHOG,            0.95,          1e-5,        0.99999,     beta_pdf,      0.8,        0.1;
 RHOZ,            0.9,           1e-5,        0.99999,     beta_pdf,      0.66,       0.15;
-SIGR,            0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        4;
-SIGG,            0.6,           1e-8,        5,           inv_gamma_pdf, 0.4,        4;
-SIGZ,            0.3,           1e-8,        5,           inv_gamma_pdf, 0.4,        4;
+SIGR,            0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        2;
+SIGG,            0.6,           1e-8,        5,           inv_gamma_pdf, 0.4,        2;
+SIGZ,            0.3,           1e-8,        5,           inv_gamma_pdf, 0.4,        2;
 @#if INDEXATION == 1
 IOTAP,           0.5,           1e-8,        0.99999,     beta_pdf,      0.5,        0.15;
 @#endif
 @#if PREFSHOCK == 1
 RHOZETA,         0.75,          1e-5,        0.99999,     beta_pdf,      0.5,        0.2;
-SIGZETA,         0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        4;
+SIGZETA,         0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        2;
+@#endif
+@#if MEASERR == 1
+SIGYGR,          0.23,          1e-8,        5,           inv_gamma_pdf, 0.3,        2;
+SIGINFL,         0.56,          1e-8,        5,           inv_gamma_pdf, 0.3,        2;
+SIGINT,          0.66,          1e-8,        5,           inv_gamma_pdf, 0.3,        2;
 @#endif
 end; % [estimated_params] end
 
@@ -372,12 +412,14 @@ for iset = 1:@{VAROBSCOMBINATIONS}
     for ii = 1:varobsset_nbr
         irun = irun+1;
         options_.varobs = M_.endo_names(varobsset(ii,:),:); % set VAROBS
-        fprintf('**** VAROBS: %s ****' , strjoin(options_.varobs));
+        fprintf('**** Null Space VAROBS: %s ****' , strjoin(options_.varobs));
         identification(ar=30,no_identification_strength, parameter_set=calibration); % run identification analysis
-        fprintf('**** VAROBS: %s ****' , strjoin(options_.varobs));
+        fprintf('**** Bruteforce VAROBS: %s ****' , strjoin(options_.varobs));
         identification(ar=30,no_identification_strength, parameter_set=calibration,checks_via_subsets=1, max_dim_subsets_groups=20); % run identification analysis
+        fprintf('**** Monte Carlo Testing VAROBS: %s ****' , strjoin(options_.varobs));
+        identification(ar=30,no_identification_strength, prior_mc=100, nograph, no_identification_minimal); % run identification analysis        
         % save results into structure
-        RESULTS{iset}{ii} = load([M_.fname, '/identification/', M_.fname, '_identif.mat'], 'ide_moments_point', 'ide_spectrum_point', 'ide_minimal_point');
+        RESULTS{iset}{ii} = load([M_.fname, '/identification/', M_.fname, '_calibration_identif.mat'], 'ide_moments_point', 'ide_spectrum_point', 'ide_minimal_point');
         RESULTS{iset}{ii}.varobs = options_.varobs;
         
         % find out if PSIP, PSIY, RHOR, SIGR are among problematic parameter sets

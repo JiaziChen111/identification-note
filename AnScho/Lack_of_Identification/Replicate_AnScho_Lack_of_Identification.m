@@ -51,36 +51,42 @@ if allmodels == 1 || jmodel == 4
 end
 
 
-%% Create Model Calls, we loop over mp=0,1,2 (monetary policy rule)
-callstring = 'dynare AnSchoModTheBuilder console -DINDEXATION=%d -DPREFSHOCK=%d -DMONPOL=%d -DVAROBSCOMBINATIONS=%d -DCOMPUTATIONS=%d';
+%% Create Model Calls, we loop over jmp=0,1,2 (monetary policy rule) and jmeaserr=0,1 (measurement errors)
+callstring = 'dynare AnSchoModTheBuilder console -DINDEXATION=%d -DPREFSHOCK=%d -DMONPOL=%d -DMEASERR=%d -DVAROBSCOMBINATIONS=%d -DCOMPUTATIONS=%d';
 
 for j=jmodel
     fprintf('Case %d\n',j);
-    for jmp=0:3
-        eval(sprintf('opt = OPT%d;',j));
-        opt.MONPOL = jmp;
-        if jmp == 0
-            modelfolder = [opt.namefolder, '_MONPOL_FLEX'];
-        elseif jmp == 1
-            modelfolder = [opt.namefolder, '_MONPOL_STEADYSTATE'];
-        elseif jmp == 2
-            modelfolder = [opt.namefolder, '_MONPOL_GROWTH'];
-        elseif jmp == 3
-            modelfolder = [opt.namefolder, '_MONPOL_SW'];
-        end
-        if exist(modelfolder, 'dir') == 7
-            rmdir(modelfolder,'s');
+    for jmeaserr = 0:1
+        for jmp=0:3
+            eval(sprintf('opt = OPT%d;',j));
+            opt.MEASERR = jmeaserr;
+            opt.MONPOL = jmp;
+            if jmp == 0
+                modelfolder = [opt.namefolder, '_MONPOL_FLEX'];
+            elseif jmp == 1
+                modelfolder = [opt.namefolder, '_MONPOL_STEADYSTATE'];
+            elseif jmp == 2
+                modelfolder = [opt.namefolder, '_MONPOL_GROWTH'];
+            elseif jmp == 3
+                modelfolder = [opt.namefolder, '_MONPOL_SW'];
+            end
+            if jmeaserr == 1
+                modelfolder = [modelfolder, '_MEASERR'];
+            end
+            if exist(modelfolder, 'dir') == 7
+                rmdir(modelfolder,'s');
+                pause(1);
+            end
+            mkdir(modelfolder);
             pause(1);
+            copyfile('../../utils/AnSchoModTheBuilder.mod',modelfolder);
+            copyfile('../../utils/LatexTable.m',modelfolder);
+            calldynare = sprintf(callstring, opt.INDEXATION, opt.PREFSHOCK, opt.MONPOL, opt.MEASERR, opt.VAROBSCOMBINATIONS, opt.COMPUTATIONS);
+            fileID = fopen([modelfolder,'/RUN_DYNARE.m'],'w');
+            fprintf(fileID,'clc; clear vars; clear globalvars; clearvars; close all;\n');
+            fprintf(fileID,'%s',calldynare);
+            fclose(fileID);
         end
-        mkdir(modelfolder);
-        pause(1);
-        copyfile('../../utils/AnSchoModTheBuilder.mod',modelfolder);
-        copyfile('../../utils/LatexTable.m',modelfolder);
-        calldynare = sprintf(callstring, opt.INDEXATION, opt.PREFSHOCK, opt.MONPOL, opt.VAROBSCOMBINATIONS, opt.COMPUTATIONS);
-        fileID = fopen([modelfolder,'/RUN_DYNARE.m'],'w');
-        fprintf(fileID,'clc; clear vars; clear globalvars; clearvars; close all;\n');
-        fprintf(fileID,'%s',calldynare);
-        fclose(fileID);
     end
 end
 
