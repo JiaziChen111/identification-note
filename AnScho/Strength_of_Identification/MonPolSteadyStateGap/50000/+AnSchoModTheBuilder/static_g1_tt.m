@@ -13,13 +13,13 @@ function T = static_g1_tt(T, y, x, params)
 %   T         [#temp variables by 1]  double   vector of temporary terms
 %
 
-assert(length(T) >= 22);
+assert(length(T) >= 21);
 
 T = AnSchoModTheBuilder.static_resid_tt(T, y, x, params);
 
-T(19) = (y(7)/T(1))^params(6);
-T(20) = (y(4)/(y(4)))^params(7);
-T(21) = getPowerDeriv(T(12),1-params(8),1);
-T(22) = getPowerDeriv(y(5),(-params(4)),1);
+T(18) = (y(7)/T(1))^params(6);
+T(19) = (y(4)/(y(4)))^params(7);
+T(20) = getPowerDeriv(T(12),1-params(8),1);
+T(21) = getPowerDeriv(y(5),(-params(4)),1);
 
 end

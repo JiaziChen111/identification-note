@@ -18,12 +18,12 @@ function T = dynamic_g1_tt(T, y, x, params, steady_state, it_)
 %   T           [#temp variables by 1]       double  vector of temporary terms
 %
 
-assert(length(T) >= 23);
+assert(length(T) >= 22);
 
 T = AnSchoModTheBuilder.dynamic_resid_tt(T, y, x, params, steady_state, it_);
 
-T(21) = getPowerDeriv(T(12),1-params(8),1);
-T(22) = T(3)*getPowerDeriv(y(9),(-params(4)),1);
-T(23) = T(5)*getPowerDeriv(y(15),(-params(4)),1);
+T(20) = getPowerDeriv(T(12),1-params(8),1);
+T(21) = T(3)*getPowerDeriv(y(9),(-params(4)),1);
+T(22) = T(5)*getPowerDeriv(y(15),(-params(4)),1);
 
 end

@@ -8,7 +8,7 @@ calldynare = sprintf('dynare AnSchoModTheBuilder -DHESSIAN=%d -DMCMC=%d -DMH_REP
 switch WEAKMODEL
     case 'Baseline'
         VAROBS = 'YGR INFL INT';
-        calldynare = [calldynare, ' -DMONPOL=0 -DINDEXATION=0 -DPREFSHOCK=0 -DVAROBS="' VAROBS, '"'];
+        calldynare = [calldynare, ' -DMONPOL=0 -DINDEXATION=0 -DPREFSHOCK=0 -DMEASERR=0 -DVAROBS="' VAROBS, '"'];
         switch SAMPLESIZE
             case 100
                 FINDMODEADVANCED = 1; OPTIMIZER = 4; JSCALEINTEGER = 0; JSCALEDECIMAL = 55;
@@ -25,7 +25,7 @@ switch WEAKMODEL
         end
     case 'MonPolSteadyStateGap'
         VAROBS = 'YGR INFL INT';
-        calldynare = [calldynare, ' -DMONPOL=1 -DINDEXATION=0 -DPREFSHOCK=0 -DVAROBS="' VAROBS, '"'];
+        calldynare = [calldynare, ' -DMONPOL=1 -DINDEXATION=0 -DPREFSHOCK=0 -DMEASERR=0 -DVAROBS="' VAROBS, '"'];
         switch SAMPLESIZE
             case 100
                 FINDMODEADVANCED = 0; OPTIMIZER = 4; JSCALEINTEGER = 0; JSCALEDECIMAL = 6;
@@ -42,7 +42,7 @@ switch WEAKMODEL
         end
     case 'Indexation'
         VAROBS = 'YGR INFL INT';
-        calldynare = [calldynare, ' -DMONPOL=0 -DINDEXATION=1 -DPREFSHOCK=0 -DVAROBS="' VAROBS, '"'];
+        calldynare = [calldynare, ' -DMONPOL=0 -DINDEXATION=1 -DPREFSHOCK=0 -DMEASERR=0 -DVAROBS="' VAROBS, '"'];
         switch SAMPLESIZE
             case 100
                 FINDMODEADVANCED = 1; OPTIMIZER = 4; JSCALEINTEGER = 0; JSCALEDECIMAL = 55;
@@ -59,7 +59,7 @@ switch WEAKMODEL
         end
     case 'Prefshock'
         VAROBS = 'YGR INFL INT';
-        calldynare = [calldynare, ' -DMONPOL=0 -DINDEXATION=0 -DPREFSHOCK=1 -DVAROBS="' VAROBS, '"'];
+        calldynare = [calldynare, ' -DMONPOL=0 -DINDEXATION=0 -DPREFSHOCK=1 -DMEASERR=0 -DVAROBS="' VAROBS, '"'];
         switch SAMPLESIZE
             case 100
                 FINDMODEADVANCED = 1; OPTIMIZER = 4; JSCALEINTEGER = 0; JSCALEDECIMAL = 4;

@@ -143,6 +143,8 @@ M_.orig_eq_nbr = 9;
 M_.eq_nbr = 9;
 M_.ramsey_eq_nbr = 0;
 M_.set_auxiliary_variables = exist(['./+' M_.fname '/set_auxiliary_variables.m'], 'file') == 2;
+M_.max_endo_lag_by_var = [0 0 0 1 1 0 1 0 1 ];
+M_.max_exo_lag_by_var = [0 0 0 ];
 M_.orig_maximum_endo_lag = 1;
 M_.orig_maximum_endo_lead = 1;
 M_.orig_maximum_exo_lag = 0;
@@ -169,11 +171,7 @@ M_.nboth   = 2;
 M_.nsfwrd   = 4;
 M_.nspred   = 4;
 M_.ndynamic   = 6;
-M_.dynamic_tmp_nbr = zeros(4,1); % Number of temporaries used for the dynamic model
-M_.dynamic_tmp_nbr(1) = 6; % Number of temporaries used for the evaluation of the residuals
-M_.dynamic_tmp_nbr(2) = 5; % Number of temporaries used for the evaluation of g1 (jacobian)
-M_.dynamic_tmp_nbr(3) = 0; % Number of temporaries used for the evaluation of g2 (hessian)
-M_.dynamic_tmp_nbr(4) = 0; % Number of temporaries used for the evaluation of g3 (third order derivatives)
+M_.dynamic_tmp_nbr = [19; 5; 0; 0; ];
 M_.equations_tags = {
   1 , 'name' , 'Euler equation' ;
   2 , 'name' , 'Price setting based on Rotemberg quadratic price adjustment costs and Dixit/Stiglitz aggregator' ;
@@ -186,6 +184,7 @@ M_.equations_tags = {
   9 , 'name' , 'Annualized nominal interest rate' ;
 };
 M_.static_and_dynamic_models_differ = false;
+M_.has_external_function = false;
 M_.state_var = [4 6 8 9 ];
 M_.exo_names_orig_ord = [1:3];
 M_.maximum_lag = 1;
@@ -197,12 +196,8 @@ M_.maximum_exo_lag = 0;
 M_.maximum_exo_lead = 0;
 oo_.exo_steady_state = zeros(3, 1);
 M_.params = NaN(15, 1);
-M_.NNZDerivatives = [35; -1; -1];
-M_.static_tmp_nbr = zeros(4,1); % Number of temporaries used for the static model
-M_.static_tmp_nbr(1) = 5; % Number of temporaries used for the evaluation of the residuals
-M_.static_tmp_nbr(2) = 5; % Number of temporaries used for the evaluation of g1 (jacobian)
-M_.static_tmp_nbr(3) = 0; % Number of temporaries used for the evaluation of g2 (hessian)
-M_.static_tmp_nbr(4) = 0; % Number of temporaries used for the evaluation of g3 (third order derivatives)
+M_.NNZDerivatives = [35; -1; -1; ];
+M_.static_tmp_nbr = [4; 5; 0; 0; ];
 M_.params( 1 ) = 1;
 RA = M_.params( 1 );
 M_.params( 2 ) = 3.2;
@@ -217,6 +212,7 @@ M_.params( 6 ) = 1.5;
 PSIP = M_.params( 6 );
 M_.params( 7 ) = 0.125;
 PSIY = M_.params( 7 );
+PSIDY   = 0.2;
 M_.params( 8 ) = 0.75;
 RHOR = M_.params( 8 );
 M_.params( 9 ) = 0.95;
@@ -255,9 +251,9 @@ estim_params_.param_vals = [estim_params_.param_vals; 7, 0.125, 1e-5, 10, 2, 0.5
 estim_params_.param_vals = [estim_params_.param_vals; 8, 0.75, 1e-5, 0.99999, 1, 0.5, 0.2, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 9, 0.95, 1e-5, 0.99999, 1, 0.8, 0.1, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 10, 0.9, 1e-5, 0.99999, 1, 0.66, 0.15, NaN, NaN, NaN ];
-estim_params_.param_vals = [estim_params_.param_vals; 11, 0.2, 1e-8, 5, 4, 0.3, 4, NaN, NaN, NaN ];
-estim_params_.param_vals = [estim_params_.param_vals; 12, 0.6, 1e-8, 5, 4, 0.4, 4, NaN, NaN, NaN ];
-estim_params_.param_vals = [estim_params_.param_vals; 13, 0.3, 1e-8, 5, 4, 0.4, 4, NaN, NaN, NaN ];
+estim_params_.param_vals = [estim_params_.param_vals; 11, 0.2, 1e-8, 5, 4, 0.3, 2, NaN, NaN, NaN ];
+estim_params_.param_vals = [estim_params_.param_vals; 12, 0.6, 1e-8, 5, 4, 0.4, 2, NaN, NaN, NaN ];
+estim_params_.param_vals = [estim_params_.param_vals; 13, 0.3, 1e-8, 5, 4, 0.4, 2, NaN, NaN, NaN ];
 steady;
 resid;                  
 oo_.dr.eigval = check(M_,options_,oo_);
