@@ -116,6 +116,8 @@ M_.orig_eq_nbr = 8;
 M_.eq_nbr = 8;
 M_.ramsey_eq_nbr = 0;
 M_.set_auxiliary_variables = exist(['./+' M_.fname '/set_auxiliary_variables.m'], 'file') == 2;
+M_.max_endo_lag_by_var = [0 1 1 1 0 1 1 0 ];
+M_.max_exo_lag_by_var = [0 ];
 M_.orig_maximum_endo_lag = 1;
 M_.orig_maximum_endo_lead = 1;
 M_.orig_maximum_exo_lag = 0;
@@ -141,11 +143,7 @@ M_.nboth   = 1;
 M_.nsfwrd   = 5;
 M_.nspred   = 3;
 M_.ndynamic   = 7;
-M_.dynamic_tmp_nbr = zeros(4,1); % Number of temporaries used for the dynamic model
-M_.dynamic_tmp_nbr(1) = 3; % Number of temporaries used for the evaluation of the residuals
-M_.dynamic_tmp_nbr(2) = 7; % Number of temporaries used for the evaluation of g1 (jacobian)
-M_.dynamic_tmp_nbr(3) = 0; % Number of temporaries used for the evaluation of g2 (hessian)
-M_.dynamic_tmp_nbr(4) = 0; % Number of temporaries used for the evaluation of g3 (third order derivatives)
+M_.dynamic_tmp_nbr = [22; 7; 0; 0; ];
 M_.equations_tags = {
   1 , 'name' , 'foc household wrt c (marginal utility of consumption)' ;
   2 , 'name' , 'foc household wrt iv (Tobins Q)' ;
@@ -157,6 +155,7 @@ M_.equations_tags = {
   8 , 'name' , 'Evolution of technology' ;
 };
 M_.static_and_dynamic_models_differ = false;
+M_.has_external_function = false;
 M_.state_var = [3 5 8 ];
 M_.exo_names_orig_ord = [1:1];
 M_.maximum_lag = 1;
@@ -168,12 +167,8 @@ M_.maximum_exo_lag = 0;
 M_.maximum_exo_lead = 0;
 oo_.exo_steady_state = zeros(1, 1);
 M_.params = NaN(9, 1);
-M_.NNZDerivatives = [33; -1; -1];
-M_.static_tmp_nbr = zeros(4,1); % Number of temporaries used for the static model
-M_.static_tmp_nbr(1) = 0; % Number of temporaries used for the evaluation of the residuals
-M_.static_tmp_nbr(2) = 13; % Number of temporaries used for the evaluation of g1 (jacobian)
-M_.static_tmp_nbr(3) = 0; % Number of temporaries used for the evaluation of g2 (hessian)
-M_.static_tmp_nbr(4) = 0; % Number of temporaries used for the evaluation of g3 (third order derivatives)
+M_.NNZDerivatives = [33; -1; -1; ];
+M_.static_tmp_nbr = [0; 13; 0; 0; ];
 IBAR_O_YBAR = 0.25;         
 KBAR_O_YBAR = 10;           
 M_.params( 3 ) = IBAR_O_YBAR/KBAR_O_YBAR;
@@ -241,9 +236,10 @@ estim_params_.param_vals = [estim_params_.param_vals; 1, 0.3, 1e-8, 0.9999, 3, 0
 estim_params_.param_vals = [estim_params_.param_vals; 2, 2, 1e-8, 10, 2, 2, 0.25, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 3, 0.025, 1e-8, 0.9999, 5, NaN, NaN, 0, 1, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 6, 0.5, 1e-8, 0.9999, 1, 0.5, 0.1, NaN, NaN, NaN ];
-estim_params_.param_vals = [estim_params_.param_vals; 7, 0.6, 1e-8, 10, 4, 0.6, 4, NaN, NaN, NaN ];
+estim_params_.param_vals = [estim_params_.param_vals; 7, 0.6, 1e-8, 10, 4, 0.6, 2, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 8, 1.5, 1e-8, 10, 2, 1.5, 0.75, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 9, 2, 1e-8, 10, 2, 2, 1.5, NaN, NaN, NaN ];
+options_.steady.maxit = 50000;
 steady;
 resid;                  
 oo_.dr.eigval = check(M_,options_,oo_);
