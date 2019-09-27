@@ -1,4 +1,5 @@
 Starting preprocessing of the model file ...
+WARNING: in the 'steady_state_model' block, variable 'rk' is declared twice
 Found 9 equation(s).
 Evaluating expressions...done
 Computing static model derivatives (order 2).
@@ -59,7 +60,7 @@ The rank condition is verified.
 
 MODEL_DIAGNOSTICS:  No obvious problems with this mod-file were detected.
  
-**** VAROBS: y ****
+**** Null Space VAROBS: y ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -116,7 +117,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y ****
+**** Bruteforce VAROBS: y ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -181,7 +182,95 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c ****
+**** Monte Carlo Testing VAROBS: y ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    RA is not identified for 1% of MC runs!
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 99% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 99% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -235,7 +324,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c ****
+**** Bruteforce VAROBS: c ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -284,7 +373,92 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv ****
+**** Monte Carlo Testing VAROBS: c ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 8% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 20% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 89% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 99% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: iv ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -338,7 +512,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv ****
+**** Bruteforce VAROBS: iv ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -402,7 +576,94 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk ****
+**** Monte Carlo Testing VAROBS: iv ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 3 (rank(J) = 5 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    RHOA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 3 (rank(G) = 5 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    RHOA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 99% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -446,13 +707,17 @@ QU AND TKACHENKO (2012):
     !!!WARNING!!!
     The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
 
-    RA is not identified!
     KAPPA is not identified!
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk ****
+**** Bruteforce VAROBS: rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -506,13 +771,97 @@ QU AND TKACHENKO (2012):
     The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
     Displaying problematic parameter combinations (with maximum dimension 20):
 
-    RA is not identified!
     KAPPA is not identified!
+    [ALPHA,RA,DELTA,SIGA,THETA] are collinear!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k ****
+**** Monte Carlo Testing VAROBS: rk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    RA is not identified for 1% of MC runs!
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 99% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 99% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 98% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 98% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 97% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -569,7 +918,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k ****
+**** Bruteforce VAROBS: k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -653,146 +1002,831 @@ QU AND TKACHENKO (2012):
     The rank of G (spectrum) is deficient by 3 (rank(G) = 5 < 8 with tol = 1e-10)!
     Displaying problematic parameter combinations (with maximum dimension 20):
 
-    [ALPHA,RA,THETA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,RHOA,THETA] are collinear!
     [ALPHA,RA,DELTA,SIGA,THETA] are collinear!
     [ALPHA,RA,DELTA,SIGA,KAPPA] are collinear!
     [ALPHA,RA,DELTA,SIGA,PSIK] are collinear!
     [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,PSIK] are collinear!
     [ALPHA,RA,DELTA,KAPPA,PSIK] are collinear!
     [ALPHA,RA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,SIGA,THETA,PSIK] are collinear!
     [ALPHA,RA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,PSIK] are collinear!
+    [ALPHA,DELTA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,DELTA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [RA,DELTA,SIGA,THETA,PSIK] are collinear!
+    [RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
+    [RA,DELTA,THETA,KAPPA,PSIK] are collinear!
+    [RA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** Monte Carlo Testing VAROBS: k ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 3 (rank(J) = 5 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 3 (rank(G) = 5 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    [KAPPA,THETA] are PAIRWISE collinear for 1% of MC runs!
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: lam ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 17 < 18 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** Bruteforce VAROBS: lam ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 1 (rank(D) = 17 < 18 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [RA,DELTA,RHOA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,RHOA,SIGA,THETA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,RHOA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,RHOA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** Monte Carlo Testing VAROBS: lam ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 93% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 99% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: q ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** Bruteforce VAROBS: q ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** Monte Carlo Testing VAROBS: q ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RHOA is collinear w.r.t. all other parameters for 1% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 99% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 90% of MC runs!
+    RHOA is collinear w.r.t. all other parameters for 1% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 6 (rank(J) = 2 < 8 with tol = 1e-10)!
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    PSIK is not identified!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 6 (rank(G) = 2 < 8 with tol = 1e-10)!
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    PSIK is not identified!
+
+==== Identification analysis completed ====
+
+
+**** Bruteforce VAROBS: a ****
+==== Identification analysis ====
+
+Testing calibration
+WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
+         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
+         Either reduce the list of parameters, or increase number of observables.
+         Skip identification analysis based on minimal state space system.
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 6 (rank(J) = 2 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    PSIK is not identified!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 6 (rank(G) = 2 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    PSIK is not identified!
+
+==== Identification analysis completed ====
+
+
+**** Monte Carlo Testing VAROBS: a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 6 (rank(J) = 2 < 8 with tol = 1e-10)!
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    PSIK is not identified!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 6 (rank(G) = 2 < 8 with tol = 1e-10)!
+
+    ALPHA is not identified!
+    RA is not identified!
+    DELTA is not identified!
+    THETA is not identified!
+    KAPPA is not identified!
+    PSIK is not identified!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is not identified for 98% of MC runs!
+    RA is not identified for 100% of MC runs!
+    DELTA is not identified for 98% of MC runs!
+    THETA is not identified for 99% of MC runs!
+    KAPPA is not identified for 100% of MC runs!
+    PSIK is not identified for 98% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is not identified for 100% of MC runs!
+    RA is not identified for 100% of MC runs!
+    DELTA is not identified for 100% of MC runs!
+    THETA is not identified for 100% of MC runs!
+    KAPPA is not identified for 100% of MC runs!
+    PSIK is not identified for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: uk ****
+==== Identification analysis ====
+
+Testing calibration
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 16 < 18 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+==== Identification analysis completed ====
+
+
+**** Bruteforce VAROBS: uk ****
+==== Identification analysis ====
+
+Testing calibration
+
+
+
+
+
+
+
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Rank condition on all possible subsets
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+KOMUNJER AND NG (2011):
+    !!!WARNING!!!
+    The rank of D (minimal system) is deficient by 2 (rank(D) = 16 < 18 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+    Displaying problematic parameter combinations (with maximum dimension 20):
+
+    [ALPHA,RA,DELTA,KAPPA] are collinear!
+    [ALPHA,RA,SIGA,PSIK] are collinear!
+    [RA,DELTA,RHOA,THETA] are collinear!
+    [RA,DELTA,SIGA,PSIK] are collinear!
+    [RA,SIGA,THETA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,RHOA,SIGA] are collinear!
+    [ALPHA,RA,DELTA,RHOA,PSIK] are collinear!
+    [ALPHA,RA,DELTA,SIGA,THETA] are collinear!
+    [ALPHA,RA,DELTA,THETA,PSIK] are collinear!
     [ALPHA,DELTA,RHOA,SIGA,PSIK] are collinear!
-    [ALPHA,DELTA,SIGA,THETA,KAPPA] are collinear!
     [ALPHA,DELTA,SIGA,THETA,PSIK] are collinear!
     [ALPHA,DELTA,SIGA,KAPPA,PSIK] are collinear!
-    [ALPHA,DELTA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [RA,DELTA,RHOA,KAPPA,PSIK] are collinear!
     [RA,DELTA,SIGA,THETA,KAPPA] are collinear!
-    [RA,DELTA,SIGA,THETA,PSIK] are collinear!
-    [RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
     [RA,DELTA,THETA,KAPPA,PSIK] are collinear!
-    [RA,SIGA,THETA,KAPPA,PSIK] are collinear!
+    [RA,RHOA,SIGA,KAPPA,PSIK] are collinear!
+    [DELTA,RHOA,SIGA,THETA,PSIK] are collinear!
     [DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: lam ****
+**** Monte Carlo Testing VAROBS: uk ****
 ==== Identification analysis ====
 
-Testing calibration
-  
-Note that differences in the criteria could be due to numerical settings,
-numerical errors or the method used to find problematic parameter sets.
-Settings:
-    Derivation mode for Jacobians:                         Analytic using sylvester equations
-    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
-    Normalize Jacobians:                                   Yes
-    Tolerance level for rank computations:                 1e-10
-    Tolerance level for selecting nonzero columns:         1e-08
-    Tolerance level for selecting nonzero singular values: 1e-03
-
-REDUCED-FORM:
-    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
-
-ISKREV (2010):
-    !!!WARNING!!!
-    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
-
-    ALPHA is collinear w.r.t. all other parameters!
-    RA is collinear w.r.t. all other parameters!
-    DELTA is collinear w.r.t. all other parameters!
-    SIGA is collinear w.r.t. all other parameters!
-    THETA is collinear w.r.t. all other parameters!
-    KAPPA is collinear w.r.t. all other parameters!
-    PSIK is collinear w.r.t. all other parameters!
-
-KOMUNJER AND NG (2011):
-    !!!WARNING!!!
-    The rank of D (minimal system) is deficient by 1 (rank(D) = 17 < 18 with tol = 1e-10)!
-
-    ALPHA is collinear w.r.t. all other parameters!
-    RA is collinear w.r.t. all other parameters!
-    DELTA is collinear w.r.t. all other parameters!
-    SIGA is collinear w.r.t. all other parameters!
-    THETA is collinear w.r.t. all other parameters!
-    KAPPA is collinear w.r.t. all other parameters!
-    PSIK is collinear w.r.t. all other parameters!
-
-QU AND TKACHENKO (2012):
-    !!!WARNING!!!
-    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
-
-    ALPHA is collinear w.r.t. all other parameters!
-    RA is collinear w.r.t. all other parameters!
-    DELTA is collinear w.r.t. all other parameters!
-    SIGA is collinear w.r.t. all other parameters!
-    THETA is collinear w.r.t. all other parameters!
-    KAPPA is collinear w.r.t. all other parameters!
-    PSIK is collinear w.r.t. all other parameters!
-
-==== Identification analysis completed ====
-
-
-**** VAROBS: lam ****
-==== Identification analysis ====
-
-Testing calibration
-
-
-
-
-
-
-
-  
-Note that differences in the criteria could be due to numerical settings,
-numerical errors or the method used to find problematic parameter sets.
-Settings:
-    Derivation mode for Jacobians:                         Analytic using sylvester equations
-    Method to find problematic parameters:                 Rank condition on all possible subsets
-    Normalize Jacobians:                                   Yes
-    Tolerance level for rank computations:                 1e-10
-    Tolerance level for selecting nonzero columns:         1e-08
-    Tolerance level for selecting nonzero singular values: 1e-03
-
-REDUCED-FORM:
-    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
-
-ISKREV (2010):
-    !!!WARNING!!!
-    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-
-KOMUNJER AND NG (2011):
-    !!!WARNING!!!
-    The rank of D (minimal system) is deficient by 1 (rank(D) = 17 < 18 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-
-QU AND TKACHENKO (2012):
-    !!!WARNING!!!
-    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-
-==== Identification analysis completed ====
-
-
-**** VAROBS: q ****
-==== Identification analysis ====
-
-Testing calibration
-WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
-         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
-         Either reduce the list of parameters, or increase number of observables.
-         Skip identification analysis based on minimal state space system.
+Testing prior mean
   
 Note that differences in the criteria could be due to numerical settings,
 numerical errors or the method used to find problematic parameter sets.
@@ -831,75 +1865,10 @@ QU AND TKACHENKO (2012):
     KAPPA is collinear w.r.t. all other parameters!
     PSIK is collinear w.r.t. all other parameters!
 
-==== Identification analysis completed ====
+Monte Carlo Testing
 
 
-**** VAROBS: q ****
-==== Identification analysis ====
-
-Testing calibration
-WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
-         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
-         Either reduce the list of parameters, or increase number of observables.
-         Skip identification analysis based on minimal state space system.
-
-
-
-
-
-
-
-  
-Note that differences in the criteria could be due to numerical settings,
-numerical errors or the method used to find problematic parameter sets.
-Settings:
-    Derivation mode for Jacobians:                         Analytic using sylvester equations
-    Method to find problematic parameters:                 Rank condition on all possible subsets
-    Normalize Jacobians:                                   Yes
-    Tolerance level for rank computations:                 1e-10
-    Tolerance level for selecting nonzero columns:         1e-08
-    Tolerance level for selecting nonzero singular values: 1e-03
-
-REDUCED-FORM:
-    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
-
-ISKREV (2010):
-    !!!WARNING!!!
-    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
-    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-
-QU AND TKACHENKO (2012):
-    !!!WARNING!!!
-    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
-    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-
-==== Identification analysis completed ====
-
-
-**** VAROBS: a ****
-==== Identification analysis ====
-
-Testing calibration
-WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
-         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
-         Either reduce the list of parameters, or increase number of observables.
-         Skip identification analysis based on minimal state space system.
+Testing MC sample
   
 Note that differences in the criteria could be due to numerical settings,
 numerical errors or the method used to find problematic parameter sets.
@@ -916,208 +1885,32 @@ REDUCED-FORM:
 
 ISKREV (2010):
     !!!WARNING!!!
-    The rank of J (moments) is deficient by 6 (rank(J) = 2 < 8 with tol = 1e-10)!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
 
-    ALPHA is not identified!
-    RA is not identified!
-    DELTA is not identified!
-    THETA is not identified!
-    KAPPA is not identified!
-    PSIK is not identified!
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
 
 QU AND TKACHENKO (2012):
     !!!WARNING!!!
-    The rank of G (spectrum) is deficient by 6 (rank(G) = 2 < 8 with tol = 1e-10)!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
 
-    ALPHA is not identified!
-    RA is not identified!
-    DELTA is not identified!
-    THETA is not identified!
-    KAPPA is not identified!
-    PSIK is not identified!
+    [DELTA,RA] are PAIRWISE collinear for 8% of MC runs!
+    [PSIK,RA] are PAIRWISE collinear for 7% of MC runs!
+    [PSIK,DELTA] are PAIRWISE collinear for 7% of MC runs!
+    ALPHA is collinear w.r.t. all other parameters for 90% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 87% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 82% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 74% of MC runs!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: a ****
-==== Identification analysis ====
-
-Testing calibration
-WARNING: Order condition for Komunjer and Ng (2011) failed: There are too many parameters or too few observable variables.
-         The number of minimal system elements with non-zero derivative is smaller than the number of parameters.
-         Either reduce the list of parameters, or increase number of observables.
-         Skip identification analysis based on minimal state space system.
-
-
-
-
-
-
-
-  
-Note that differences in the criteria could be due to numerical settings,
-numerical errors or the method used to find problematic parameter sets.
-Settings:
-    Derivation mode for Jacobians:                         Analytic using sylvester equations
-    Method to find problematic parameters:                 Rank condition on all possible subsets
-    Normalize Jacobians:                                   Yes
-    Tolerance level for rank computations:                 1e-10
-    Tolerance level for selecting nonzero columns:         1e-08
-    Tolerance level for selecting nonzero singular values: 1e-03
-
-REDUCED-FORM:
-    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
-
-ISKREV (2010):
-    !!!WARNING!!!
-    The rank of J (moments) is deficient by 6 (rank(J) = 2 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    ALPHA is not identified!
-    RA is not identified!
-    DELTA is not identified!
-    THETA is not identified!
-    KAPPA is not identified!
-    PSIK is not identified!
-
-QU AND TKACHENKO (2012):
-    !!!WARNING!!!
-    The rank of G (spectrum) is deficient by 6 (rank(G) = 2 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    ALPHA is not identified!
-    RA is not identified!
-    DELTA is not identified!
-    THETA is not identified!
-    KAPPA is not identified!
-    PSIK is not identified!
-
-==== Identification analysis completed ====
-
-
-**** VAROBS: uk ****
-==== Identification analysis ====
-
-Testing calibration
-  
-Note that differences in the criteria could be due to numerical settings,
-numerical errors or the method used to find problematic parameter sets.
-Settings:
-    Derivation mode for Jacobians:                         Analytic using sylvester equations
-    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
-    Normalize Jacobians:                                   Yes
-    Tolerance level for rank computations:                 1e-10
-    Tolerance level for selecting nonzero columns:         1e-08
-    Tolerance level for selecting nonzero singular values: 1e-03
-
-REDUCED-FORM:
-    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
-
-ISKREV (2010):
-    !!!WARNING!!!
-    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
-
-    ALPHA is collinear w.r.t. all other parameters!
-    RA is collinear w.r.t. all other parameters!
-    DELTA is collinear w.r.t. all other parameters!
-    SIGA is collinear w.r.t. all other parameters!
-    THETA is collinear w.r.t. all other parameters!
-    KAPPA is collinear w.r.t. all other parameters!
-    PSIK is collinear w.r.t. all other parameters!
-
-KOMUNJER AND NG (2011):
-    !!!WARNING!!!
-    The rank of D (minimal system) is deficient by 2 (rank(D) = 16 < 18 with tol = 1e-10)!
-
-    ALPHA is collinear w.r.t. all other parameters!
-    RA is collinear w.r.t. all other parameters!
-    DELTA is collinear w.r.t. all other parameters!
-    SIGA is collinear w.r.t. all other parameters!
-    THETA is collinear w.r.t. all other parameters!
-    KAPPA is collinear w.r.t. all other parameters!
-    PSIK is collinear w.r.t. all other parameters!
-
-QU AND TKACHENKO (2012):
-    !!!WARNING!!!
-    The rank of G (spectrum) is deficient by 3 (rank(G) = 5 < 8 with tol = 1e-10)!
-
-    KAPPA is not identified!
-    RA is collinear w.r.t. all other parameters!
-    DELTA is collinear w.r.t. all other parameters!
-    PSIK is collinear w.r.t. all other parameters!
-
-==== Identification analysis completed ====
-
-
-**** VAROBS: uk ****
-==== Identification analysis ====
-
-Testing calibration
-
-
-
-
-
-
-
-  
-Note that differences in the criteria could be due to numerical settings,
-numerical errors or the method used to find problematic parameter sets.
-Settings:
-    Derivation mode for Jacobians:                         Analytic using sylvester equations
-    Method to find problematic parameters:                 Rank condition on all possible subsets
-    Normalize Jacobians:                                   Yes
-    Tolerance level for rank computations:                 1e-10
-    Tolerance level for selecting nonzero columns:         1e-08
-    Tolerance level for selecting nonzero singular values: 1e-03
-
-REDUCED-FORM:
-    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
-
-ISKREV (2010):
-    !!!WARNING!!!
-    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
-    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-
-KOMUNJER AND NG (2011):
-    !!!WARNING!!!
-    The rank of D (minimal system) is deficient by 2 (rank(D) = 16 < 18 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    [ALPHA,RA,DELTA,SIGA,THETA,KAPPA] are collinear!
-    [ALPHA,RA,DELTA,SIGA,THETA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,SIGA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-    [RA,DELTA,SIGA,THETA,KAPPA,PSIK] are collinear!
-
-QU AND TKACHENKO (2012):
-    !!!WARNING!!!
-    The rank of G (spectrum) is deficient by 3 (rank(G) = 5 < 8 with tol = 1e-10)!
-    Displaying problematic parameter combinations (with maximum dimension 20):
-
-    KAPPA is not identified!
-    [ALPHA,RA,DELTA] are collinear!
-    [RA,SIGA,PSIK] are collinear!
-    [ALPHA,DELTA,SIGA,PSIK] are collinear!
-    [RA,DELTA,RHOA,THETA] are collinear!
-    [RA,DELTA,SIGA,THETA] are collinear!
-    [RA,DELTA,THETA,PSIK] are collinear!
-    [DELTA,SIGA,THETA,PSIK] are collinear!
-
-==== Identification analysis completed ====
-
-
-**** VAROBS: y c ****
+**** Null Space VAROBS: y c ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1147,7 +1940,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y c ****
+**** Bruteforce VAROBS: y c ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1177,7 +1970,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y iv ****
+**** Monte Carlo Testing VAROBS: y c ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: y iv ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1207,7 +2051,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y iv ****
+**** Bruteforce VAROBS: y iv ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1237,7 +2081,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y rk ****
+**** Monte Carlo Testing VAROBS: y iv ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: y rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1267,7 +2162,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y rk ****
+**** Bruteforce VAROBS: y rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1297,7 +2192,63 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y k ****
+**** Monte Carlo Testing VAROBS: y rk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 1 out of 100 MC runs (with tol = 1e-10)!
+
+    DELTA is collinear w.r.t. all other parameters for 1% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 1% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 1% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: y k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1327,7 +2278,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y k ****
+**** Bruteforce VAROBS: y k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1357,7 +2308,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y lam ****
+**** Monte Carlo Testing VAROBS: y k ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: y lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1387,7 +2389,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y lam ****
+**** Bruteforce VAROBS: y lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1417,7 +2419,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y q ****
+**** Monte Carlo Testing VAROBS: y lam ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: y q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1447,7 +2500,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y q ****
+**** Bruteforce VAROBS: y q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1477,7 +2530,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y a ****
+**** Monte Carlo Testing VAROBS: y q ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: y a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1523,6 +2627,7 @@ QU AND TKACHENKO (2012):
 
     ALPHA is collinear w.r.t. all other parameters!
     RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
     THETA is collinear w.r.t. all other parameters!
     KAPPA is collinear w.r.t. all other parameters!
     PSIK is collinear w.r.t. all other parameters!
@@ -1530,7 +2635,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y a ****
+**** Bruteforce VAROBS: y a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1575,12 +2680,94 @@ QU AND TKACHENKO (2012):
     Displaying problematic parameter combinations (with maximum dimension 20):
 
     [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
-    [ALPHA,RA,RHOA,THETA,KAPPA,PSIK] are collinear!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y uk ****
+**** Monte Carlo Testing VAROBS: y a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 99% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 97% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: y uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1610,7 +2797,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: y uk ****
+**** Bruteforce VAROBS: y uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1640,7 +2827,62 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c iv ****
+**** Monte Carlo Testing VAROBS: y uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 1 out of 100 MC runs (with tol = 1e-10)!
+
+    THETA is collinear w.r.t. all other parameters for 1% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 1% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c iv ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1670,7 +2912,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c iv ****
+**** Bruteforce VAROBS: c iv ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1700,7 +2942,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c rk ****
+**** Monte Carlo Testing VAROBS: c iv ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1730,7 +3023,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c rk ****
+**** Bruteforce VAROBS: c rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1760,7 +3053,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c k ****
+**** Monte Carlo Testing VAROBS: c rk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1790,7 +3134,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c k ****
+**** Bruteforce VAROBS: c k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1820,7 +3164,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c lam ****
+**** Monte Carlo Testing VAROBS: c k ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1850,7 +3245,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c lam ****
+**** Bruteforce VAROBS: c lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1880,7 +3275,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c q ****
+**** Monte Carlo Testing VAROBS: c lam ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1910,7 +3356,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c q ****
+**** Bruteforce VAROBS: c q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1940,7 +3386,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c a ****
+**** Monte Carlo Testing VAROBS: c q ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -1970,7 +3467,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c a ****
+**** Bruteforce VAROBS: c a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2000,7 +3497,64 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c uk ****
+**** Monte Carlo Testing VAROBS: c a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 5 out of 100 MC runs (with tol = 1e-10)!
+
+    RA is collinear w.r.t. all other parameters for 2% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 1% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 1% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 3% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: c uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2030,7 +3584,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: c uk ****
+**** Bruteforce VAROBS: c uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2060,7 +3614,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv rk ****
+**** Monte Carlo Testing VAROBS: c uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: iv rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2090,7 +3695,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv rk ****
+**** Bruteforce VAROBS: iv rk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2120,7 +3725,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv k ****
+**** Monte Carlo Testing VAROBS: iv rk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: iv k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2174,7 +3830,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv k ****
+**** Bruteforce VAROBS: iv k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2228,16 +3884,101 @@ QU AND TKACHENKO (2012):
     The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
     Displaying problematic parameter combinations (with maximum dimension 20):
 
-    [ALPHA,RA,THETA,PSIK] are collinear!
+    [ALPHA,RA,RHOA,THETA,PSIK] are collinear!
     [ALPHA,RA,SIGA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,SIGA,THETA,PSIK] are collinear!
     [ALPHA,RA,SIGA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,THETA,KAPPA,PSIK] are collinear!
     [ALPHA,SIGA,THETA,KAPPA,PSIK] are collinear!
     [RA,SIGA,THETA,KAPPA,PSIK] are collinear!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv lam ****
+**** Monte Carlo Testing VAROBS: iv k ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: iv lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2267,7 +4008,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv lam ****
+**** Bruteforce VAROBS: iv lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2297,7 +4038,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv q ****
+**** Monte Carlo Testing VAROBS: iv lam ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: iv q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2327,7 +4119,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv q ****
+**** Bruteforce VAROBS: iv q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2357,7 +4149,62 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv a ****
+**** Monte Carlo Testing VAROBS: iv q ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 3 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 1% of MC runs!
+    RA is collinear w.r.t. all other parameters for 1% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: iv a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2408,7 +4255,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv a ****
+**** Bruteforce VAROBS: iv a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2457,7 +4304,86 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv uk ****
+**** Monte Carlo Testing VAROBS: iv a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 98% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 93% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: iv uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2487,7 +4413,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: iv uk ****
+**** Bruteforce VAROBS: iv uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2517,7 +4443,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk k ****
+**** Monte Carlo Testing VAROBS: iv uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: rk k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2547,7 +4524,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk k ****
+**** Bruteforce VAROBS: rk k ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2577,7 +4554,62 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk lam ****
+**** Monte Carlo Testing VAROBS: rk k ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 2 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 1% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 1% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: rk lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2607,7 +4639,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk lam ****
+**** Bruteforce VAROBS: rk lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2637,7 +4669,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk q ****
+**** Monte Carlo Testing VAROBS: rk lam ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: rk q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2667,7 +4750,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk q ****
+**** Bruteforce VAROBS: rk q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2697,7 +4780,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk a ****
+**** Monte Carlo Testing VAROBS: rk q ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: rk a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2748,7 +4882,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk a ****
+**** Bruteforce VAROBS: rk a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2797,7 +4931,86 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk uk ****
+**** Monte Carlo Testing VAROBS: rk a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 98% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 99% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 99% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: rk uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2841,17 +5054,12 @@ QU AND TKACHENKO (2012):
     !!!WARNING!!!
     The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
 
-    ALPHA is collinear w.r.t. all other parameters!
-    RA is collinear w.r.t. all other parameters!
-    DELTA is collinear w.r.t. all other parameters!
-    SIGA is collinear w.r.t. all other parameters!
-    THETA is collinear w.r.t. all other parameters!
-    KAPPA is collinear w.r.t. all other parameters!
+    [DELTA,RA] are PAIRWISE collinear!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: rk uk ****
+**** Bruteforce VAROBS: rk uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2895,14 +5103,96 @@ QU AND TKACHENKO (2012):
     The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
     Displaying problematic parameter combinations (with maximum dimension 20):
 
-    [ALPHA,RA,DELTA] are collinear!
-    [RA,DELTA,RHOA,THETA] are collinear!
-    [RA,DELTA,THETA,KAPPA] are collinear!
+    [RA,DELTA] are collinear!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k lam ****
+**** Monte Carlo Testing VAROBS: rk uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    SIGA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    [DELTA,RA] are PAIRWISE collinear for 5% of MC runs!
+    [PSIK,RA] are PAIRWISE collinear for 4% of MC runs!
+    [PSIK,DELTA] are PAIRWISE collinear for 4% of MC runs!
+    ALPHA is collinear w.r.t. all other parameters for 86% of MC runs!
+    SIGA is collinear w.r.t. all other parameters for 80% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 81% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 76% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: k lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2932,7 +5222,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k lam ****
+**** Bruteforce VAROBS: k lam ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2962,7 +5252,62 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k q ****
+**** Monte Carlo Testing VAROBS: k lam ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 1 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 1% of MC runs!
+    RA is collinear w.r.t. all other parameters for 1% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: k q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -2992,7 +5337,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k q ****
+**** Bruteforce VAROBS: k q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3022,7 +5367,61 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k a ****
+**** Monte Carlo Testing VAROBS: k q ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 1 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 1% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: k a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3076,7 +5475,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k a ****
+**** Bruteforce VAROBS: k a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3130,16 +5529,99 @@ QU AND TKACHENKO (2012):
     The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
     Displaying problematic parameter combinations (with maximum dimension 20):
 
-    [ALPHA,RA,THETA,PSIK] are collinear!
     [ALPHA,RA,DELTA,THETA,KAPPA] are collinear!
+    [ALPHA,RA,DELTA,THETA,PSIK] are collinear!
     [ALPHA,RA,DELTA,KAPPA,PSIK] are collinear!
+    [ALPHA,RA,THETA,KAPPA,PSIK] are collinear!
     [ALPHA,DELTA,THETA,KAPPA,PSIK] are collinear!
     [RA,DELTA,THETA,KAPPA,PSIK] are collinear!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k uk ****
+**** Monte Carlo Testing VAROBS: k a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 2 (rank(J) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 2 (rank(G) = 6 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    [KAPPA,THETA] are PAIRWISE collinear for 1% of MC runs!
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 98% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: k uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3169,7 +5651,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: k uk ****
+**** Bruteforce VAROBS: k uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3199,7 +5681,63 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: lam q ****
+**** Monte Carlo Testing VAROBS: k uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 3 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 1% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 1% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 1% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: lam q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3229,7 +5767,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: lam q ****
+**** Bruteforce VAROBS: lam q ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3259,7 +5797,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: lam a ****
+**** Monte Carlo Testing VAROBS: lam q ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: lam a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3289,7 +5878,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: lam a ****
+**** Bruteforce VAROBS: lam a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3319,7 +5908,64 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: lam uk ****
+**** Monte Carlo Testing VAROBS: lam a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 7 out of 100 MC runs (with tol = 1e-10)!
+
+    RA is collinear w.r.t. all other parameters for 7% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 1% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 1% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 6% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: lam uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3349,7 +5995,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: lam uk ****
+**** Bruteforce VAROBS: lam uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3379,7 +6025,58 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: q a ****
+**** Monte Carlo Testing VAROBS: lam uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: q a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3433,7 +6130,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: q a ****
+**** Bruteforce VAROBS: q a ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3482,7 +6179,90 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: q uk ****
+**** Monte Carlo Testing VAROBS: q a ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 98% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 91% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 99% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: q uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3512,7 +6292,7 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: q uk ****
+**** Bruteforce VAROBS: q uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3542,7 +6322,62 @@ QU AND TKACHENKO (2012):
 ==== Identification analysis completed ====
 
 
-**** VAROBS: a uk ****
+**** Monte Carlo Testing VAROBS: q uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    All parameters are identified in the spectrum (rank(G) is full with tol = 1e-10).
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    All parameters are identified in the moments (rank(J) is full with tol = 1e-10).
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 2 out of 100 MC runs (with tol = 1e-10)!
+
+    DELTA is collinear w.r.t. all other parameters for 1% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 2% of MC runs!
+
+==== Identification analysis completed ====
+
+
+**** Null Space VAROBS: a uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3589,12 +6424,14 @@ QU AND TKACHENKO (2012):
     ALPHA is collinear w.r.t. all other parameters!
     RA is collinear w.r.t. all other parameters!
     DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
     PSIK is collinear w.r.t. all other parameters!
 
 ==== Identification analysis completed ====
 
 
-**** VAROBS: a uk ****
+**** Bruteforce VAROBS: a uk ****
 ==== Identification analysis ====
 
 Testing calibration
@@ -3639,6 +6476,89 @@ QU AND TKACHENKO (2012):
     Displaying problematic parameter combinations (with maximum dimension 20):
 
     [ALPHA,RA,DELTA,THETA,KAPPA,PSIK] are collinear!
+
+==== Identification analysis completed ====
+
+
+**** Monte Carlo Testing VAROBS: a uk ****
+==== Identification analysis ====
+
+Testing prior mean
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient by 1 (rank(J) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient by 1 (rank(G) = 7 < 8 with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters!
+    RA is collinear w.r.t. all other parameters!
+    DELTA is collinear w.r.t. all other parameters!
+    THETA is collinear w.r.t. all other parameters!
+    KAPPA is collinear w.r.t. all other parameters!
+    PSIK is collinear w.r.t. all other parameters!
+
+Monte Carlo Testing
+
+
+Testing MC sample
+  
+Note that differences in the criteria could be due to numerical settings,
+numerical errors or the method used to find problematic parameter sets.
+Settings:
+    Derivation mode for Jacobians:                         Analytic using sylvester equations
+    Method to find problematic parameters:                 Nullspace and multicorrelation coefficients
+    Normalize Jacobians:                                   Yes
+    Tolerance level for rank computations:                 1e-10
+    Tolerance level for selecting nonzero columns:         1e-08
+    Tolerance level for selecting nonzero singular values: 1e-03
+
+REDUCED-FORM:
+    All parameters are identified in the reduced-form solution (rank(Tau) is full with tol = 1e-10).
+
+ISKREV (2010):
+    !!!WARNING!!!
+    The rank of J (moments) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 100% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 100% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 100% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 100% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
+
+QU AND TKACHENKO (2012):
+    !!!WARNING!!!
+    The rank of G (spectrum) is deficient for 100 out of 100 MC runs (with tol = 1e-10)!
+
+    ALPHA is collinear w.r.t. all other parameters for 96% of MC runs!
+    RA is collinear w.r.t. all other parameters for 100% of MC runs!
+    DELTA is collinear w.r.t. all other parameters for 99% of MC runs!
+    THETA is collinear w.r.t. all other parameters for 96% of MC runs!
+    KAPPA is collinear w.r.t. all other parameters for 92% of MC runs!
+    PSIK is collinear w.r.t. all other parameters for 100% of MC runs!
 
 ==== Identification analysis completed ====
 
@@ -3647,9 +6567,9 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (prelo
  restricted \write18 enabled.
 entering extended mode
 (./table.tex
-LaTeX2e <2018-04-01> patch level 5
+LaTeX2e <2018-12-01>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 For additional information on amsmath, use the `?' option.
@@ -3675,12 +6595,13 @@ ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb>
-Output written on table.pdf (1 page, 44511 bytes).
+Output written on table.pdf (1 page, 44509 bytes).
 Transcript written on table.log.
 
 ans =
 
      0
 
-Total computing time : 0h02m43s
+Total computing time : 0h46m05s
+Note: 1 warning(s) encountered in the preprocessor
 Note: warning(s) encountered in MATLAB/Octave code

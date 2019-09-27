@@ -528,10 +528,11 @@ UPSILON = 1;
 @#endif
 % -------------------------------------------------------------------------
 @#if CAPUTIL == 1
-UK = UKBAR;
+RK = 1-PSIK;
+UK = (1/BETTA+DELTA-1)*Q/RK;
 uk = UK;
+rk = RK;
 PSSIK = (1-PSIK)*(UK-UK) + PSIK/2*(UK-UK)^2;
-RK = (1/BETTA+DELTA-1)*Q/UK + PSSIK/UK; % foc k
 @#else
 RK = (1/BETTA+DELTA-1)*Q; % foc k
 @#endif
@@ -672,7 +673,7 @@ ALPHA,           0.3,           1e-8,        0.9999,      normal_pdf,    0.3,   
 RA,              2,             1e-8,        10,          gamma_pdf,     2,          0.25;
 DELTA,           0.025,         1e-8,        0.9999,      uniform_pdf,   ,           ,                     0,                   1;
 RHOA,            0.5,           1e-8,        0.9999,      beta_pdf,      0.5,        0.1;
-SIGA,            0.6,           1e-8,        10,          inv_gamma_pdf, 0.6,        4;
+SIGA,            0.6,           1e-8,        10,          inv_gamma_pdf, 0.6,        2;
 @#if MSADJ == 1
 THETA,           1.5,           1e-8,        10,          gamma_pdf,     1.5,        0.75;
 @#endif
@@ -696,14 +697,14 @@ ETAL,            1.5,           1e-8,        10,          gamma_pdf,     1.5,   
 @#endif
 @#if INVESTSHOCK == 1
 RHOUPSILON,      0.5,           1e-8,        0.9999,      beta_pdf,      0.5,         0.1;
-SIGUPSILON,      0.6,           1e-8,        10,          inv_gamma_pdf, 0.6,         4;
+SIGUPSILON,      0.6,           1e-8,        10,          inv_gamma_pdf, 0.6,         2;
 @#endif
 @#if MONPOL == 1
 PIEA,            3.2,           0,           10,          gamma_pdf,     3.2,         2;
 PSIPIE,          1.5,           1e-8,        10,          gamma_pdf,     1.5,         0.25;
 PSIY,            0.125,         1e-8,        10,          gamma_pdf,     0.125,       0.1;
 RHOR,            0.5,           1e-8,        0.9999,      beta_pdf,      0.5,         0.2;
-SIGR,            0.2,           1e-8,        10,          inv_gamma_pdf, 0.2,         4;
+SIGR,            0.2,           1e-8,        10,          inv_gamma_pdf, 0.2,         2;
 @#endif
 end; % [estimated_params] end
 
@@ -712,7 +713,7 @@ end; % [estimated_params] end
 % =========================================================================
 % Steady-State, Checks and Diagnostics
 % =========================================================================
-steady;                 % compute steady state given the starting values
+steady(maxit=50000);                 % compute steady state given the starting values
 resid;                  % check the residuals of model equations evaluated at steady state
 check;                  % check Blanchard-Kahn conditions
 model_diagnostics;      % check obvious model errors
@@ -733,12 +734,15 @@ for iset = 1:@{VAROBSCOMBINATIONS}
     for ii = 1:varobsset_nbr
         irun = irun+1;
         options_.varobs = M_.endo_names(varobsset(ii,:),:); % set VAROBS
-        fprintf('**** VAROBS: %s ****' , strjoin(options_.varobs));
+        fprintf('**** Null Space VAROBS: %s ****' , strjoin(options_.varobs));
         identification(ar=10, no_identification_strength, parameter_set=calibration); % run identification analysis
-        fprintf('**** VAROBS: %s ****' , strjoin(options_.varobs));
+        fprintf('**** Bruteforce VAROBS: %s ****' , strjoin(options_.varobs));
         identification(ar=10, no_identification_strength, parameter_set=calibration,checks_via_subsets=1, max_dim_subsets_groups=20); % run identification analysis
+        fprintf('**** Monte Carlo Testing VAROBS: %s ****' , strjoin(options_.varobs));
+        identification(ar=10, no_identification_strength, prior_mc=100, nograph, no_identification_minimal); % run identification analysis
+
         % save results into structure
-        RESULTS{iset}{ii} = load([M_.fname, '/identification/', M_.fname, '_identif.mat'], 'ide_moments_point', 'ide_spectrum_point', 'ide_minimal_point');
+        RESULTS{iset}{ii} = load([M_.fname, '/identification/', M_.fname, '_calibration_identif.mat'], 'ide_moments_point', 'ide_spectrum_point', 'ide_minimal_point');
         RESULTS{iset}{ii}.varobs = options_.varobs;
         
         % find out if KAPPA and/or THETA are among problematic parameter sets

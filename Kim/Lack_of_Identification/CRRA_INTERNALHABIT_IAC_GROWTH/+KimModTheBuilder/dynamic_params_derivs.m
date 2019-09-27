@@ -1,4 +1,4 @@
-function [rp, gp, rpp, gpp, hp] = dynamic_params_derivs(y, x, params, steady_state, it_, ss_param_deriv, ss_param_2nd_deriv)
+function [rp, gp, rpp, gpp, hp, g3p] = dynamic_params_derivs(y, x, params, steady_state, it_, ss_param_deriv, ss_param_2nd_deriv)
 %
 % Compute the derivatives of the dynamic model with respect to the parameters
 % Inputs :
@@ -38,6 +38,14 @@ function [rp, gp, rpp, gpp, hp] = dynamic_params_derivs(y, x, params, steady_sta
 %                                                              3rd column: column number of second variable in Hessian of the dynamic model
 %                                                              4th column: number of the parameter in derivative
 %                                                              5th column: value of the Hessian term
+%   g3p      [#first_order_g3_terms by 6] double   Jacobian matrix of derivatives of g3 (dynamic 3rd derivs) with respect to the parameters;
+%                                                              rows: respective derivative term
+%                                                              1st column: equation number of the term appearing
+%                                                              2nd column: column number of first variable in g3 of the dynamic model
+%                                                              3rd column: column number of second variable in g3 of the dynamic model
+%                                                              4th column: column number of third variable in g3 of the dynamic model
+%                                                              5th column: number of the parameter in derivative
+%                                                              6th column: value of the Hessian term
 %
 %
 % Warning : this file is generated automatically by Dynare
@@ -8036,5 +8044,8 @@ hp(249,2)=4;
 hp(249,3)=4;
 hp(249,4)=6;
 hp(249,5)=(-((-1)/(y(4)*y(4))));
+end
+if nargout >= 6
+g3p = zeros(0,6);
 end
 end

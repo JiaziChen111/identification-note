@@ -123,6 +123,8 @@ M_.orig_eq_nbr = 10;
 M_.eq_nbr = 10;
 M_.ramsey_eq_nbr = 0;
 M_.set_auxiliary_variables = exist(['./+' M_.fname '/set_auxiliary_variables.m'], 'file') == 2;
+M_.max_endo_lag_by_var = [0 1 0 1 1 1 1 0 0 0 ];
+M_.max_exo_lag_by_var = [0 ];
 M_.orig_maximum_endo_lag = 1;
 M_.orig_maximum_endo_lead = 1;
 M_.orig_maximum_exo_lag = 0;
@@ -150,11 +152,7 @@ M_.nboth   = 1;
 M_.nsfwrd   = 5;
 M_.nspred   = 2;
 M_.ndynamic   = 6;
-M_.dynamic_tmp_nbr = zeros(4,1); % Number of temporaries used for the dynamic model
-M_.dynamic_tmp_nbr(1) = 6; % Number of temporaries used for the evaluation of the residuals
-M_.dynamic_tmp_nbr(2) = 30; % Number of temporaries used for the evaluation of g1 (jacobian)
-M_.dynamic_tmp_nbr(3) = 10; % Number of temporaries used for the evaluation of g2 (hessian)
-M_.dynamic_tmp_nbr(4) = 0; % Number of temporaries used for the evaluation of g3 (third order derivatives)
+M_.dynamic_tmp_nbr = [23; 30; 10; 0; ];
 M_.equations_tags = {
   1 , 'name' , 'foc household wrt c (marginal utility of consumption)' ;
   2 , 'name' , 'foc household wrt iv (Tobins Q)' ;
@@ -168,6 +166,7 @@ M_.equations_tags = {
   10 , 'name' , 'labor demand' ;
 };
 M_.static_and_dynamic_models_differ = false;
+M_.has_external_function = false;
 M_.state_var = [5 8 ];
 M_.exo_names_orig_ord = [1:1];
 M_.maximum_lag = 1;
@@ -179,12 +178,8 @@ M_.maximum_exo_lag = 0;
 M_.maximum_exo_lead = 0;
 oo_.exo_steady_state = zeros(1, 1);
 M_.params = NaN(10, 1);
-M_.NNZDerivatives = [40; 83; -1];
-M_.static_tmp_nbr = zeros(4,1); % Number of temporaries used for the static model
-M_.static_tmp_nbr(1) = 4; % Number of temporaries used for the evaluation of the residuals
-M_.static_tmp_nbr(2) = 46; % Number of temporaries used for the evaluation of g1 (jacobian)
-M_.static_tmp_nbr(3) = 21; % Number of temporaries used for the evaluation of g2 (hessian)
-M_.static_tmp_nbr(4) = 0; % Number of temporaries used for the evaluation of g3 (third order derivatives)
+M_.NNZDerivatives = [40; 83; -1; ];
+M_.static_tmp_nbr = [4; 46; 21; 0; ];
 IBAR_O_YBAR = 0.25;         
 KBAR_O_YBAR = 10;           
 M_.params( 3 ) = IBAR_O_YBAR/KBAR_O_YBAR;
@@ -255,7 +250,7 @@ estim_params_.param_vals = [estim_params_.param_vals; 1, 0.3, 1e-8, 0.9999, 3, 0
 estim_params_.param_vals = [estim_params_.param_vals; 2, 2, 1e-8, 10, 2, 2, 0.25, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 3, 0.025, 1e-8, 0.9999, 5, NaN, NaN, 0, 1, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 6, 0.5, 1e-8, 0.9999, 1, 0.5, 0.1, NaN, NaN, NaN ];
-estim_params_.param_vals = [estim_params_.param_vals; 7, 0.6, 1e-8, 10, 4, 0.6, 4, NaN, NaN, NaN ];
+estim_params_.param_vals = [estim_params_.param_vals; 7, 0.6, 1e-8, 10, 4, 0.6, 2, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 8, 1.5, 1e-8, 10, 2, 1.5, 0.75, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 9, 2, 1e-8, 10, 2, 2, 1.5, NaN, NaN, NaN ];
 estim_params_.param_vals = [estim_params_.param_vals; 10, 1.0052, 1e-8, 10, 5, NaN, NaN, 0, 10, NaN ];
@@ -274,13 +269,13 @@ RESULTS{iset}=cell(varobsset_nbr,1);
 for ii = 1:varobsset_nbr
 irun = irun+1;
 options_.varobs = M_.endo_names(varobsset(ii,:),:); 
-fprintf('**** VAROBS: %s ****' , strjoin(options_.varobs));
+fprintf('**** Null Space VAROBS: %s ****' , strjoin(options_.varobs));
 options_ident = struct();
 options_ident.ar = 10;
 options_ident.no_identification_strength = true;
 options_ident.parameter_set = 'calibration';
 dynare_identification(options_ident);
-fprintf('**** VAROBS: %s ****' , strjoin(options_.varobs));
+fprintf('**** Bruteforce VAROBS: %s ****' , strjoin(options_.varobs));
 options_ident = struct();
 options_ident.ar = 10;
 options_ident.checks_via_subsets = 1;
@@ -288,7 +283,16 @@ options_ident.max_dim_subsets_groups = 20;
 options_ident.no_identification_strength = true;
 options_ident.parameter_set = 'calibration';
 dynare_identification(options_ident);
-RESULTS{iset}{ii} = load([M_.fname, '/identification/', M_.fname, '_identif.mat'], 'ide_moments_point', 'ide_spectrum_point', 'ide_minimal_point');
+fprintf('**** Monte Carlo Testing VAROBS: %s ****' , strjoin(options_.varobs));
+options_ident = struct();
+options_ident.ar = 10;
+options_ident.no_identification_minimal = true;
+options_ident.no_identification_strength = true;
+options_ident.nograph = true;
+options_ident.prior_mc = 100;
+options_.nograph = true;
+dynare_identification(options_ident);
+RESULTS{iset}{ii} = load([M_.fname, '/identification/', M_.fname, '_calibration_identif.mat'], 'ide_moments_point', 'ide_spectrum_point', 'ide_minimal_point');
 RESULTS{iset}{ii}.varobs = options_.varobs;
 idx_KAPPA = find(estim_params_.param_vals(:,1)==find(contains(M_.param_names,'KAPPA')));
 idx_THETA = find(estim_params_.param_vals(:,1)==find(contains(M_.param_names,'THETA')));
