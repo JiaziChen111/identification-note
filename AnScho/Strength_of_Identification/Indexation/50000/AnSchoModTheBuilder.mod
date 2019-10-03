@@ -270,17 +270,17 @@ lam = BET*lamp*r/p(+1)/(GAM*z(+1));
 y - PHI/2*(p-gammapback)^2*y = c + (1-1/g)*y;
 
 [name='Taylor rule']
-r = RSTAR^(1-RHOR)*r(-1)^RHOR*exp(SIGR*epsr);
+r = RSTAR^(1-RHOR)*r(-1)^RHOR*exp(SIGR/100*epsr);
 
 [name='Government spending process']
-log(g) = (1-RHOG)*log(G) + RHOG*log(g(-1)) + SIGG*epsg;
+log(g) = (1-RHOG)*log(G) + RHOG*log(g(-1)) + SIGG/100*epsg;
 
 [name='Technology growth process']
-log(z) = RHOZ*log(z(-1)) + SIGZ*epsz;
+log(z) = RHOZ*log(z(-1)) + SIGZ/100*epsz;
 
 @#if PREFSHOCK == 1
 [name='Preference shifter process']
-log(zeta) = RHOZETA*log(zeta(-1)) + SIGZETA*epszeta;
+log(zeta) = RHOZETA*log(zeta(-1)) + SIGZETA/100*epszeta;
 @#endif
 
 [name='Output growth (q-on-q)']
@@ -369,20 +369,20 @@ PSIDY,           0.2,           1e-5,        10,          gamma_pdf,     0.2,   
 RHOR,            0.75,          1e-5,        0.99999,     beta_pdf,      0.5,        0.2;
 RHOG,            0.95,          1e-5,        0.99999,     beta_pdf,      0.8,        0.1;
 RHOZ,            0.9,           1e-5,        0.99999,     beta_pdf,      0.66,       0.15;
-SIGR,            0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        2;
-SIGG,            0.6,           1e-8,        5,           inv_gamma_pdf, 0.4,        2;
-SIGZ,            0.3,           1e-8,        5,           inv_gamma_pdf, 0.4,        2;
+SIGR,            0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        4;
+SIGG,            0.6,           1e-8,        5,           inv_gamma_pdf, 0.4,        4;
+SIGZ,            0.3,           1e-8,        5,           inv_gamma_pdf, 0.4,        4;
 @#if INDEXATION == 1
 IOTAP,           0.5,           1e-8,        0.99999,     beta_pdf,      0.5,        0.15;
 @#endif
 @#if PREFSHOCK == 1
 RHOZETA,         0.75,          1e-5,        0.99999,     beta_pdf,      0.5,        0.2;
-SIGZETA,         0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        2;
+SIGZETA,         0.2,           1e-8,        5,           inv_gamma_pdf, 0.3,        4;
 @#endif
 @#if MEASERR == 1
-SIGYGR,          0.23,          1e-8,        5,           inv_gamma_pdf, 0.3,        2;
-SIGINFL,         0.56,          1e-8,        5,           inv_gamma_pdf, 0.3,        2;
-SIGINT,          0.66,          1e-8,        5,           inv_gamma_pdf, 0.3,        2;
+SIGYGR,          0.23,          1e-8,        5,           inv_gamma_pdf, 0.3,        4;
+SIGINFL,         0.56,          1e-8,        5,           inv_gamma_pdf, 0.3,        4;
+SIGINT,          0.66,          1e-8,        5,           inv_gamma_pdf, 0.3,        4;
 @#endif
 end; % [estimated_params] end
 
